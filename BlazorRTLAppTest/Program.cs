@@ -1,4 +1,4 @@
-using Havit.Blazor.Components.Web;
+using EnchantedCoder.Blazor.Components.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 

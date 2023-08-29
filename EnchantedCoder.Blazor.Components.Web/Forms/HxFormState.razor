@@ -1,0 +1,8 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web
+
+@if (Visible)
+{
+	<CascadingValue Value="@CreateNewCascadingFormState()">
+		@ChildContent
+	</CascadingValue>
+}

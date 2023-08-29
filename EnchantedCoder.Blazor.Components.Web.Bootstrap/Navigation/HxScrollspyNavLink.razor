@@ -1,0 +1,3 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+
+<a href="@Href" class="@CssClassHelper.Combine("nav-link", CssClass)" @onclick="HandleClick" @onclick:stopPropagation @onclick:preventDefault @attributes="this.AdditionalAttributes">@ChildContent</a>

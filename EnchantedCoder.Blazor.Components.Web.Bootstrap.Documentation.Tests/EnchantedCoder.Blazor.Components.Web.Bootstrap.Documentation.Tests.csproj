@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="bunit.web" Version="1.22.19" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
+		<PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+		<PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\EnchantedCoder.Blazor.Components.Web.Bootstrap.Documentation\EnchantedCoder.Blazor.Components.Web.Bootstrap.Documentation.csproj" />
+	</ItemGroup>
+
+</Project>

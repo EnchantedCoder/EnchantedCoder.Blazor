@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+	  <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<!-- NuGet -->
+	<Import Project="../NuGet.targets" />
+	<PropertyGroup>
+		<!-- GrpcPackagesVersion - variable from Directory.Build.props -->
+		<PackageVersion>$(GrpcPackagesVersion)</PackageVersion>
+		<Description>EnchantedCoder Blazor stack - gRPC Support - client-side</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/EnchantedCoder/EnchantedCoder.Blazor</PackageProjectUrl>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Grpc.Net.Client" Version="2.55.0" />
+		<PackageReference Include="Grpc.Net.Client.Web" Version="2.55.0" />
+		<PackageReference Include="EnchantedCoder.Core" Version="2.0.27" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.9" Condition="'$(TargetFramework)' == 'net7.0'" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.20" Condition="'$(TargetFramework)' == 'net6.0'" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
+		<PackageReference Include="protobuf-net" Version="3.2.26" />
+		<PackageReference Include="protobuf-net.Grpc.ClientFactory" Version="1.1.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\EnchantedCoder.Blazor.Grpc.Core\EnchantedCoder.Blazor.Grpc.Core.csproj" />
+	</ItemGroup>
+
+</Project>

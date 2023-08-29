@@ -1,0 +1,5 @@
+@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+
+<div @ref="collapseHtmlElement" aria-expanded="@isShown" id="@this.Id" class="@GetCssClass()" data-bs-parent="@this.Parent" @attributes="this.AdditionalAttributes">
+	@ChildContent
+</div>

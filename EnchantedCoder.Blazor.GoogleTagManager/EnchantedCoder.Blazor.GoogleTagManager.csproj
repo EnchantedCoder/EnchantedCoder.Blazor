@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<NoWarn>1591;1701;1702;SA1134</NoWarn>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<!-- NuGet -->
+	<Import Project="../NuGet.targets" />
+	<PropertyGroup>
+		<PackageVersion>1.1.2</PackageVersion>
+		<Description>EnchantedCoder Blazor Library - Google Tag Manager support (incl. optional automatic page-views tracking)</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/EnchantedCoder/EnchantedCoder.Blazor</PackageProjectUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EnchantedCoder.Core" Version="2.0.27" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.9" Condition="'$(TargetFramework)' == 'net7.0'" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.20" Condition="'$(TargetFramework)' == 'net6.0'" />
+	</ItemGroup>
+
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+		<Copy SourceFiles="$(TargetDir)\EnchantedCoder.Blazor.GoogleTagManager.xml" DestinationFolder="$(OutDir)\..\..\..\..\EnchantedCoder.Blazor.Components.Web.Bootstrap.Documentation\xmldoc" />
+	</Target>
+
+</Project>

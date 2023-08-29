@@ -1,4 +1,4 @@
-﻿using Havit.Blazor.Components.Web.Bootstrap;
+﻿using EnchantedCoder.Blazor.Components.Web.Bootstrap;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorAppTest.Pages;

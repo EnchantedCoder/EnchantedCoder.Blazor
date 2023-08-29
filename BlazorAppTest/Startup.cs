@@ -1,7 +1,7 @@
 using System.Globalization;
 using BlazorAppTest.Resources;
-using Havit.Blazor.Components.Web;
-using Havit.Blazor.GoogleTagManager;
+using EnchantedCoder.Blazor.Components.Web;
+using EnchantedCoder.Blazor.GoogleTagManager;
 
 namespace BlazorAppTest;
 
@@ -30,7 +30,7 @@ public class Startup
 		services.AddHxMessageBoxHost();
 		services.AddHxGoogleTagManager(options =>
 		{
-			options.GtmId = "GTM-W2CT4P6"; // Havit.Blazor.GoogleTagManager DEV test
+			options.GtmId = "GTM-W2CT4P6"; // EnchantedCoder.Blazor.GoogleTagManager DEV test
 		});
 
 		// TESTs for Defaults

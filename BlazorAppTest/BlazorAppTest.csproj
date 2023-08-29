@@ -14,11 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Havit.Blazor.Components.Web.Bootstrap\Havit.Blazor.Components.Web.Bootstrap.csproj" />
-    <ProjectReference Include="..\Havit.Blazor.Components.Web\Havit.Blazor.Components.Web.csproj" />
-    <ProjectReference Include="..\Havit.Blazor.GoogleTagManager\Havit.Blazor.GoogleTagManager.csproj" />
-    <ProjectReference Include="..\Havit.Extensions.Localization\Havit.Extensions.Localization.csproj" />
-    <ProjectReference Include="..\Havit.SourceGenerators.StrongApiStringLocalizers\Havit.SourceGenerators.StrongApiStringLocalizers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\EnchantedCoder.Blazor.Components.Web.Bootstrap\EnchantedCoder.Blazor.Components.Web.Bootstrap.csproj" />
+    <ProjectReference Include="..\EnchantedCoder.Blazor.Components.Web\EnchantedCoder.Blazor.Components.Web.csproj" />
+    <ProjectReference Include="..\EnchantedCoder.Blazor.GoogleTagManager\EnchantedCoder.Blazor.GoogleTagManager.csproj" />
+    <ProjectReference Include="..\EnchantedCoder.Extensions.Localization\EnchantedCoder.Extensions.Localization.csproj" />
+    <ProjectReference Include="..\EnchantedCoder.SourceGenerators.StrongApiStringLocalizers\EnchantedCoder.SourceGenerators.StrongApiStringLocalizers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
 </Project>

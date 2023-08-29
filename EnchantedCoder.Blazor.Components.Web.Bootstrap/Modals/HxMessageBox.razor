@@ -1,0 +1,21 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+<HxModal @ref="modal"
+         Title="@Title"
+         ShowCloseButton="this.ShowCloseButton"
+         Settings="this.ModalSettingsEffective"
+         OnClosed="HandleModalClosed"
+         HeaderTemplate="this.HeaderTemplate"
+         @attributes="this.AdditionalAttributes">
+    <BodyTemplate>
+        @Text
+        @BodyTemplate
+    </BodyTemplate>
+    <FooterTemplate>
+        @foreach (var button in GetButtonsToRender())
+        {
+            <HxButton @key="@button" Text="@button.Text"
+                  OnClick="@(() => HandleButtonClick(button.Id))"
+                  Settings="@((button.IsPrimary ?? false) ? this.PrimaryButtonSettingsEffective : this.SecondaryButtonSettingsEffective)" />
+        }
+    </FooterTemplate>
+</HxModal>

@@ -1,8 +1,8 @@
-﻿@page "/HxSelect_Issue456_Test"
+@page "/HxSelect_Issue456_Test"
 
 <h1>HxSelect_Issue456_Test</h1>
 <p>[HxSelect] Throws exception when Data not loaded</p>
-@* https://github.com/havit/Havit.Blazor/issues/456 *@
+@* https://github.com/EnchantedCoder/EnchantedCoder.Blazor/issues/456 *@
 
 <HxSelect TItem="int" TValue="int" Data="@data" @bind-Value="selectedNumber" NullDataText="Loading numbers..." NullText="-all-" ValueSelector="(v => v)" />
 
@@ -19,7 +19,7 @@
 }
 
 @* FAILING VARIANT (as designed, invalid Value when Data loaded):
-	
+
 <HxSelect TItem="int" TValue="int" Data="@data" @bind-Value="selectedNumber" NullDataText="Loading numbers..." NullText="-all-" ValueSelector="(v => v)" />
 
 @code

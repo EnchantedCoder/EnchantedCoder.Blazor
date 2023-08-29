@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+	  <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<!-- NuGet -->
+	<Import Project="../NuGet.targets" />
+	<PropertyGroup>
+		<!-- GrpcPackagesVersion - variable from Directory.Build.props -->
+		<PackageVersion>$(GrpcPackagesVersion)</PackageVersion>
+		<Description>EnchantedCoder Blazor stack - gRPC Support - Core library for both server and client side</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/EnchantedCoder/EnchantedCoder.Blazor</PackageProjectUrl>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="EnchantedCoder.Core" Version="2.0.27" />
+		<PackageReference Include="protobuf-net" Version="3.2.26" />
+		<PackageReference Include="protobuf-net.Grpc" Version="1.1.1" />
+	</ItemGroup>
+
+</Project>

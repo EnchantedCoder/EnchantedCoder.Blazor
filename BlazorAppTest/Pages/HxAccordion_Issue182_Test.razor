@@ -1,18 +1,18 @@
 ﻿@page "/HxAccordion_Issue182_Test"
 
-<h1><a href="https://github.com/havit/Havit.Blazor/issues/182">https://github.com/havit/Havit.Blazor/issues/182</a></h1>
+<h1><a href="https://github.com/EnchantedCoder/EnchantedCoder.Blazor/issues/182">https://github.com/EnchantedCoder/EnchantedCoder.Blazor/issues/182</a></h1>
 
 <button class="btn btn-primary" @onclick="SortItems">@(AscOrder ? "Sort Asc": "Sort Desc")</button>
-<Havit.Blazor.Components.Web.Bootstrap.HxAccordion @bind-ExpandedItemId="expandedItemId">
+<EnchantedCoder.Blazor.Components.Web.Bootstrap.HxAccordion @bind-ExpandedItemId="expandedItemId">
     @foreach (var team in TeamItems)
     {
-        <Havit.Blazor.Components.Web.Bootstrap.HxAccordionItem Id="@team.Id.ToString()" @key="@team.Id">
+        <EnchantedCoder.Blazor.Components.Web.Bootstrap.HxAccordionItem Id="@team.Id.ToString()" @key="@team.Id">
             <HeaderTemplate>
                 <div>@team.Name</div>
             </HeaderTemplate>
             <BodyTemplate>
-                <Havit.Blazor.Components.Web.Bootstrap.HxProgressIndicator>
-                    <Havit.Blazor.Components.Web.Bootstrap.HxListGroup>
+                <EnchantedCoder.Blazor.Components.Web.Bootstrap.HxProgressIndicator>
+                    <EnchantedCoder.Blazor.Components.Web.Bootstrap.HxListGroup>
                         @foreach (var player in team.Players)
                         {
                             <div @key="player" class="row">
@@ -21,12 +21,12 @@
                                 <div class="col-sm">Jersey# <p>@player.Jersey</p></div>
                             </div>
                         }
-                    </Havit.Blazor.Components.Web.Bootstrap.HxListGroup>
-                </Havit.Blazor.Components.Web.Bootstrap.HxProgressIndicator>
+                    </EnchantedCoder.Blazor.Components.Web.Bootstrap.HxListGroup>
+                </EnchantedCoder.Blazor.Components.Web.Bootstrap.HxProgressIndicator>
             </BodyTemplate>
-        </Havit.Blazor.Components.Web.Bootstrap.HxAccordionItem>
+        </EnchantedCoder.Blazor.Components.Web.Bootstrap.HxAccordionItem>
     }
-</Havit.Blazor.Components.Web.Bootstrap.HxAccordion>
+</EnchantedCoder.Blazor.Components.Web.Bootstrap.HxAccordion>
 
 ExpandedItemId: @expandedItemId
 

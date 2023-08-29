@@ -1,15 +1,15 @@
 <Project>
 
 	<PropertyGroup>
-		<Company>HAVIT, s.r.o.</Company>
-		<Copyright>Copyright HAVIT, s.r.o.</Copyright>
+		<Company>EnchantedCoder, s.r.o.</Company>
+		<Copyright>Copyright EnchantedCoder, s.r.o.</Copyright>
 		<VersionPrefix>2.0.0</VersionPrefix>
 		<AssemblyVersion>2.0.0.0</AssemblyVersion>
-		<Product>HAVIT Blazor Library</Product>
-		<AssemblyTitle>HAVIT Blazor Library</AssemblyTitle>
+		<Product>EnchantedCoder Blazor Library</Product>
+		<AssemblyTitle>EnchantedCoder Blazor Library</AssemblyTitle>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 		<LangVersion>latest</LangVersion>
-		
+
 		<!-- aligned NuGet PackageVersion for package-bundles -->
 		<ComponentsPackagesVersion>4.1.1</ComponentsPackagesVersion>
 		<GrpcPackagesVersion>1.4.2</GrpcPackagesVersion>

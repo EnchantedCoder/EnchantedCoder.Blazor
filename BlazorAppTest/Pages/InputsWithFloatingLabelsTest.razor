@@ -1,8 +1,8 @@
-﻿@page "/InputsWithFloatingLabelsTest"
+@page "/InputsWithFloatingLabelsTest"
 
 @using System.Globalization;
 @using System.ComponentModel.DataAnnotations
-@using Havit
+@using EnchantedCoder
 
 <h1>Inputs</h1>
 
@@ -30,12 +30,12 @@
 
 			<HxInputNumber LabelType="LabelType.Floating" Label="Integer" @bind-Value="@context.IntegerValue" ParsingErrorMessage="Enter correct Integer." />
 			<HxInputNumber LabelType="LabelType.Floating" Label="Integer (nullable)" @bind-Value="@context.NullableIntegerValue" ParsingErrorMessage="Enter correct Integer." />
-			
+
 			<HxInputNumber LabelType="LabelType.Floating" Label="Decimal" @bind-Value="@context.DecimalValue" ParsingErrorMessage="Enter correct Decimal." />
 			<HxInputNumber LabelType="LabelType.Floating" Label="Decimal (nullable)" @bind-Value="@context.NullableDecimalValue" ParsingErrorMessage="Enter correct Decimal." />
-            
+
 			<HxInputPercent LabelType="LabelType.Floating" Label="Percent" @bind-Value="@context.PercentValue" ParsingErrorMessage="Enter correct Percent." InputGroupEndText="" />
-			
+
 			<HxInputDate LabelType="LabelType.Floating" Label="Date" @bind-Value="@context.DateValue" ParsingErrorMessage="Enter correct Date." />
 			<HxInputDate LabelType="LabelType.Floating" Label="Date (nullable)" @bind-Value="@context.NullableDateValue" ParsingErrorMessage="Enter correct Date." InputGroupEndTemplate="null" />
 
@@ -83,7 +83,7 @@
 	private ChipItem[] chips;
 	private DateTime? lastCapturedClick = null;
 	private List<CultureInfo> cultureInfos = new List<CultureInfo> { CultureInfo.GetCultureInfo("cs-CZ"), CultureInfo.GetCultureInfo("en-US"), CultureInfo.GetCultureInfo("sk-SK"), CultureInfo.GetCultureInfo("es-ES") };
-    
+
     private List<string> values = new List<string>() { "Blazor", "C#", "ASP.NET" };
 
 	private async Task<InputTagsDataProviderResult> GetNewItemSuggestions(InputTagsDataProviderRequest request)
@@ -191,7 +191,7 @@
 		public decimal? NullableDecimalValue { get; set; }
 
         public float PercentValue { get; set; }
-        
+
         public string SearchBoxValue { get; set; }
 
 		public DateTime DateValue { get; set; } = DateTime.Today;

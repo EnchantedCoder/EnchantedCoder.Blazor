@@ -9,8 +9,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorAppTest\BlazorAppTest.csproj" />
-    <ProjectReference Include="..\Havit.Blazor.Components.Web.Bootstrap\Havit.Blazor.Components.Web.Bootstrap.csproj" />
-    <ProjectReference Include="..\Havit.Blazor.Components.Web\Havit.Blazor.Components.Web.csproj" />
+    <ProjectReference Include="..\EnchantedCoder.Blazor.Components.Web.Bootstrap\EnchantedCoder.Blazor.Components.Web.Bootstrap.csproj" />
+    <ProjectReference Include="..\EnchantedCoder.Blazor.Components.Web\EnchantedCoder.Blazor.Components.Web.csproj" />
   </ItemGroup>
 
 </Project>

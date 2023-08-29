@@ -1,7 +1,7 @@
   @page "/HxMultiSelectIssue449Test"
 @using System.Globalization;
-@using Havit
-  
+@using EnchantedCoder
+
   <div style="border:1px solid blue">
      <HxGrid TItem="string" DataProvider="GetGridData" PageSize="10">
          <Columns>
@@ -13,7 +13,7 @@
                                     @bind-Value="@selectedPersonsInitials"
                                     TextSelector="@(p => p.Name)"
                                     ValueSelector="@(p => p.Initials)" />
- 
+
                  </ItemTemplate>
              </HxGridColumn>
              <HxGridColumn HeaderText="HxSelect">
@@ -33,11 +33,11 @@
  @code {
      private string selectedInitials;
      private List<Person> people;
-     private List<string> selectedPersonsInitials { get; set; } = new();     
+     private List<string> selectedPersonsInitials { get; set; } = new();
      protected override async Task OnInitializedAsync()
      {
          await Task.Delay(1000); // simulates slow server API call
- 
+
          people = new List<Person>
          {
              new Person("Starr Ringo", "RS"),
@@ -46,10 +46,10 @@
              new Person("Harrison George", "GH")
          };
      }
- 
-     private record Person(string Name, string Initials);     
+
+     private record Person(string Name, string Initials);
      private Task<GridDataProviderResult<string>> GetGridData(GridDataProviderRequest<string> request)
-     {     
+     {
          return Task.FromResult(new GridDataProviderResult<string>
              {
                  Data = new[] { "JL" },

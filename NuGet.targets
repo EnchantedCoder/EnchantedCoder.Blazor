@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Authors>HAVIT</Authors>
+		<Authors>EnchantedCoder</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>logo.png</PackageIcon>
 	</PropertyGroup>
@@ -33,7 +33,7 @@
 	</PropertyGroup>
 	<!-- /Publish NuGet -->
 
-	<Target Name="HavitCheckPackageIsNotEmpty" BeforeTargets="GenerateNuspec" AfterTargets="_CalculateInputsOutputsForPack" Condition=" $(GeneratePackageOnBuild) == 'true' ">
+	<Target Name="EnchantedCoderCheckPackageIsNotEmpty" BeforeTargets="GenerateNuspec" AfterTargets="_CalculateInputsOutputsForPack" Condition=" $(GeneratePackageOnBuild) == 'true' ">
 		<!-- _BuildOutputInPackage - výstup buildu -->
 		<!-- _PackageFiles - content -->
 		<!-- Nereflektujeme zde _PackageFilesToExclude. -->

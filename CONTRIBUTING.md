@@ -1,5 +1,5 @@
 ﻿# Information and Guidelines for Contributors
-Thank you for contributing to HAVIT Blazor and making it even better. We are happy about every contribution! Issues, fixes, enahncements, new components...
+Thank you for contributing to EnchantedCoder Blazor and making it even better. We are happy about every contribution! Issues, fixes, enahncements, new components...
 
 ## Coding Standards
 * Align with [official C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
@@ -11,7 +11,7 @@ Thank you for contributing to HAVIT Blazor and making it even better. We are hap
 * Follow existing [Blazor](https://github.com/dotnet/aspnetcore/tree/main/src/Components) naming whenever possible.
 * Prefix all event parameters with `On`, e.g. `OnClosed`, `OnShown`, `OnFileUploaded` (except `XyChanged` callbacks).
 * Suffix all `RenderFragment`-parameters with `Template` (except very specific cases such as `HxGrid.Columns`), e.g. `HeaderTemplate`,  `ItemTemplate`, `FooterTemplate`.
-* Suffix all `Func`-parameters returning a projection with `Selector`, e.g. `TextSelector`,  `CssClassSelector`, `ValueSelector`. See [`HxSelect`](https://havit.blazor.eu/components/HxSelect) for samples.
+* Suffix all `Func`-parameters returning a projection with `Selector`, e.g. `TextSelector`,  `CssClassSelector`, `ValueSelector`. See [`HxSelect`](https://EnchantedCoder.blazor.eu/components/HxSelect) for samples.
 
 ## Design Guidelines
 * Prefer ease of user over complex functionality.

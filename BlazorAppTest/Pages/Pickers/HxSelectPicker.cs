@@ -1,5 +1,5 @@
 ﻿using System.Globalization;
-using Havit.Blazor.Components.Web.Bootstrap;
+using EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 namespace BlazorAppTest.Pages.Pickers;
 

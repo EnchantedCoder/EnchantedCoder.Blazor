@@ -1,0 +1,10 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+<li class="@this.ContainerCssClass">
+    <span class="@CssClassHelper.Combine("dropdown-item", CascadeEnabledComponent.EnabledEffective(this) ? null : "disabled", this.CssClass)"
+          @onclick="InvokeOnClickAsync"
+          @onclick:stopPropagation="true"
+          role="button"
+          @attributes="AdditionalAttributes">
+        @ChildContent
+    </span>
+</li>

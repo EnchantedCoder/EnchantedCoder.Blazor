@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
+		<PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+		<PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\EnchantedCoder.Blazor.Grpc.Client\EnchantedCoder.Blazor.Grpc.Client.csproj" />
+		<ProjectReference Include="..\EnchantedCoder.Blazor.Grpc.TestContracts\EnchantedCoder.Blazor.Grpc.TestContracts.csproj" />
+	</ItemGroup>
+
+</Project>

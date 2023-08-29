@@ -1,0 +1,12 @@
+﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
+
+/// <summary>
+/// Switch input.<br/>
+/// (Replaces the former <c>HxInputSwitch</c> component which was dropped in v4.0.0.)<br/>
+/// Full documentation and demos: <see href="https://EnchantedCoder.blazor.eu/components/HxSwitch">https://EnchantedCoder.blazor.eu/components/HxSwitch</see>
+/// </summary>
+public class HxSwitch : HxCheckbox
+{
+	/// <inheritdoc cref="HxCheckbox.CoreFormElementCssClass" />
+	private protected override string CoreFormElementCssClass => "form-check form-switch";
+}

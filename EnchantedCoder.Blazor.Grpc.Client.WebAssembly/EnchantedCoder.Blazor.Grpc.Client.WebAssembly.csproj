@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+	  <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<!-- NuGet -->
+	<Import Project="../NuGet.targets" />
+	<PropertyGroup>
+		<!-- GrpcPackagesVersion - variable from Directory.Build.props -->
+		<PackageVersion>$(GrpcPackagesVersion)</PackageVersion>
+		<Description>EnchantedCoder Blazor stack - gRPC Support - client-side - WebAssembly specific features</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/EnchantedCoder/EnchantedCoder.Blazor</PackageProjectUrl>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="EnchantedCoder.Core" Version="2.0.27" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="7.0.9" Condition="'$(TargetFramework)' == 'net7.0'" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.20" Condition="'$(TargetFramework)' == 'net6.0'" />
+		<PackageReference Include="protobuf-net" Version="3.2.26" />
+		<PackageReference Include="protobuf-net.Grpc" Version="1.1.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\EnchantedCoder.Blazor.Grpc.Client\EnchantedCoder.Blazor.Grpc.Client.csproj" />
+	</ItemGroup>
+
+</Project>
