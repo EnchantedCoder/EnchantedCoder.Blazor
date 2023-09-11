@@ -11,13 +11,13 @@ public enum LabelValueRenderOrder
 	LabelValue,
 
 	/// <summary>
-	/// Render value/input first, then label (ie. former HxInputCheckbox).
+	/// Render value/input first, then label (ie. former EcInputCheckbox).
 	/// Obsolete, should not be needed any more.
 	/// </summary>
 	ValueLabel,
 
 	/// <summary>
-	/// Render value/input only. Label is not rendered (ie. <see cref="HxAutosuggest{TItem, TValue}" /> with floating label which renders label internally).
+	/// Render value/input only. Label is not rendered (ie. <see cref="EcAutosuggest{TItem, TValue}" /> with floating label which renders label internally).
 	/// </summary>
 	ValueOnly
 }

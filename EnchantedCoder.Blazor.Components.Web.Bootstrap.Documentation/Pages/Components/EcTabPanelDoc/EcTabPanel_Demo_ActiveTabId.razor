@@ -1,0 +1,16 @@
+﻿<EcTabPanel @bind-ActiveTabId="activeTabId">
+	<EcTab Title="First tab">
+		<Content>This is the first tab.</Content>
+	</EcTab>
+	<EcTab Id="tab2" Title="Second tab">
+		<Content>This is the second tab.</Content>
+	</EcTab>
+</EcTabPanel>
+
+activeTabId: @activeTabId
+
+<EcButton Text="Set second tab active" Enabled="@(activeTabId != "tab2")" OnClick="@(() => activeTabId = "tab2")" Color="ThemeColor.Primary" />
+
+@code{
+	private string activeTabId;
+}

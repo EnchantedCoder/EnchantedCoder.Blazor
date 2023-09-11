@@ -1,0 +1,19 @@
+﻿@attribute [Route("/components/" + nameof(EcMessenger))]
+
+<ComponentApiDoc Type="typeof(EcMessenger)">
+
+	<p>Component is using <code>@nameof(IEcMessengerService)</code> injected service.</p>
+	<p>Informational messages are automatically hidden after 5 seconds, warning and error messages remain visible till manually closed.</p>
+
+	<DocHeading Title="Basic usage" />
+	<Demo Type="typeof(EcMessenger_Demo)" />
+
+	<p>You should place the <code>@nameof(EcMessenger)</code> component itself to the layout component (<code>MainLayout.razor</code>) to make it work!</p>
+	<CodeSnippet File="~\Pages\Components\EcMessengerDoc\EcMessenger_HostDeployment.CodeSnippet.razor" />
+
+	<p>Call <code>services.AddEcMessenger()</code> in <code>Startup.cs</code> to setup related services.</p>
+	<CodeSnippet File="~\Pages\Components\EcMessengerDoc\EcMessenger_RegisterService.CodeSnippet.cs" />
+
+    <DocHeading Title="Clearing messages" />
+	<p>Use <code>messenger.Clear()</code> method (<code>IEcMessengerService</code>) if you want all messages to disappear immediately.</p>
+</ComponentApiDoc>

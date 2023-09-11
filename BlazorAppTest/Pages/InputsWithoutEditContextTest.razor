@@ -4,18 +4,18 @@
 
 <h1>Inputs without EditContext</h1>
 
-<HxInputText Label="Text" @bind-Value="@text" />
+<EcInputText Label="Text" @bind-Value="@text" />
 
-<HxInputNumber Label="Integer (nullable)" @bind-Value="@nullableIntegerValue" ParsingErrorMessage="Enter correct Integer." />
+<EcInputNumber Label="Integer (nullable)" @bind-Value="@nullableIntegerValue" ParsingErrorMessage="Enter correct Integer." />
 
-<HxInputNumber Label="Decimal" @bind-Value="@decimalValue" ParsingErrorMessage="Enter correct Decimal." />
-<HxInputDate Label="Date" @bind-Value="@dateValue" ParsingErrorMessage="Enter correct Date." />
-<HxInputDateRange Label="DateRange" @bind-Value="@dateRangeValue" FromParsingErrorMessage="Enter correct date from." ToParsingErrorMessage="Enter correct date to." />
+<EcInputNumber Label="Decimal" @bind-Value="@decimalValue" ParsingErrorMessage="Enter correct Decimal." />
+<EcInputDate Label="Date" @bind-Value="@dateValue" ParsingErrorMessage="Enter correct Date." />
+<EcInputDateRange Label="DateRange" @bind-Value="@dateRangeValue" FromParsingErrorMessage="Enter correct date from." ToParsingErrorMessage="Enter correct date to." />
 
-<HxCheckbox Text="Checkbox" @bind-Value="@boolValue" />
-<HxCheckbox Text="Checkbox" CssClass="form-switch" @bind-Value="@boolValue" />
+<EcCheckbox Text="Checkbox" @bind-Value="@boolValue" />
+<EcCheckbox Text="Checkbox" CssClass="form-switch" @bind-Value="@boolValue" />
 
-<HxSubmit Icon="@BootstrapIcon.Check" Color="ThemeColor.Primary">Submit</HxSubmit>
+<EcSubmit Icon="@BootstrapIcon.Check" Color="ThemeColor.Primary">Submit</EcSubmit>
 
 @code
 {

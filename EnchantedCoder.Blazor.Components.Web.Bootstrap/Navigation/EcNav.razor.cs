@@ -1,0 +1,68 @@
+﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
+
+/// <summary>
+/// <see href="https://getbootstrap.com/docs/5.3/components/navs-tabs/">Bootstrap Nav</see> component.<br />
+/// Full documentation and demos: <see href="https://EnchantedCoder.blazor.eu/components/EcNav">https://EnchantedCoder.blazor.eu/components/EcNav</see>
+/// </summary>
+public partial class EcNav
+{
+	/// <summary>
+	/// Orientation of the nav.
+	/// Default is <see cref="NavOrientation.Horizontal"/>.
+	/// </summary>
+	[Parameter] public NavOrientation Orientation { get; set; } = NavOrientation.Horizontal;
+
+	/// <summary>
+	/// The visual variant of the nav items.
+	/// Default is <see cref="NavVariant.Standard"/>.
+	/// </summary>
+	[Parameter] public NavVariant Variant { get; set; } = NavVariant.Standard;
+
+	/// <summary>
+	/// ID of the nav which can be used for <see cref="EcScrollspy.TargetId"/>.
+	/// </summary>
+	[Parameter] public string Id { get; set; } = "ec-" + Guid.NewGuid().ToString("N");
+
+	/// <summary>
+	/// Additional CSS class.
+	/// </summary>
+	[Parameter] public string CssClass { get; set; }
+
+	/// <summary>
+	/// Content of the nav.
+	/// </summary>
+	[Parameter] public RenderFragment ChildContent { get; set; }
+
+	[CascadingParameter] protected EcNavbar NavbarContainer { get; set; }
+
+	protected virtual string GetCoreCssClass()
+	{
+		if (NavbarContainer is not null)
+		{
+			return "navbar-nav";
+		}
+		return "nav";
+	}
+
+	protected virtual string GetOrientationCssClass()
+	{
+		return this.Orientation switch
+		{
+			NavOrientation.Horizontal => null,
+			NavOrientation.Vertical => "flex-column",
+			_ => throw new InvalidOperationException($"Unknown {nameof(NavOrientation)} value {this.Orientation}.")
+		};
+	}
+
+	protected virtual string GetVariantCssClass()
+	{
+		return this.Variant switch
+		{
+			NavVariant.Standard => null,
+			NavVariant.Pills => "nav-pills",
+			NavVariant.Tabs => "nav-tabs",
+			NavVariant.Underline => "nav-underline",
+			_ => throw new InvalidOperationException($"Unknown {nameof(NavVariant)} value {this.Variant}.")
+		};
+	}
+}

@@ -1,0 +1,24 @@
+﻿@attribute [Route("/components/" + nameof(EcListLayout))]
+
+<ComponentApiDoc Type="typeof(EcListLayout<TModel>)">
+    <MainContent>
+        <DocHeading Title="Basic usage" />
+        <Demo Type="typeof(EcListLayout_Demo_Title)" />
+
+        <DocHeading Title="Title template" />
+        <Demo Type="typeof(EcListLayout_Demo_TitleTemplate)" />
+
+        <DocHeading Title="Search" />
+        <Demo Type="typeof(EcListLayout_Demo_SearchTemplate)" />
+
+        <DocHeading Title="Named views" />
+        <Demo Type="typeof(EcListLayout_Demo)" />
+
+    </MainContent>
+    <CssVariables>
+        <ComponentApiDocCssVariable Name="--ec-list-layout-table-font-size" Default=".875rem">
+            Table font size.
+        </ComponentApiDocCssVariable>
+    </CssVariables>
+
+</ComponentApiDoc>

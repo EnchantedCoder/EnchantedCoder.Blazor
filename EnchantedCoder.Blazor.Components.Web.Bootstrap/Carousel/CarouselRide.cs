@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Behavior of the <see cref="HxCarousel"/>.
+/// Behavior of the <see cref="EcCarousel"/>.
 /// </summary>
 public enum CarouselRide
 {

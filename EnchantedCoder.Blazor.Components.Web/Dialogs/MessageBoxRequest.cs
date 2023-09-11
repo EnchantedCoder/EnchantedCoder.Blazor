@@ -43,7 +43,7 @@ public struct MessageBoxRequest
 	public string CustomButtonText { get; set; }
 
 	/// <summary>
-	/// Additional attributes to be splatted onto an underlying UI component (Bootstrap: HxMessageBox -> HxModal).
+	/// Additional attributes to be splatted onto an underlying UI component (Bootstrap: EcMessageBox -> EcModal).
 	/// </summary>
 	public Dictionary<string, object> AdditionalAttributes { get; set; }
 }

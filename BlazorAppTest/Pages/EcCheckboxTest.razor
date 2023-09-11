@@ -1,0 +1,42 @@
+﻿@page "/EcCheckboxTest"
+@using System.Globalization;
+@using System.ComponentModel.DataAnnotations
+@using EnchantedCoder
+
+<h1>EcCheckbox</h1>
+
+<EcCheckbox Text="Value 1" @bind-Value="@model.Value1" Inline="true" />
+<EcCheckbox Text="Value 2" @bind-Value="@model.Value2" Inline="true" />
+
+<EditForm @bind-Model="@model">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <EcCheckbox Text="Value 1" @bind-Value="@model.Value1" Inline="true" />
+    <EcCheckbox Text="Value 2" @bind-Value="@model.Value2" Inline="true" />
+
+    <EcCheckbox Label="CheckBox 1" Text="Value 1" @bind-Value="@model.Value1" />
+    <EcCheckbox Label="CheckBox 2" Text="Value 2" @bind-Value="@model.Value2" />
+
+    <EcSubmit Icon="@BootstrapIcon.Check" Color="ThemeColor.Primary">Submit</EcSubmit>
+</EditForm>
+
+@code
+{
+    private FormModel model = new FormModel();
+
+    public class FormModel : IValidatableObject
+    {
+        public bool Value1 { get; set; }
+
+        public bool Value2 { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (Value1 && !Value2)
+            {
+                yield return new ValidationResult("When Value1 is true, Value2 must be also true.", new string[] { nameof(Value2) });
+            }
+        }
+    }
+}

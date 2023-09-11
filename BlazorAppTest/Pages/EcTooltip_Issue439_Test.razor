@@ -1,0 +1,19 @@
+﻿@page "/EcTooltip_Issue439_Test"
+
+<h4>#439 [EcButton/EcTooltip] Tooltip stays on screen when its text is changed in async handler method of EcButton.OnClick</h4>
+
+<EcButton Text="EcButton with Tooltip" OnClick="HandleChangeTooltipButtonClick" Color="ThemeColor.Light" Tooltip="@tooltipText" Spinner="false" />
+
+<EcTooltip Text="@tooltipText">
+	<EcButton Text="EcTooltip-wrapped EcButton" OnClick="HandleChangeTooltipButtonClick" Color="ThemeColor.Light" Spinner="false" />
+</EcTooltip>
+
+@code {
+	private string tooltipText = "Fizz";
+
+	private async Task HandleChangeTooltipButtonClick()
+	{
+		await Task.Delay(2000);
+		tooltipText = (tooltipText == "Fizz" ? "Buzz" : "Fizz");
+	}
+}

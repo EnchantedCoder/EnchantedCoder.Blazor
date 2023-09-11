@@ -5,10 +5,10 @@ namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 public static class GridDataProviderRequestExtensions
 {
 	/// <summary>
-	/// Applies sorting &amp; paging from <see cref="HxGrid{TItem}.DataProvider"/>.
+	/// Applies sorting &amp; paging from <see cref="EcGrid{TItem}.DataProvider"/>.
 	/// </summary>
 	/// <param name="source">Data source to apply the request to.</param>
-	/// <param name="gridDataProviderRequest"><see cref="HxGrid{TItem}.DataProvider"/> request</param>
+	/// <param name="gridDataProviderRequest"><see cref="EcGrid{TItem}.DataProvider"/> request</param>
 	public static IQueryable<TItem> ApplyGridDataProviderRequest<TItem>(this IQueryable<TItem> source, GridDataProviderRequest<TItem> gridDataProviderRequest)
 	{
 		gridDataProviderRequest.CancellationToken.ThrowIfCancellationRequested();

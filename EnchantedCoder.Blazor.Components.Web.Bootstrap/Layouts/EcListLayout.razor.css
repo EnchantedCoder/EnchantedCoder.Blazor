@@ -1,0 +1,63 @@
+	 ::deep .ec-grid {
+    border-top: 1px solid var(--bs-table-border-color);
+}
+
+.ec-list-layout-header ::deep button {
+    white-space: nowrap;
+}
+
+.ec-list-layout-header-dropdown {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.ec-list-layout-dropdown-menu-link {
+    display: flex;
+    align-items: center;
+}
+
+::deep .ec-grid {
+    --ec-context-menu-button-border-radius: .25rem;
+    margin-bottom: 0;
+    font-size: var(--ec-list-layout-table-font-size);
+}
+
+::deep .ec-grid td:first-child,
+::deep .ec-grid th:first-child {
+    padding-left: 1rem;
+}
+
+::deep .ec-grid td:last-child,
+::deep .ec-grid th:last-child {
+    padding-right: 1rem;
+}
+
+.ec-list-layout:not(:has(.ec-pager)) ::deep .ec-grid tr:last-child td:first-child {
+	border-bottom-left-radius: var(--bs-card-inner-border-radius);
+}
+
+.ec-list-layout:not(:has(.ec-pager)) ::deep .ec-grid tr:last-child td:last-child {
+	border-bottom-right-radius: var(--bs-card-inner-border-radius);
+}
+
+.ec-list-layout:not(:has(.ec-pager)) ::deep .ec-grid tr:last-child td {
+    border-bottom-width: 0;
+}
+
+::deep .ec-pager {
+	margin: 1rem;
+}
+
+.ec-list-layout-named-view .card-title {
+    display: flex;
+    align-items: center;
+}
+
+.ec-list-layout-named-view ::deep .ec-icon {
+    font-size: .75rem;
+}
+
+.ec-list-layout-header .card-title {
+    margin-bottom: 0;
+}

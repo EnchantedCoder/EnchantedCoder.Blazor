@@ -1,0 +1,15 @@
+﻿<EcButton OnClick="() => myModal.ShowAsync()" Color="ThemeColor.Primary">Vertically centered modal</EcButton>
+
+<EcModal @ref="myModal" Title="Modal title" Centered="true">
+	<BodyTemplate>
+		This is a vertically centered modal.
+	</BodyTemplate>
+	<FooterTemplate>
+		<EcButton Text="Close" OnClick="() => myModal.HideAsync()" Color="ThemeColor.Primary" />
+	</FooterTemplate>
+</EcModal>
+
+@code
+{
+	private EcModal myModal;
+}

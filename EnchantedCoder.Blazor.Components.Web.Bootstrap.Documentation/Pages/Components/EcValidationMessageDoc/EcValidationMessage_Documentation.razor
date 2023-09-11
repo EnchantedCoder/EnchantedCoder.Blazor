@@ -1,0 +1,22 @@
+﻿@attribute [Route("/components/" + nameof(EcValidationMessage<TValue>))]
+
+<ComponentApiDoc Type="typeof(EcValidationMessage<TValue>)">
+    <p>You usualy don't use the <code>@nameof(EcValidationMessage<object>)</code> in your code directly. It is encapsulated in <code>EcInputXy</code> components.</p>
+
+    <DocHeading Title="Display modes" />
+    <p>
+        You can select display mode by setting the <code>Mode</code> parameter. It allows you to choose between <code>Regular</code>, <code>Tooltip</code>, <code>Floating</code> and <code>None</code>.
+    </p>
+    <DocAlert Type="DocAlertType.Info">
+        For <code>EcInputXy</code> components, the default <code>ValidationMessageMode</code> is <code>Floating</code>.
+        You can change application-wide default by setting <code>EcInputBase.Defaults.ValidationMessageMode</code> static property.
+    </DocAlert>
+    <Demo Type="typeof(EcValidationMessage_Demo_Mode)" />
+
+    <DocHeading Title="Custom validation message" />
+    <p>
+        You can disable the encapsulated validation message with <code>ValidationMessageMode="ValidationMessageMode.None"</code> and use
+        your own instance of <code>EcValidationMessage</code>.
+    </p>
+    <Demo Type="typeof(EcValidationMessage_Demo)" />
+</ComponentApiDoc>

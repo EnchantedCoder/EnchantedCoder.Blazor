@@ -1,0 +1,47 @@
+﻿<EcModal @ref="smModal" Fullscreen="ModalFullscreen.SmallDown" Title="Fullscreen bellow SM">
+	<BodyTemplate>
+		...
+	</BodyTemplate>
+</EcModal>
+<EcModal @ref="mdModal" Fullscreen="ModalFullscreen.MediumDown" Title="Fullscreen bellow MD">
+	<BodyTemplate>
+		...
+	</BodyTemplate>
+</EcModal>
+<EcModal @ref="lgModal" Fullscreen="ModalFullscreen.LargeDown" Title="Fullscreen bellow LG">
+	<BodyTemplate>
+		...
+	</BodyTemplate>
+</EcModal>
+<EcModal @ref="xlModal" Fullscreen="ModalFullscreen.ExtraLargeDown"  Title="Fullscreen bellow XL">
+	<BodyTemplate>
+		...
+	</BodyTemplate>
+</EcModal>
+<EcModal @ref="xxlModal" Fullscreen="ModalFullscreen.XxlDown" Title="Fullscreen bellow XXL">
+	<BodyTemplate>
+		...
+	</BodyTemplate>
+</EcModal>
+<EcModal @ref="xl2Modal" Fullscreen="ModalFullscreen.ExtraLargeDown" Size="ModalSize.Large" Title="Fullscreen bellow XL (otherwise L)">
+	<BodyTemplate>
+		...
+	</BodyTemplate>
+</EcModal>
+
+<EcButton OnClick="() => smModal.ShowAsync()" Color="ThemeColor.Primary" CssClass="me-1 mb-1">Fullscreen bellow SM</EcButton>
+<EcButton OnClick="() => mdModal.ShowAsync()" Color="ThemeColor.Primary" CssClass="me-1 mb-1">Fullscreen bellow MD</EcButton>
+<EcButton OnClick="() => lgModal.ShowAsync()" Color="ThemeColor.Primary" CssClass="me-1 mb-1">Fullscreen bellow LG</EcButton>
+<EcButton OnClick="() => xlModal.ShowAsync()" Color="ThemeColor.Primary" CssClass="me-1 mb-1">Fullscreen bellow XL</EcButton>
+<EcButton OnClick="() => xxlModal.ShowAsync()" Color="ThemeColor.Primary" CssClass="me-1 mb-1">Fullscreen bellow XXL</EcButton>
+<EcButton OnClick="() => xl2Modal.ShowAsync()" Color="ThemeColor.Primary" CssClass="me-1 mb-1">Fullscreen bellow XL (otherwise L)</EcButton>
+
+@code
+{
+	private EcModal smModal;
+	private EcModal mdModal;
+	private EcModal lgModal;
+	private EcModal xlModal;
+	private EcModal xxlModal;
+	private EcModal xl2Modal;
+}

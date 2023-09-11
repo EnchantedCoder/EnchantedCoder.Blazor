@@ -1,196 +1,196 @@
 @import url("bootstrap-icons.css");
 :root {
-	/* HxAutosuggest */
-	--hx-autosuggest-input-close-icon-opacity: 						.25;
-	--hx-autosuggest-item-highlighted-background-color: 			var(--bs-tertiary-bg);
-	--hx-autosuggest-dropdown-menu-height: 							300px;
-	--hx-autosuggest-dropdown-menu-width: 							100%;
+	/* EcAutosuggest */
+	--ec-autosuggest-input-close-icon-opacity: 						.25;
+	--ec-autosuggest-item-highlighted-background-color: 			var(--bs-tertiary-bg);
+	--ec-autosuggest-dropdown-menu-height: 							300px;
+	--ec-autosuggest-dropdown-menu-width: 							100%;
 
-	/* HxButton */
-	--hx-button-icon-text-spacer-width: 							0.25rem;
+	/* EcButton */
+	--ec-button-icon-text-spacer-width: 							0.25rem;
 
-	/* HxSidebar */
-	--hx-sidebar-background-color: 									transparent;
-	--hx-sidebar-collapsed-width: 									72px;
-	--hx-sidebar-width: 											250px;
-	--hx-sidebar-toggler-border: 									1px solid var(--bs-border-color);
-	--hx-sidebar-toggler-background: 								var(--bs-body-bg);
-	--hx-sidebar-toggler-color: 									var(--bs-body-color);
-	--hx-sidebar-item-font-size: 									1rem;
-	--hx-sidebar-item-padding: 										.75rem;
-	--hx-sidebar-item-color: 										var(--bs-body-color);
-	--hx-sidebar-item-hover-color: 									var(--bs-primary);
-	--hx-sidebar-item-hover-background-color: 						var(--bs-primary-rgb);
-	--hx-sidebar-item-hover-background-opacity: 					.05;
-	--hx-sidebar-item-hover-icon-color: 							var(--bs-primary);
-	--hx-sidebar-item-icon-color: 									var(--bs-primary);
-	--hx-sidebar-item-border-radius: 								var(--bs-border-radius-lg);
-	--hx-sidebar-item-margin: 										0 0 .25rem 0;
-	--hx-sidebar-subitem-font-size: 								.875rem;
-	--hx-sidebar-subitem-padding: 									.5rem;
-	--hx-sidebar-subitem-margin: 									0 0 .25rem 2rem;
-	--hx-sidebar-header-padding: 									1rem;
-	--hx-sidebar-body-padding: 										0 1rem;
-	--hx-sidebar-brand-logo-width: 									2.5rem;
-	--hx-sidebar-brand-logo-height: 								2.5rem;
-	--hx-sidebar-brand-shortname-width: 							2.5rem;
-	--hx-sidebar-brand-shortname-height: 							2.5rem;
-	--hx-sidebar-brand-shortname-background-color: 					var(--bs-primary);
-	--hx-sidebar-brand-shortname-border-radius: 					.625rem;
-	--hx-sidebar-brand-shortname-color: 							var(--bs-white);
-	--hx-sidebar-brand-shortname-font-weight: 						600;
-	--hx-sidebar-brand-name-color: 									var(--bs-body-color);
-	--hx-sidebar-brand-name-font-weight: 							600;
-	--hx-sidebar-footer-padding: 									1rem;
-	--hx-sidebar-footer-item-padding: 								.75rem;
-	--hx-sidebar-footer-item-margin: 								0;
-	--hx-sidebar-footer-item-font-size: 							1rem;
-	--hx-sidebar-footer-item-color: 								unset;
-	--hx-sidebar-footer-item-radius: 								unset;
-	--hx-sidebar-footer-item-hover-background-color: 				unset;
-	--hx-sidebar-footer-item-hover-background-opacity: 				unset;
-	--hx-sidebar-footer-item-hover-color: 							unset;
+	/* EcSidebar */
+	--ec-sidebar-background-color: 									transparent;
+	--ec-sidebar-collapsed-width: 									72px;
+	--ec-sidebar-width: 											250px;
+	--ec-sidebar-toggler-border: 									1px solid var(--bs-border-color);
+	--ec-sidebar-toggler-background: 								var(--bs-body-bg);
+	--ec-sidebar-toggler-color: 									var(--bs-body-color);
+	--ec-sidebar-item-font-size: 									1rem;
+	--ec-sidebar-item-padding: 										.75rem;
+	--ec-sidebar-item-color: 										var(--bs-body-color);
+	--ec-sidebar-item-hover-color: 									var(--bs-primary);
+	--ec-sidebar-item-hover-background-color: 						var(--bs-primary-rgb);
+	--ec-sidebar-item-hover-background-opacity: 					.05;
+	--ec-sidebar-item-hover-icon-color: 							var(--bs-primary);
+	--ec-sidebar-item-icon-color: 									var(--bs-primary);
+	--ec-sidebar-item-border-radius: 								var(--bs-border-radius-lg);
+	--ec-sidebar-item-margin: 										0 0 .25rem 0;
+	--ec-sidebar-subitem-font-size: 								.875rem;
+	--ec-sidebar-subitem-padding: 									.5rem;
+	--ec-sidebar-subitem-margin: 									0 0 .25rem 2rem;
+	--ec-sidebar-header-padding: 									1rem;
+	--ec-sidebar-body-padding: 										0 1rem;
+	--ec-sidebar-brand-logo-width: 									2.5rem;
+	--ec-sidebar-brand-logo-height: 								2.5rem;
+	--ec-sidebar-brand-shortname-width: 							2.5rem;
+	--ec-sidebar-brand-shortname-height: 							2.5rem;
+	--ec-sidebar-brand-shortname-background-color: 					var(--bs-primary);
+	--ec-sidebar-brand-shortname-border-radius: 					.625rem;
+	--ec-sidebar-brand-shortname-color: 							var(--bs-white);
+	--ec-sidebar-brand-shortname-font-weight: 						600;
+	--ec-sidebar-brand-name-color: 									var(--bs-body-color);
+	--ec-sidebar-brand-name-font-weight: 							600;
+	--ec-sidebar-footer-padding: 									1rem;
+	--ec-sidebar-footer-item-padding: 								.75rem;
+	--ec-sidebar-footer-item-margin: 								0;
+	--ec-sidebar-footer-item-font-size: 							1rem;
+	--ec-sidebar-footer-item-color: 								unset;
+	--ec-sidebar-footer-item-radius: 								unset;
+	--ec-sidebar-footer-item-hover-background-color: 				unset;
+	--ec-sidebar-footer-item-hover-background-opacity: 				unset;
+	--ec-sidebar-footer-item-hover-color: 							unset;
 
-	/* HxProgressOverlay */
-	--hx-progress-overlay-color: 									var(--bs-white);
-	--hx-progress-overlay-opacity: 									.65;
+	/* EcProgressOverlay */
+	--ec-progress-overlay-color: 									var(--bs-white);
+	--ec-progress-overlay-opacity: 									.65;
 
-	/* HxEditForm */
-	--hx-form-spacing: 1.25rem;
+	/* EcEditForm */
+	--ec-form-spacing: 1.25rem;
 
-	/* HxChipList */
-	--hx-chip-list-chip-margin:							0.75rem 0.25rem .375rem 0;
-	--hx-chip-list-chip-remove-btn-margin: 				0 0 0 .25rem;
-	--hx-chip-list-chip-remove-btn-opacity: 				.75;
-	--hx-chip-list-chip-reset-btn-padding: 				.35em .65em;
-	--hx-chip-list-chip-label-font-weight: 				400;
-	--hx-chip-list-chip-label-margin: 					.25rem;
-	--hx-chip-list-chip-label-opacity: 					.75;
-    --hx-chip-list-gap:									.25rem;
-	/* HxContextMenu */
-	--hx-context-menu-button-color: 								unset;
-	--hx-context-menu-button-border: 								unset;
-	--hx-context-menu-button-border-radius: 						var(--bs-border-radius-sm);
-	--hx-context-menu-button-padding: 								0 .25rem;
-	--hx-context-menu-button-hover-background: 						var(--bs-secondary-bg);
-	--hx-context-menu-item-icon-margin: 							0 .5rem 0 0;
+	/* EcChipList */
+	--ec-chip-list-chip-margin:							0.75rem 0.25rem .375rem 0;
+	--ec-chip-list-chip-remove-btn-margin: 				0 0 0 .25rem;
+	--ec-chip-list-chip-remove-btn-opacity: 				.75;
+	--ec-chip-list-chip-reset-btn-padding: 				.35em .65em;
+	--ec-chip-list-chip-label-font-weight: 				400;
+	--ec-chip-list-chip-label-margin: 					.25rem;
+	--ec-chip-list-chip-label-opacity: 					.75;
+    --ec-chip-list-gap:									.25rem;
+	/* EcContextMenu */
+	--ec-context-menu-button-color: 								unset;
+	--ec-context-menu-button-border: 								unset;
+	--ec-context-menu-button-border-radius: 						var(--bs-border-radius-sm);
+	--ec-context-menu-button-padding: 								0 .25rem;
+	--ec-context-menu-button-hover-background: 						var(--bs-secondary-bg);
+	--ec-context-menu-item-icon-margin: 							0 .5rem 0 0;
 
-	/* HxGrid */
-	--hx-grid-button-hover-background: 								var(--bs-secondary-bg);
-	--hx-grid-button-border-radius: 								var(--bs-border-radius);
-	--hx-grid-sorted-icon-color: 									var(--bs-primary);
+	/* EcGrid */
+	--ec-grid-button-hover-background: 								var(--bs-secondary-bg);
+	--ec-grid-button-border-radius: 								var(--bs-border-radius);
+	--ec-grid-sorted-icon-color: 									var(--bs-primary);
 
-	/* HxInputFileDropZone */
-	--hx-input-file-drop-zone-border-width: 						1px;
-	--hx-input-file-drop-zone-box-shadow: 							none;
-	--hx-input-file-drop-zone-hover-box-shadow: 					0 0 0 .25rem rgba(var(--bs-primary-rgb), .25);
-	--hx-input-file-drop-zone-border-color: 						var(--bs-border-color);
-	--hx-input-file-drop-zone-disabled-color: 						var(--bs-secondary-color);
-	--hx-input-file-drop-zone-disabled-background-color: 			var(--bs-secondary-bg);
-	--hx-input-file-drop-zone-background-color: 					transparent;
-	--hx-input-file-drop-zone-hover-background-color: 				rgba(var(--bs-primary-rgb), .05);
-	--hx-input-file-drop-zone-hover-border-color: 					var(--bs-primary);
-	--hx-input-file-drop-zone-border-radius: 						var(--bs-border-radius-lg);
-	--hx-input-file-drop-zone-margin: 								0;
-	--hx-input-file-drop-zone-padding: 								3rem;
+	/* EcInputFileDropZone */
+	--ec-input-file-drop-zone-border-width: 						1px;
+	--ec-input-file-drop-zone-box-shadow: 							none;
+	--ec-input-file-drop-zone-hover-box-shadow: 					0 0 0 .25rem rgba(var(--bs-primary-rgb), .25);
+	--ec-input-file-drop-zone-border-color: 						var(--bs-border-color);
+	--ec-input-file-drop-zone-disabled-color: 						var(--bs-secondary-color);
+	--ec-input-file-drop-zone-disabled-background-color: 			var(--bs-secondary-bg);
+	--ec-input-file-drop-zone-background-color: 					transparent;
+	--ec-input-file-drop-zone-hover-background-color: 				rgba(var(--bs-primary-rgb), .05);
+	--ec-input-file-drop-zone-hover-border-color: 					var(--bs-primary);
+	--ec-input-file-drop-zone-border-radius: 						var(--bs-border-radius-lg);
+	--ec-input-file-drop-zone-margin: 								0;
+	--ec-input-file-drop-zone-padding: 								3rem;
 
-	/* HxCalendar */
-	--hx-calendar-day-hover-background: 							var(--bs-tertiary-bg);
-	--hx-calendar-day-hover-border: 								none;
-	--hx-calendar-day-selected-background: 							var(--bs-primary);
-	--hx-calendar-day-selected-color: 								var(--bs-white);
-	--hx-calendar-day-selected-border: 								none;
-	--hx-calendar-day-out-color: 									var(--bs-tertiary-color);
-	--hx-calendar-day-in-color: 									unset;
-	--hx-calendar-day-disabled-opacity: 							.5;
-	--hx-calendar-day-disabled-text-decoration: 					line-through;
-	--hx-calendar-day-names-color: 									unset;
-	--hx-calendar-day-names-font-weight: 							700;
-	--hx-calendar-navigation-button-hover-background: 				var(--bs-tertiary-bg);
-	--hx-calendar-navigation-button-focus-box-shadow: 				0 0 0 0.25rem rgb(0 157 224 / 25%);
-	--hx-calendar-navigation-button-text-color: 					var(--bs-tertiary-color);
-	--hx-calendar-day-today-border: 								none;
-	--hx-calendar-day-today-background: 							var(--bs-primary-rgb);
-	--hx-calendar-day-today-background-opacity: 					.05;
-	--hx-calendar-day-today-color: 									var(--bs-primary);
-	--hx-calendar-day-border-radius: 								var(--bs-border-radius-sm);
-	--hx-calendar-day-padding: 										.375rem .5rem;
-	--hx-calendar-day-width: 										2.25rem;
-	--hx-calendar-day-height: 										2.25rem;
-	--hx-calendar-day-spacing: 										.125rem;
-	--hx-calendar-font-size: 										.875rem;
+	/* EcCalendar */
+	--ec-calendar-day-hover-background: 							var(--bs-tertiary-bg);
+	--ec-calendar-day-hover-border: 								none;
+	--ec-calendar-day-selected-background: 							var(--bs-primary);
+	--ec-calendar-day-selected-color: 								var(--bs-white);
+	--ec-calendar-day-selected-border: 								none;
+	--ec-calendar-day-out-color: 									var(--bs-tertiary-color);
+	--ec-calendar-day-in-color: 									unset;
+	--ec-calendar-day-disabled-opacity: 							.5;
+	--ec-calendar-day-disabled-text-decoration: 					line-through;
+	--ec-calendar-day-names-color: 									unset;
+	--ec-calendar-day-names-font-weight: 							700;
+	--ec-calendar-navigation-button-hover-background: 				var(--bs-tertiary-bg);
+	--ec-calendar-navigation-button-focus-box-shadow: 				0 0 0 0.25rem rgb(0 157 224 / 25%);
+	--ec-calendar-navigation-button-text-color: 					var(--bs-tertiary-color);
+	--ec-calendar-day-today-border: 								none;
+	--ec-calendar-day-today-background: 							var(--bs-primary-rgb);
+	--ec-calendar-day-today-background-opacity: 					.05;
+	--ec-calendar-day-today-color: 									var(--bs-primary);
+	--ec-calendar-day-border-radius: 								var(--bs-border-radius-sm);
+	--ec-calendar-day-padding: 										.375rem .5rem;
+	--ec-calendar-day-width: 										2.25rem;
+	--ec-calendar-day-height: 										2.25rem;
+	--ec-calendar-day-spacing: 										.125rem;
+	--ec-calendar-font-size: 										.875rem;
 
 	/* Offcanvas */
-	--hx-offcanvas-close-icon-font-size: 							2rem;
-	--hx-offcanvas-footer-padding-y: 								1rem;
-	--hx-offcanvas-footer-padding-x: 								1rem;
-	--hx-offcanvas-horizontal-width-sm: 							400px;
-	--hx-offcanvas-horizontal-width-lg: 							600px;
+	--ec-offcanvas-close-icon-font-size: 							2rem;
+	--ec-offcanvas-footer-padding-y: 								1rem;
+	--ec-offcanvas-footer-padding-x: 								1rem;
+	--ec-offcanvas-horizontal-width-sm: 							400px;
+	--ec-offcanvas-horizontal-width-lg: 							600px;
 
 	/* ListLayout */
-	--hx-list-layout-table-font-size: 								.875rem;
+	--ec-list-layout-table-font-size: 								.875rem;
 
-	/* HxMultiSelect */
-	--hx-multi-select-background-color: 							var(--bs-body-bg);
-	--hx-multi-select-dropdown-menu-height: 						300px;
+	/* EcMultiSelect */
+	--ec-multi-select-background-color: 							var(--bs-body-bg);
+	--ec-multi-select-dropdown-menu-height: 						300px;
 
 	/* TagInput */
-	--hx-input-tags-tag-margin: 									0 .25rem 0 0;
-	--hx-input-tags-input-width: 									3em;
-	--hx-input-tags-input-placeholder-color: 						var(--bs-secondary-color);
-	--hx-input-tags-naked-font-size-lg: 							1.25em;
-	--hx-input-tags-naked-font-size-sm: 							.875em;
-	--hx-input-tags-control-focused-box-shadow: 					0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
-	--hx-input-tags-control-focused-border-color: 					rgba(var(--bs-primary-rgb), .3);
-	--hx-input-tags-add-button-text-margin: 						0 0 0 .25rem;
-	--hx-input-tags-remove-button-margin: 							0 0 0 .25rem;
-	--hx-input-tags-dropdown-item-highlighted-background-color: 	var(--bs-tertiary-bg);
+	--ec-input-tags-tag-margin: 									0 .25rem 0 0;
+	--ec-input-tags-input-width: 									3em;
+	--ec-input-tags-input-placeholder-color: 						var(--bs-secondary-color);
+	--ec-input-tags-naked-font-size-lg: 							1.25em;
+	--ec-input-tags-naked-font-size-sm: 							.875em;
+	--ec-input-tags-control-focused-box-shadow: 					0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+	--ec-input-tags-control-focused-border-color: 					rgba(var(--bs-primary-rgb), .3);
+	--ec-input-tags-add-button-text-margin: 						0 0 0 .25rem;
+	--ec-input-tags-remove-button-margin: 							0 0 0 .25rem;
+	--ec-input-tags-dropdown-item-highlighted-background-color: 	var(--bs-tertiary-bg);
 
 	/* TreeView */
-	--hx-tree-view-item-border-radius: 								var(--bs-border-radius-sm);
-	--hx-tree-view-item-border-width: 								0;
-	--hx-tree-view-item-border-style: 								unset;
-	--hx-tree-view-item-border-color: 								unset;
-	--hx-tree-view-item-color: 										var(--bs-bg-color);
-	--hx-tree-view-item-hover-color: 								var(--bs-primary);
-	--hx-tree-view-item-selected-color: 							var(--bs-primary);
-	--hx-tree-view-item-background: 								transparent;
-	--hx-tree-view-item-hover-background: 							var(--bs-primary-rgb);
-	--hx-tree-view-item-hover-background-opacity: 					.1;
-	--hx-tree-view-item-selected-background: 						var(--bs-primary-rgb);
-	--hx-tree-view-item-spacer-width: 								1rem;
-	--hx-tree-view-item-font-size: 									.75rem;
-	--hx-tree-view-item-padding: 									.25rem .5rem;
-	--hx-tree-view-item-margin: 									0 0 .125rem 0;
-	--hx-tree-view-item-gap:										.25rem;
-	--hx-tree-view-expander-container-width: 						1rem;
+	--ec-tree-view-item-border-radius: 								var(--bs-border-radius-sm);
+	--ec-tree-view-item-border-width: 								0;
+	--ec-tree-view-item-border-style: 								unset;
+	--ec-tree-view-item-border-color: 								unset;
+	--ec-tree-view-item-color: 										var(--bs-bg-color);
+	--ec-tree-view-item-hover-color: 								var(--bs-primary);
+	--ec-tree-view-item-selected-color: 							var(--bs-primary);
+	--ec-tree-view-item-background: 								transparent;
+	--ec-tree-view-item-hover-background: 							var(--bs-primary-rgb);
+	--ec-tree-view-item-hover-background-opacity: 					.1;
+	--ec-tree-view-item-selected-background: 						var(--bs-primary-rgb);
+	--ec-tree-view-item-spacer-width: 								1rem;
+	--ec-tree-view-item-font-size: 									.75rem;
+	--ec-tree-view-item-padding: 									.25rem .5rem;
+	--ec-tree-view-item-margin: 									0 0 .125rem 0;
+	--ec-tree-view-item-gap:										.25rem;
+	--ec-tree-view-expander-container-width: 						1rem;
 
-	/* HxProgressIndicator */
-	--hx-progress-indicator-background: 							var(--bs-body-bg);
-	--hx-progress-indicator-box-shadow: 							var(--bs-box-shadow);
-	--hx-progress-indicator-border-color: 							var(--bs-border-color);
-	--hx-progress-indicator-spinner-color: 							var(--bs-primary);
+	/* EcProgressIndicator */
+	--ec-progress-indicator-background: 							var(--bs-body-bg);
+	--ec-progress-indicator-box-shadow: 							var(--bs-box-shadow);
+	--ec-progress-indicator-border-color: 							var(--bs-border-color);
+	--ec-progress-indicator-spinner-color: 							var(--bs-primary);
 
-	/* HxToastContainer */
-	--hx-toast-container-margin: 									.5rem;
+	/* EcToastContainer */
+	--ec-toast-container-margin: 									.5rem;
 
-	/* HxSearchBox */
-	--hx-search-box-item-icon-margin: 								0 .5rem 0 0;
-	--hx-search-box-item-icon-font-size: 							inherit;
-	--hx-search-box-item-title-font-size: 							inherit;
-	--hx-search-box-item-title-color: 								inherit;
-	--hx-search-box-item-subtitle-color: 							var(--bs-secondary);
-	--hx-search-box-item-subtitle-font-size: 						.75rem;
-	--hx-search-box-item-highlighted-background-color: 				var(--bs-tertiary-bg);
-	--hx-search-box-dropdown-menu-height: 							300px;
+	/* EcSearchBox */
+	--ec-search-box-item-icon-margin: 								0 .5rem 0 0;
+	--ec-search-box-item-icon-font-size: 							inherit;
+	--ec-search-box-item-title-font-size: 							inherit;
+	--ec-search-box-item-title-color: 								inherit;
+	--ec-search-box-item-subtitle-color: 							var(--bs-secondary);
+	--ec-search-box-item-subtitle-font-size: 						.75rem;
+	--ec-search-box-item-highlighted-background-color: 				var(--bs-tertiary-bg);
+	--ec-search-box-dropdown-menu-height: 							300px;
 }
 
 form {
 	display:				flex;
 	flex-direction: 		column;
-	gap: 					var(--hx-form-spacing);
+	gap: 					var(--ec-form-spacing);
 }
 
-form > .hx-button {
+form > .ec-button {
 	align-self: start;
 }

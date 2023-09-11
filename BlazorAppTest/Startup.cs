@@ -26,22 +26,22 @@ public class Startup
 		services.AddRazorPages();
 		services.AddServerSideBlazor();
 
-		services.AddHxMessenger();
-		services.AddHxMessageBoxHost();
-		services.AddHxGoogleTagManager(options =>
+		services.AddEcMessenger();
+		services.AddEcMessageBoxHost();
+		services.AddEcGoogleTagManager(options =>
 		{
 			options.GtmId = "GTM-W2CT4P6"; // EnchantedCoder.Blazor.GoogleTagManager DEV test
 		});
 
 		// TESTs for Defaults
-		//HxAutosuggest.Defaults.InputSize = InputSize.Large;
-		//HxInputText.Defaults.InputSize = InputSize.Large;
-		//HxInputNumber.Defaults.InputSize = InputSize.Large;
-		//HxSelect.Defaults.InputSize = InputSize.Large;
-		//HxInputDate.Defaults.InputSize = InputSize.Large;
-		//HxInputDateRange.Defaults.InputSize = InputSize.Large;
-		//HxCalendar.Defaults.DateCustomizationProvider = request => new CalendarDateCustomizationResult { Enabled = request.Date < DateTime.Today };
-		//HxMessageBox.Defaults.ModalSettings.Centered = true;
+		//EcAutosuggest.Defaults.InputSize = InputSize.Large;
+		//EcInputText.Defaults.InputSize = InputSize.Large;
+		//EcInputNumber.Defaults.InputSize = InputSize.Large;
+		//EcSelect.Defaults.InputSize = InputSize.Large;
+		//EcInputDate.Defaults.InputSize = InputSize.Large;
+		//EcInputDateRange.Defaults.InputSize = InputSize.Large;
+		//EcCalendar.Defaults.DateCustomizationProvider = request => new CalendarDateCustomizationResult { Enabled = request.Date < DateTime.Today };
+		//EcMessageBox.Defaults.ModalSettings.Centered = true;
 	}
 
 	// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,10 @@
+﻿@attribute [Route("/components/" + nameof(EcSelect))]
+@attribute [Route("/components/" + nameof(EcSelectBase<object, object>))]
+
+<ComponentApiDoc Type="typeof(EcSelect<TValue, TItem>)">
+    <DocHeading Title="Basic usage" />
+    <Demo Type="typeof(EcSelect_Demo)" Tabs="false" />
+
+    <DocHeading Title="Input groups" />
+    <Demo Type="typeof(EcSelect_Demo_InputGroups)" />
+</ComponentApiDoc>

@@ -1,0 +1,7 @@
+﻿::deep .ec-button-icon-text-spacer {
+	margin-right: var(--ec-button-icon-text-spacer-width);
+}
+
+::deep .ec-button-text-icon-spacer {
+	margin-left: var(--ec-button-icon-text-spacer-width);
+}

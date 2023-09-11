@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Placement of the popover for <see cref="HxPopover"/>.
+/// Placement of the popover for <see cref="EcPopover"/>.
 /// </summary>
 public enum PopoverPlacement
 {

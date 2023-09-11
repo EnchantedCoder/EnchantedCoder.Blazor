@@ -1,0 +1,103 @@
+﻿@page "/EcScrollspyTest"
+@inject NavigationManager NavigationManager
+
+<h1>Scrollspy Tests</h1>
+
+@if (loaded1)
+{
+	<EcListGroup id="list-example">
+		<EcScrollspyNavLink class="list-group-item list-group-item-action" Href="#par1">Par 1</EcScrollspyNavLink>
+		<EcScrollspyNavLink class="list-group-item list-group-item-action" Href="#par2">Par 2</EcScrollspyNavLink>
+		<EcScrollspyNavLink class="list-group-item list-group-item-action" Href="#par3">Par 3</EcScrollspyNavLink>
+		<EcScrollspyNavLink class="list-group-item list-group-item-action" Href="#par4">Par 4</EcScrollspyNavLink>
+		<EcScrollspyNavLink class="list-group-item list-group-item-action" Href="#par5">Par 5</EcScrollspyNavLink>
+	</EcListGroup>
+
+	<div style="height:300px">
+		<EcScrollspy @ref="scrollspyComponent" TargetId="list-example">
+			<h4 id="par1">§ 1</h4>
+			@if (loaded2)
+			{
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			}
+			else
+			{
+				<p>Loading...</p>
+			}
+
+			<h4 id="par2">§ 2</h4>
+			@if (loaded2)
+			{
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			}
+			else
+			{
+				<p>Loading...</p>
+			}
+
+			<h4 id="par3">§ 3</h4>
+			@if (loaded2)
+			{
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			}
+			else
+			{
+				<p>Loading...</p>
+			}
+
+			<h4 id="par4">§ 4</h4>
+			@if (loaded2)
+			{
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			}
+			else
+			{
+				<p>Loading...</p>
+			}
+
+			<h4 id="par5">§ 5</h4>
+			@if (loaded2)
+			{
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus facilisis lobortis. Sed non nisi mollis, hendrerit augue sed, facilisis leo. Aliquam dapibus malesuada quam quis luctus. Phasellus placerat mi vel aliquam ullamcorper. Sed sit amet erat a mauris viverra egestas. Praesent efficitur odio sed orci iaculis accumsan. Sed quis quam suscipit, scelerisque velit porttitor, tristique enim. Pellentesque ac magna et metus venenatis pellentesque ullamcorper vitae felis. Vestibulum ut est mi. Ut at dignissim turpis. Pellentesque et magna non massa malesuada consectetur. Morbi in lorem nunc. Integer congue mi non sem consectetur suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			}
+			else
+			{
+				<p>Loading...</p>
+			}
+		</EcScrollspy>
+	</div>
+}
+
+<EcAnchorFragmentNavigation @ref="anchorFragmentNavigationComponent" Automation="AnchorFragmentNavigationAutomationMode.SamePage" />
+
+@code {
+	private EcScrollspy scrollspyComponent;
+	private EcAnchorFragmentNavigation anchorFragmentNavigationComponent;
+
+	private bool loaded1;
+	private bool loaded2;
+	private bool shouldRefreshScrollspy;
+	protected override async Task OnInitializedAsync()
+	{
+		await Task.Delay(5000);
+		loaded1 = true;
+		shouldRefreshScrollspy = true;
+		loaded2 = true;
+		shouldRefreshScrollspy = true;
+	}
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (shouldRefreshScrollspy)
+		{
+			shouldRefreshScrollspy = false;
+			await scrollspyComponent.RefreshAsync();
+			await anchorFragmentNavigationComponent.ScrollToCurrentUriFragmentAsync();
+		}
+	}
+}

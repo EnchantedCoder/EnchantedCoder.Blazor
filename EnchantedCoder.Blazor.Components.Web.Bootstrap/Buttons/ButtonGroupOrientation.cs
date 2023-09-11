@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Orientation for <see cref="HxButtonGroup"/>.
+/// Orientation for <see cref="EcButtonGroup"/>.
 /// </summary>
 public enum ButtonGroupOrientation
 {

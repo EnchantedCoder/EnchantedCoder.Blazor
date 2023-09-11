@@ -1,0 +1,20 @@
+﻿@attribute [Route("/components/" + nameof(EcSwitch))]
+@attribute [Route("/components/EcInputSwitch")]
+
+<ComponentApiDoc Type="typeof(EcSwitch)">
+
+    <DocAlert Type="DocAlertType.Info">
+        <code>EcSwitch</code> replaces the former <code>EcInputSwitch</code> component, which was dropped in v4.0.0.
+        <ul class="mb-0">
+            <li><code>EcInputSwitch.Label</code> is now <code>EcSwitch.Text</code></li>
+            <li>new <code>Label</code> parameter coresponds to the optional <code>.form-label</code></li>
+        </ul>
+    </DocAlert>
+
+    <DocHeading Title="Basic usage" />
+    <Demo Type="typeof(EcSwitch_Demo)" Tabs="false" />
+
+    <DocHeading Title="Reverse" />
+    <p>Put the switch on the opposite side by setting the <code>Reverse</code> parameter to <code>true</code>.</p>
+    <Demo Type="typeof(EcSwitch_Demo_Reverse)" />
+</ComponentApiDoc>

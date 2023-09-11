@@ -11,7 +11,7 @@ public class ApiHelperTests
 	[DataRow("GridDataProviderDelegate", true)]
 	[DataRow("InputTagsDataProviderDelegate", true)]
 	[DataRow("CalendarDateCustomizationProviderDelegate", true)]
-	[DataRow("HxButton", false)]
+	[DataRow("EcButton", false)]
 	[DataRow("ButtonSize", false)]
 	public void ApiHelper_GetType_IsDelegate(string typeName, bool expected)
 	{

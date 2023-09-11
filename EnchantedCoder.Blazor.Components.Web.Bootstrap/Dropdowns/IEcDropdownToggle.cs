@@ -1,0 +1,17 @@
+﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
+
+/// <summary>
+/// Interface to help keep the dropdown-toggle implementations aligned.
+/// </summary>
+internal interface IEcDropdownToggle
+{
+	(int Skidding, int Distance)? DropdownOffset { get; set; }
+	string DropdownReference { get; set; }
+	EventCallback OnHidden { get; set; }
+	EventCallback OnShown { get; set; }
+
+	Task HandleJsHidden();
+	Task HandleJsShown();
+	Task HideAsync();
+	Task ShowAsync();
+}

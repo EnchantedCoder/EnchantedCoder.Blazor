@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxPager"/>.
+/// Settings for the <see cref="EcPager"/>.
 /// </summary>
 public record PagerSettings
 {

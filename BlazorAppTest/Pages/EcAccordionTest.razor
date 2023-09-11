@@ -1,0 +1,102 @@
+﻿@page "/EcAccordionTest"
+
+<h1>EcAccordion</h1>
+
+<EcCard CssClass="my-3">
+	<HeaderTemplate>Plain, No IDs</HeaderTemplate>
+	<BodyTemplate>
+		<EcAccordion>
+			<EcAccordionItem>
+				<HeaderTemplate>Accordition Item 1</HeaderTemplate>
+				<BodyTemplate>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pharetra mi, ut ullamcorper nisl. Morbi efficitur metus eu mauris finibus suscipit ac vel nibh.
+					Suspendisse eu ipsum orci. Donec sit amet fringilla ante, at facilisis metus. Fusce leo elit, cursus sed rutrum vel, elementum eu justo.
+				</BodyTemplate>
+			</EcAccordionItem>
+			<EcAccordionItem>
+				<HeaderTemplate>Accordition Item 2</HeaderTemplate>
+				<BodyTemplate>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pharetra mi, ut ullamcorper nisl. Morbi efficitur metus eu mauris finibus suscipit ac vel nibh.
+					Suspendisse eu ipsum orci. Donec sit amet fringilla ante, at facilisis metus. Fusce leo elit, cursus sed rutrum vel, elementum eu justo.
+				</BodyTemplate>
+			</EcAccordionItem>
+		</EcAccordion>
+	</BodyTemplate>
+</EcCard>
+
+<EcCard CssClass="my-3">
+	<HeaderTemplate>InitialExpandedItemId="2"</HeaderTemplate>
+	<BodyTemplate>
+		<EcAccordion InitialExpandedItemId="2">
+			<EcAccordionItem Id="1">
+				<HeaderTemplate>Accordition Item 1 (Id="1")</HeaderTemplate>
+				<BodyTemplate>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pharetra mi, ut ullamcorper nisl. Morbi efficitur metus eu mauris finibus suscipit ac vel nibh.
+					Vivamus lacinia magna ut risus auctor ultrices. Aenean maximus lacus in tellus dictum posuere. Nulla facilisi. Sed vitae facilisis justo.
+				</BodyTemplate>
+			</EcAccordionItem>
+			<EcAccordionItem Id="2">
+				<HeaderTemplate>Accordition Item 2 (Id="2")</HeaderTemplate>
+				<BodyTemplate>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel pharetra mi, ut ullamcorper nisl. Morbi efficitur metus eu mauris finibus suscipit ac vel nibh.
+					Suspendisse eu ipsum orci. Donec sit amet fringilla ante, at facilisis metus. Fusce leo elit, cursus sed rutrum vel, elementum eu justo.
+				</BodyTemplate>
+			</EcAccordionItem>
+		</EcAccordion>
+	</BodyTemplate>
+</EcCard>
+
+<EcCard CssClass="my-3">
+	<HeaderTemplate>Binding ExpandedId="@@expandedId"</HeaderTemplate>
+	<BodyTemplate>
+		<EcAccordion @bind-ExpandedItemId="@expandedItemId">
+			<EcAccordionItem Id="1" OnExpanded="HandleExpanded" OnCollapsed="HandleCollapsed">
+				<HeaderTemplate>Accordition Item 1 (Id="1") with LazyLoaded content</HeaderTemplate>
+				<BodyTemplate>
+					<EcProgressIndicator InProgress="inProgress">
+						Lazy loaded content...<br/>
+						@dataLoaded
+					</EcProgressIndicator>
+				</BodyTemplate>
+			</EcAccordionItem>
+			<EcAccordionItem Id="2" @ref="xxx">
+				<HeaderTemplate>Accordition Item 2 (Id="2")</HeaderTemplate>
+				<BodyTemplate>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec vel pharetra mi, ut ullamcorper nisl. Morbi efficitur metus eu mauris finibus suscipit ac vel nibh.
+					Vivamus lacinia magna ut risus auctor ultrices.Aenean maximus lacus in tellus dictum posuere.Nulla facilisi. Sed vitae facilisis justo.
+				</BodyTemplate>
+			</EcAccordionItem>
+		</EcAccordion>
+	</BodyTemplate>
+	<FooterTemplate>
+		<EcButton Text="@("expandedItemId=\"1\"")" OnClick="@(async () => expandedItemId = "1")" Color="ThemeColor.Primary" />
+		<EcButton Text="@("expandedItemId=\"2\"")" OnClick="@(async () => expandedItemId = "2")" Color="ThemeColor.Primary" />
+		<EcButton Text="@("expandedItemId=null")" OnClick="@(async () => expandedItemId = null)" Color="ThemeColor.Primary" />
+		<EcButton Text="@("expandedItemId=\"bžbž\"")" OnClick="@(async () => expandedItemId = "bžbž")" Color="ThemeColor.Secondary" />
+		expandedId: @expandedItemId
+	</FooterTemplate>
+</EcCard>
+
+@code
+{
+	private string expandedItemId;
+	private bool inProgress;
+	private string dataLoaded;
+
+	private EcAccordionItem xxx;
+
+	private async Task HandleExpanded(string id)
+	{
+		inProgress = true;
+		await Task.Delay(3000);
+		dataLoaded = "DataLoaded" + id;
+		inProgress = false;
+	}
+
+	private Task HandleCollapsed(string id)
+	{
+		dataLoaded = id; // throw-away data
+
+		return Task.CompletedTask;
+	}
+}

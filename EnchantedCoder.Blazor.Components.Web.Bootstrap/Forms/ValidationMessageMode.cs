@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Validation message display mode for <see cref="HxValidationMessage{TValue}"/>
+/// Validation message display mode for <see cref="EcValidationMessage{TValue}"/>
 /// </summary>
 public enum ValidationMessageMode
 {

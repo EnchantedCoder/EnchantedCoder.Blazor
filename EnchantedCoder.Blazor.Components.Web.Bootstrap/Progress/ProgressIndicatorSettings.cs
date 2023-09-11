@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxProgressIndicator"/> and derived components.
+/// Settings for the <see cref="EcProgressIndicator"/> and derived components.
 /// </summary>
 public record ProgressIndicatorSettings
 {

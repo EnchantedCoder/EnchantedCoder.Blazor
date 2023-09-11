@@ -2,7 +2,7 @@
 
 internal static class GridInternalStateSortingItemHelper
 {
-	public static GridInternalStateSortingItem<TItem>[] ApplyColumnToSorting<TItem>(IList<GridInternalStateSortingItem<TItem>> currentSorting, IHxGridColumn<TItem> newSortColumn)
+	public static GridInternalStateSortingItem<TItem>[] ApplyColumnToSorting<TItem>(IList<GridInternalStateSortingItem<TItem>> currentSorting, IEcGridColumn<TItem> newSortColumn)
 	{
 		List<GridInternalStateSortingItem<TItem>> newSorting;
 

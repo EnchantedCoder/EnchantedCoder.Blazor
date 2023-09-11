@@ -52,7 +52,7 @@
         "watch": "npm-run-all --parallel watch-*",
         "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
         "watch-css-dist": "nodemon --watch dist/css/ --ext css --ignore \"dist/css/*.rtl.*\" --exec \"npm run css-rtl\"",
-        "publish-to-blazor": "shx cp -r dist/css/* ../EnchantedCoder.Blazor.Components.Web.Bootstrap/wwwroot"
+        "publish-to-blazor": "sec cp -r dist/css/* ../EnchantedCoder.Blazor.Components.Web.Bootstrap/wwwroot"
     },
     "devDependencies": {
       "autoprefixer": "^10.4.14",
@@ -68,7 +68,7 @@
       "sass": "^1.62.1",
       "stylelint": "^15.6.2",
       "stylelint-config-twbs-bootstrap": "^10.0.0",
-      "shx":"^0.3.4"
+      "sec":"^0.3.4"
   },
     "files": [
         "dist/{css}/*.{css,map}",

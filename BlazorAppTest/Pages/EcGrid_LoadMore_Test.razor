@@ -1,0 +1,67 @@
+@page "/EcGrid_LoadMore_Test"
+@using System.Globalization
+@using Microsoft.Extensions.Logging
+
+<h1>EcGrid with load more</h1>
+<h2>No LoadMoreTemplate</h2>
+
+<EcGrid TItem="CultureInfo" @bind-CurrentUserState="customGridUserState" DataProvider="@ClientCultureInfosDataProvider" ContentNavigationMode="GridContentNavigationMode.PaginationAndLoadMore" PageSize="5" LoadMoreButtonText="Give me more!" LoadMoreButtonSettings="EcGrid.Defaults.LoadMoreButtonSettings with { Color = ThemeColor.Primary }">
+	<Columns>
+		<EcGridColumn TItem="CultureInfo" HeaderText="Display Name" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" IsDefaultSortColumn="true" />
+		<EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)" ItemCssClassSelector="@(item => item.Name.Contains('Z') ? "text-end" : null)" />
+		<EcContextMenuGridColumn Context="item">
+			<EcContextMenu>
+				<EcContextMenuItem Text="Delete" Icon="BootstrapIcon.Trash" />
+			</EcContextMenu>
+		</EcContextMenuGridColumn>
+	</Columns>
+</EcGrid>
+
+<EcButton Text="Go to page 3 and add 2 additional items" OnClick="HandleCustomGridPositionClick" Color="ThemeColor.Secondary" />
+
+<h2>Custom LoadMoreTemplate</h2>
+
+<EcGrid TItem="CultureInfo" DataProvider="@ClientCultureInfosDataProvider" ContentNavigationMode="GridContentNavigationMode.LoadMore" PageSize="5">
+	<Columns>
+		<EcGridColumn TItem="CultureInfo" HeaderText="Display Name" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" IsDefaultSortColumn="true" />
+		<EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)" ItemCssClassSelector="@(item => item.Name.Contains('Z') ? "text-end" : null)" />
+		<EcContextMenuGridColumn Context="item">
+			<EcContextMenu>
+				<EcContextMenuItem Text="Delete" Icon="BootstrapIcon.Trash" />
+			</EcContextMenu>
+		</EcContextMenuGridColumn>
+	</Columns>
+
+	<LoadMoreTemplate>
+		There are some visible items, huh?
+		Do you want to <span role="button" style="color: red" @onclick="async () => await context.LoadMoreAsync()">see more</span>?
+	</LoadMoreTemplate>
+</EcGrid>
+@code {
+	private GridUserState customGridUserState = new GridUserState();
+
+	protected override Task OnInitializedAsync()
+	{
+		EcProgressIndicator.Defaults.Delay = 0; // TEST
+
+		return base.OnInitializedAsync();
+	}
+
+	private List<CultureInfo> GetCultureInfos()
+	{
+		return CultureInfo.GetCultures(CultureTypes.SpecificCultures).OrderBy(item => item.EnglishName /* only for skip! */).ToList();
+	}
+
+	private async Task<GridDataProviderResult<CultureInfo>> ClientCultureInfosDataProvider(GridDataProviderRequest<CultureInfo> request)
+	{
+		await Task.Delay(500); // simulate server call
+
+		var cultures = GetCultureInfos();
+		return request.ApplyTo(cultures);
+	}
+
+	private void HandleCustomGridPositionClick()
+	{
+		customGridUserState = customGridUserState with { PageIndex = 2 /* page 3 */ , LoadMoreAdditionalItemsCount = 2 };
+	}
+}

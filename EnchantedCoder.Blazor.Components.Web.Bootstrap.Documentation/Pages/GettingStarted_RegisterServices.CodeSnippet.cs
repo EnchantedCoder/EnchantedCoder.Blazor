@@ -8,7 +8,7 @@ public static async Task Main(string[] args)
 
 	// ... shortened for brevity
 
-	builder.Services.AddHxServices();        // <------ ADD THIS LINE
+	builder.Services.AddEcServices();        // <------ ADD THIS LINE
 
 	await builder.Build().RunAsync();
 }

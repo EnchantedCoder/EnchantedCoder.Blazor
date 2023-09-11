@@ -1,0 +1,17 @@
+﻿<EcContextMenu>
+	<EcContextMenuItem OnClick="() => SetMessage(1)">Item 1</EcContextMenuItem>
+	<EcContextMenuItem OnClick="() => SetMessage(2)">Item 2</EcContextMenuItem>
+	<EcDropdownDivider />
+	<EcContextMenuItem Href="https://www.EnchantedCoder.eu">www.EnchantedCoder.eu</EcContextMenuItem>
+</EcContextMenu>
+
+@message
+
+@code {
+	private string message;
+
+	private void SetMessage(int item)
+	{
+		message = $"Item number {item} has been selected";
+	}
+}

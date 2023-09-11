@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Options for controlling the behavior of the <see cref="HxOffcanvas.Backdrop"/>.
+/// Options for controlling the behavior of the <see cref="EcOffcanvas.Backdrop"/>.
 /// </summary>
 public enum OffcanvasBackdrop
 {

@@ -1,0 +1,33 @@
+﻿<EcButton Text="Show information" OnClick="HandleAddInformationButtonClick" Color="ThemeColor.Primary" />
+<EcButton Text="Show warning" OnClick="HandleAddWarningButtonClick" Color="ThemeColor.Primary" />
+<EcButton Text="Show error" OnClick="HandleAddErrorButtonClick" Color="ThemeColor.Primary" />
+
+@code {
+	[Inject] protected IEcMessengerService Messenger { get; set; }
+
+	protected override void OnAfterRender(bool firstRender)
+	{
+		base.OnAfterRender(firstRender);
+
+		if (firstRender)
+		{
+			Messenger.AddInformation($"Welcome to the {nameof(EcMessenger)} documentation!");
+			Messenger.AddWarning("Setup", "services.AddEcMessenger(); in Startup.cs!\n<EcMessenger /> in MainLayout.razor");
+		}
+	}
+
+	private void HandleAddInformationButtonClick()
+	{
+		Messenger.AddInformation(title: "Data encrypted", message: "All your data has been encrypted. To decrypt your data share $100 with all your teammates.");
+	}
+
+	private void HandleAddWarningButtonClick()
+	{
+		Messenger.AddWarning(title: "Bio hazard!", message: "Bio hazard detected in your office!");
+	}
+
+	private void HandleAddErrorButtonClick()
+	{
+		Messenger.AddError(title: "Error", message: "An error occurred during showing messenger message.");
+	}
+}

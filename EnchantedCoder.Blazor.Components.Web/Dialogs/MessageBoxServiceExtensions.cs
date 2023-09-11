@@ -2,7 +2,7 @@
 
 public static class MessageBoxServiceExtensions
 {
-	public static Task<MessageBoxButtons> ShowAsync(this IHxMessageBoxService messageBoxService, string title, string text, MessageBoxButtons buttons = MessageBoxButtons.Ok, MessageBoxButtons? primaryButton = null, string customButtonText = null)
+	public static Task<MessageBoxButtons> ShowAsync(this IEcMessageBoxService messageBoxService, string title, string text, MessageBoxButtons buttons = MessageBoxButtons.Ok, MessageBoxButtons? primaryButton = null, string customButtonText = null)
 	{
 		return messageBoxService.ShowAsync(new MessageBoxRequest()
 		{
@@ -14,14 +14,14 @@ public static class MessageBoxServiceExtensions
 		});
 	}
 
-	public static async Task<bool> ConfirmAsync(this IHxMessageBoxService messageBoxService, string title, string text)
+	public static async Task<bool> ConfirmAsync(this IEcMessageBoxService messageBoxService, string title, string text)
 	{
 		var result = await messageBoxService.ShowAsync(title, text, MessageBoxButtons.OkCancel);
 
 		return (result == MessageBoxButtons.Ok);
 	}
 
-	public static Task<bool> ConfirmAsync(this IHxMessageBoxService messageBoxService, string text)
+	public static Task<bool> ConfirmAsync(this IEcMessageBoxService messageBoxService, string text)
 	{
 		return messageBoxService.ConfirmAsync("Confirmation", text); // TODO Localization
 	}

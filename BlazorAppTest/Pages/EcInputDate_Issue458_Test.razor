@@ -1,0 +1,38 @@
+﻿@page "/EcInputDate_Issue458_Test"
+@using EnchantedCoder;
+
+<h1>EcInputDate</h1>
+
+<EcButton Color="ThemeColor.Primary" OnClick="HandleEditClicked">Edit</EcButton>
+
+<EditForm EditContext="editContext">
+	<EcFormState Enabled="canEdit">
+		<EcInputDate CssClass="col-3" Label="Date" @bind-Value="model.BirthDate" />
+		<EcInputDateRange CssClass="col-3" Label="DateRange" @bind-Value="model.DateRange" />
+	</EcFormState>
+</EditForm>
+
+@code {
+
+	private Person model;
+	private EditContext editContext;
+	private bool canEdit = true;
+
+	protected override async Task OnInitializedAsync()
+	{
+		await base.OnInitializedAsync();
+		model = new Person();
+		editContext = new EditContext(model);
+	}
+
+	private void HandleEditClicked()
+	{
+		canEdit = !canEdit;
+	}
+
+	public class Person
+	{
+		public DateTime BirthDate { get; set; }
+		public DateTimeRange DateRange { get; set; }
+	}
+}

@@ -7,7 +7,7 @@ public abstract class IconBase
 {
 	/// <summary>
 	/// Renderer of the icon. Must have a Icon property which receives the instance of the icon (IconBase descendant instance).
-	/// See BootstrapIcon and <see cref="HxIcon"/> implementations for more details.
+	/// See BootstrapIcon and <see cref="EcIcon"/> implementations for more details.
 	/// </summary>
 	public abstract Type RendererComponentType { get; }
 }

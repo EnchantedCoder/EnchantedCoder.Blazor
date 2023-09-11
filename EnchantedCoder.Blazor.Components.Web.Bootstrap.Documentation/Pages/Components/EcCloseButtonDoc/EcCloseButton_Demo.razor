@@ -1,0 +1,10 @@
+﻿<EcCloseButton OnClick="OnCloseButtonClick" />
+
+@code {
+    [Inject] protected IEcMessengerService Messenger { get; set; }
+
+    private void OnCloseButtonClick()
+    {
+        Messenger.AddInformation("Click", "EcCloseButton has been clicked!");
+    }
+}

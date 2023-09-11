@@ -1,0 +1,20 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap.Internal
+
+<span class="ec-search-box-item">
+    @if (Icon is not null)
+	{
+		<EcIcon CssClass="ec-search-box-item-icon" Icon="Icon" />
+	}
+
+	<span class="overflow-hidden">
+		@if (!string.IsNullOrEmpty(Subtitle))
+		{
+			<span class="ec-search-box-item-title text-truncate">@Title</span>
+			<span class="ec-search-box-item-subtitle text-truncate">@Subtitle</span>
+		}
+		else
+		{
+			<span class="ec-search-box-item-title text-truncate">@Title</span>
+		}
+	</span>
+</span>

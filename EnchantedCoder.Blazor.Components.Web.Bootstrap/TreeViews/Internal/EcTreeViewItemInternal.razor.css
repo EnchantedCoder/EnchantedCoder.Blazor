@@ -1,0 +1,58 @@
+.ec-tree-view-item {
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	gap: var(--ec-tree-view-item-gap);
+	padding: var(--ec-tree-view-item-padding);
+	margin: var(--ec-tree-view-item-margin);
+	font-size: var(--ec-tree-view-item-font-size);
+	border-radius: var(--ec-tree-view-item-border-radius);
+	background-color: var(--ec-tree-view-item-background);
+	color: var(--ec-tree-view-item-color);
+	border-width: var(--ec-tree-view-item-border-width);
+	border-color: var(--ec-tree-view-item-border-color);
+	border-style: var(--ec-tree-view-item-border-style);
+}
+
+.ec-tree-view-item + .ec-tree-view-item {
+	border-top-width: 0;
+}
+
+.ec-tree-view-item.selected,
+.ec-tree-view-item.selected:hover {
+	background-color: rgba(var(--ec-tree-view-item-selected-background), var(--ec-tree-view-item-hover-background-opacity));
+	color: var(--ec-tree-view-item-selected-color);
+}
+
+.ec-tree-view-item:hover {
+	background-color: rgba(var(--ec-tree-view-item-hover-background), var(--ec-tree-view-item-hover-background-opacity));
+	color: var(--ec-tree-view-item-hover-color);
+}
+
+.ec-tree-view-item-spacer {
+	flex: 0 0 var(--ec-tree-view-item-spacer-width);
+}
+
+.ec-tree-view-item-title {
+	flex: 1;
+}
+
+.ec-tree-view-item-icon {
+	color: var(--ec-tree-view-item-hover-color);
+}
+
+.ec-tree-view-item-expander {
+	transition: transform 0.15s ease-in-out;
+	transform: rotate(0deg);
+}
+
+.ec-tree-view-item-expander-container:not(.collapsed) .ec-tree-view-item-expander {
+	transform: rotate(90deg);
+}
+
+::deep .ec-tree-view-item-expander-container {
+	width: var(--ec-tree-view-expander-container-width);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

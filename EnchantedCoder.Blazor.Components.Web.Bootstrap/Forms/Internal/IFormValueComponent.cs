@@ -54,7 +54,7 @@ public interface IFormValueComponent
 	/// <summary>
 	/// CSS class to be rendered with the wrapping div.
 	/// </summary>
-	string CoreCssClass => "hx-form-group position-relative";
+	string CoreCssClass => "ec-form-group position-relative";
 
 	/// <summary>
 	/// CSS class to be rendered with the label.

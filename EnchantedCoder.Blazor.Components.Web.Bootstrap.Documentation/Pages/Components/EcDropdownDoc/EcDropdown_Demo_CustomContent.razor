@@ -1,0 +1,19 @@
+﻿<EcDropdownButtonGroup>
+	<EcDropdownToggleButton Color="ThemeColor.Secondary">Dropdown</EcDropdownToggleButton>
+	<EcDropdownContent CssClass="px-4 py-3">
+		<EditForm Model="model">
+			<EcInputText Label="Name" @bind-Value="model.Name" />
+			<EcInputText Label="Email address" @bind-Value="model.Email" />
+			<EcButton Text="Save" Color="ThemeColor.Primary" />
+		</EditForm>
+	</EcDropdownContent>
+</EcDropdownButtonGroup>
+@code
+{
+	private FormModel model = new();
+	public class FormModel
+	{
+		public string Name { get; set; }
+		public string Email { get; set; }
+	}
+}

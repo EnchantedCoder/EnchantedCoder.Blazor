@@ -1,0 +1,16 @@
+﻿@attribute [Route("/components/" + nameof(EcToast))]
+@attribute [Route("/components/" + nameof(EcToastContainer))]
+
+<ComponentApiDoc Type="typeof(EcToast)">
+    <MainContent>
+        <DocHeading Title="Basic usage" />
+        <p>See <a href="/components/@nameof(EcMessenger)">@nameof(EcMessenger) documentation</a>.</p>
+    </MainContent>
+    <CssVariables>
+        <ComponentApiDocCssVariable Name="--ec-toast-container-margin" Default="0.5rem">
+            Margin of the container.
+        </ComponentApiDocCssVariable>
+    </CssVariables>
+</ComponentApiDoc>
+
+<ComponentApiDoc Type="typeof(EcToastContainer)" />

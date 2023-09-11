@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxInputText"/> and derived components.
+/// Settings for the <see cref="EcInputText"/> and derived components.
 /// </summary>
 public record InputTextSettings : InputSettings, IInputSettingsWithSize
 {

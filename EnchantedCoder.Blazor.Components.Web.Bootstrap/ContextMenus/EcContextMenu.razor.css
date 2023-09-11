@@ -1,0 +1,22 @@
+.ec-context-menu-btn {
+    color: var(--ec-context-menu-button-color);
+    border: var(--ec-context-menu-button-border);
+    border-radius: var(--ec-context-menu-button-border-radius);
+    padding: var(--ec-context-menu-button-padding);
+}
+
+.ec-context-menu-btn:hover {
+    background: var(--ec-context-menu-button-hover-background);
+}
+
+.ec-context-menu {
+    display: inline-block;
+}
+
+tr .ec-context-menu {
+    opacity: 0;
+}
+
+tr:hover .ec-context-menu {
+    opacity: 1;
+}

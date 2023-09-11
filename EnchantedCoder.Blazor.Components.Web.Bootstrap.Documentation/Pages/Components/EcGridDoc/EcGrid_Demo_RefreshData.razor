@@ -1,0 +1,26 @@
+﻿<EcGrid @ref="gridComponent" TItem="CultureInfo" Responsive="true" DataProvider="GetGridData" PageSize="5">
+    <Columns>
+		<EcGridColumn HeaderText="LCID" ItemTextSelector="@(item => item.LCID.ToString())" SortKeySelector="@(item => item.LCID)" IsDefaultSortColumn="true" />
+		<EcGridColumn HeaderText="DisplayName" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" />
+		<EcGridColumn HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)"  />
+		<EcGridColumn HeaderText="EnglishName" ItemTextSelector="@(item => item.EnglishName)" SortKeySelector="@(item => item.EnglishName)"  />
+	</Columns>
+</EcGrid>
+
+<EcButton Text="Refresh data" OnClick="HandleButtonClick" Color="ThemeColor.Primary" />
+
+@code {
+    private EcGrid<CultureInfo> gridComponent;
+    private List<CultureInfo> localCultureInfos = CultureInfo.GetCultures(CultureTypes.AllCultures).ToList();
+
+    private async Task<GridDataProviderResult<CultureInfo>> GetGridData(GridDataProviderRequest<CultureInfo> request)
+    {
+        await Task.Delay(1000); // simulate 1sec data-gathering latency
+        return request.ApplyTo(localCultureInfos);
+    }
+
+    private async Task HandleButtonClick()
+    {
+        await gridComponent.RefreshDataAsync();
+    }
+}

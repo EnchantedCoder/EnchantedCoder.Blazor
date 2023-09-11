@@ -1,0 +1,6 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+<div id="@this.Id" class="@CssClassHelper.Combine("ec-accordion","accordion", this.CssClass)">
+	<CascadingValue Value="this" IsFixed="true">
+		@ChildContent
+	</CascadingValue>
+</div>

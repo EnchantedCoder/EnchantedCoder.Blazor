@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Size for <see cref="HxButtonGroup"/>.
+/// Size for <see cref="EcButtonGroup"/>.
 /// </summary>
 public enum ButtonGroupSize
 {

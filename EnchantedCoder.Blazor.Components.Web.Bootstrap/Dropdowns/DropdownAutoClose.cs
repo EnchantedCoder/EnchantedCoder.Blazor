@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Auto-close behavior of the <see cref="HxDropdown"/> (<see cref="HxDropdownToggleButton"/> respectively).
+/// Auto-close behavior of the <see cref="EcDropdown"/> (<see cref="EcDropdownToggleButton"/> respectively).
 /// <see href="https://getbootstrap.com/docs/5.3/components/dropdowns/#auto-close-behavior"/>.
 /// </summary>
 public enum DropdownAutoClose

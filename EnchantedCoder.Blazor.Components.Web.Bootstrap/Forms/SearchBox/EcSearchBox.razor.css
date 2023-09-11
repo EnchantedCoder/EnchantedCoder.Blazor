@@ -1,0 +1,40 @@
+﻿::deep .dropdown,
+::deep div[data-bs-toggle="dropdown"],
+::deep .dropdown-menu {
+	width: 100%; /* override for current .btn-group, see issue #117 */
+}
+
+::deep .ec-search-box-input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+::deep .ec-search-box-input-icon-end {
+    right: .75rem;
+}
+
+::deep .ec-search-box-input-with-search-icon {
+    border-top-right-radius: 0.375rem !important;
+    border-bottom-right-radius: 0.375rem !important;
+}
+
+.dropdown-item:not(:active) ::deep .ec-search-box-item-title {
+    color: var(--ec-search-box-item-title-color);
+}
+
+.dropdown-item:not(:active) ::deep .ec-search-box-item-subtitle {
+    color: var(--ec-search-box-item-subtitle-color);
+}
+
+::deep .ec-dropdown-item-focused {
+    background-color: var(--ec-search-box-item-highlighted-background-color);
+}
+
+::deep .dropdown-menu {
+    overflow: auto;
+    max-height: var(--ec-search-box-dropdown-menu-height);
+}

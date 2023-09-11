@@ -17,7 +17,7 @@
 
 	<script src="/js/color-mode-auto.js" asp-append-version="true"></script>
 
-	@Html.Raw(HxSetup.RenderBootstrapCssReference())
+	@Html.Raw(EcSetup.RenderBootstrapCssReference())
 	<link href="_content/EnchantedCoder.Blazor.Components.Web.Bootstrap/defaults.css" rel="stylesheet" asp-append-version="true" />
 	<link href="EnchantedCoder.Blazor.Components.Web.Bootstrap.Documentation.styles.css" rel="stylesheet" asp-append-version="true" /> @* CSS Isolation *@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" /> @* Prism: Syntax Highlighting *@
@@ -51,7 +51,7 @@
 	</div>
 
 	<script src="_framework/blazor.webassembly.js" autostart="false" asp-append-version="true"></script>
-	@Html.Raw(HxSetup.RenderBootstrapJavaScriptReference())
+	@Html.Raw(EcSetup.RenderBootstrapJavaScriptReference())
 
 	@* Prism: Syntax Highlighting *@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>

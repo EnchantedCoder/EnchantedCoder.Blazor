@@ -1,0 +1,26 @@
+﻿<EcButton OnClick="HandleShowClick" Color="ThemeColor.Primary">Show modal</EcButton>
+
+<EcModal @ref="myModal" Title="Modal title">
+	<BodyTemplate>
+		Modal body
+	</BodyTemplate>
+	<FooterTemplate>
+		<EcButton Text="Close" OnClick="HandleHideClick" Color="ThemeColor.Primary" />
+	</FooterTemplate>
+</EcModal>
+
+@code
+{
+	private EcModal myModal;
+
+	private async Task HandleShowClick()
+	{
+		await myModal.ShowAsync();
+	}
+
+	private async Task HandleHideClick()
+	{
+		await myModal.HideAsync();
+	}
+
+}

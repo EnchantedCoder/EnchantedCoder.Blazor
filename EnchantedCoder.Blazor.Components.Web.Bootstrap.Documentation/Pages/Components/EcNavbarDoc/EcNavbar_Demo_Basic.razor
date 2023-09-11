@@ -1,0 +1,30 @@
+﻿<EcNavbar CssClass="bg-body-tertiary">
+    <EcNavbarBrand>Navbar</EcNavbarBrand>
+    <EcNavbarToggler />
+    <EcNavbarCollapse>
+        <EcNav CssClass="me-auto mb-2 mb-lg-0">
+            <EcNavLink Href="/components/EcNavbar">Home</EcNavLink>
+            <EcNavLink Href="#">Link</EcNavLink>
+            <EcDropdown>
+                <EcDropdownToggleElement ElementName="a" Caret="true" role="button">Dropdown</EcDropdownToggleElement>
+                <EcDropdownMenu>
+                    <EcDropdownItemNavLink Href="#">Action</EcDropdownItemNavLink>
+                    <EcDropdownItemNavLink Href="#">Another action</EcDropdownItemNavLink>
+                    <EcDropdownDivider />
+                    <EcDropdownItemNavLink Href="#">Something else here</EcDropdownItemNavLink>
+                </EcDropdownMenu>
+            </EcDropdown>
+            <EcNavLink Enabled="false">Disabled</EcNavLink>
+        </EcNav>
+        <EditForm Model="@query">
+            <div class="d-flex">
+                <EcInputText CssClass="me-2" Placeholder="Search" @bind-Value="@query" />
+                <EcSubmit Color="ThemeColor.Success" Outline="true">Search</EcSubmit>
+            </div>
+        </EditForm>
+    </EcNavbarCollapse>
+</EcNavbar>
+
+@code {
+    private string query = String.Empty;
+}

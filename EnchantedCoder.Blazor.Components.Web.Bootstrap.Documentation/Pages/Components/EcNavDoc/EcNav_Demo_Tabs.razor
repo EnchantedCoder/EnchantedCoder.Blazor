@@ -1,0 +1,13 @@
+﻿<EcNav Variant="NavVariant.Tabs">
+	<EcNavLink OnClick="HandleTabClick" CssClass="active">Tab 1</EcNavLink>
+	<EcNavLink Text="Tab 2" />
+	<EcNavLink Text="Tab 3" />
+	<EcNavLink Text="Disabled" Enabled="false" />
+</EcNav>
+@code {
+	[Inject] protected IEcMessengerService Messenger { get; set; }
+	private void HandleTabClick()
+	{
+		Messenger.AddInformation("Tab 1 clicked...");
+	}
+}

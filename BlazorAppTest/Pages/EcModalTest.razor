@@ -1,0 +1,40 @@
+﻿@page "/EcModalTest"
+
+<h1>EcModal</h1>
+
+<EcButton OnClick="HandleShowClick" Color="ThemeColor.Primary">Show</EcButton>
+
+<EcModal @ref="myModal" Title="Modal title">
+	<BodyTemplate>
+		Body
+		<EcButton OnClick="HandleShowNestedClick" Color="ThemeColor.Danger">Show nested (exception expected)</EcButton>
+
+		<EcModal @ref="myNestedModal" />
+	</BodyTemplate>
+	<FooterTemplate>
+		<EcButton Text="Close" OnClick="HandleHideClick" Color="ThemeColor.Secondary" />
+	</FooterTemplate>
+</EcModal>
+
+@code
+{
+	private EcModal myModal;
+	private EcModal myNestedModal;
+
+	private async Task HandleShowClick()
+	{
+		await myModal.ShowAsync();
+	}
+
+	private async Task HandleHideClick()
+	{
+		await myModal.HideAsync();
+	}
+
+	private async Task HandleShowNestedClick()
+	{
+		await myNestedModal.ShowAsync();
+	}
+
+
+}

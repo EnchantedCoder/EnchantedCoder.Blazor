@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+
+<EcMessenger Position="ToastContainerPosition.MiddleCenter" />
+<EcMessageBoxHost />
+
+@* Add .container-xxl or similar, if you want to limit page width as this documentation does. *@
+<div class="d-md-flex min-vh-100">
+
+	<EcSidebar CssClass="sticky-top">
+		...
+	</EcSidebar>
+
+	<div class="main p-4 flex-grow-1 overflow-hidden">
+		@Body
+	</div>
+
+</div>

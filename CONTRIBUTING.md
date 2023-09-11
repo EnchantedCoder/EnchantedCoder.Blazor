@@ -10,8 +10,8 @@ Thank you for contributing to EnchantedCoder Blazor and making it even better. W
 * Preserve original [Bootstrap](https://getbootstrap.com/) naming whenever possible (adjust to comply with .NET coding standards).
 * Follow existing [Blazor](https://github.com/dotnet/aspnetcore/tree/main/src/Components) naming whenever possible.
 * Prefix all event parameters with `On`, e.g. `OnClosed`, `OnShown`, `OnFileUploaded` (except `XyChanged` callbacks).
-* Suffix all `RenderFragment`-parameters with `Template` (except very specific cases such as `HxGrid.Columns`), e.g. `HeaderTemplate`,  `ItemTemplate`, `FooterTemplate`.
-* Suffix all `Func`-parameters returning a projection with `Selector`, e.g. `TextSelector`,  `CssClassSelector`, `ValueSelector`. See [`HxSelect`](https://EnchantedCoder.blazor.eu/components/HxSelect) for samples.
+* Suffix all `RenderFragment`-parameters with `Template` (except very specific cases such as `EcGrid.Columns`), e.g. `HeaderTemplate`,  `ItemTemplate`, `FooterTemplate`.
+* Suffix all `Func`-parameters returning a projection with `Selector`, e.g. `TextSelector`,  `CssClassSelector`, `ValueSelector`. See [`EcSelect`](https://EnchantedCoder.blazor.eu/components/EcSelect) for samples.
 
 ## Design Guidelines
 * Prefer ease of user over complex functionality.

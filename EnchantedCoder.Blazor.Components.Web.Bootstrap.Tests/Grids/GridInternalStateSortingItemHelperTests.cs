@@ -16,7 +16,7 @@ public class GridInternalStateSortingItemHelperTests
 	public void GridInternalStateSortingItemHelper_ApplyColumnToSorting_OnEmptySorting()
 	{
 		// Arrange
-		Mock<IHxGridColumn<string>> mockColumn = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 
 		// Act
 		var newSorting = GridInternalStateSortingItemHelper.ApplyColumnToSorting(null, mockColumn.Object);
@@ -35,8 +35,8 @@ public class GridInternalStateSortingItemHelperTests
 	public void GridInternalStateSortingItemHelper_ApplyColumnToSorting_TakesColumnToTheFirstPosition()
 	{
 		// Arrange
-		Mock<IHxGridColumn<string>> mockColumn1 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
-		Mock<IHxGridColumn<string>> mockColumn2 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn1 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn2 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 		var currentSorting = new List<GridInternalStateSortingItem<string>>
 		{
 			new GridInternalStateSortingItem<string> { Column = mockColumn1.Object, ReverseDirection = false },
@@ -63,7 +63,7 @@ public class GridInternalStateSortingItemHelperTests
 	public void GridInternalStateSortingItemHelper_ApplyColumnToSorting_TogglesReverseOnFirstColumn()
 	{
 		// Arrange
-		Mock<IHxGridColumn<string>> mockColumn1 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn1 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 		var currentSorting = new List<GridInternalStateSortingItem<string>>
 		{
 			new GridInternalStateSortingItem<string> { Column = mockColumn1.Object, ReverseDirection = false }
@@ -86,10 +86,10 @@ public class GridInternalStateSortingItemHelperTests
 	public void GridInternalStateSortingItemHelper_ToSortingItems_TwoSimpleColumns()
 	{
 		// Arrange
-		Mock<IHxGridColumn<string>> mockColumn1 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn1 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 		mockColumn1.Setup(m => m.GetSorting()).Returns(new[] { new SortingItem<string>("A", null, SortDirection.Ascending) });
 
-		Mock<IHxGridColumn<string>> mockColumn2 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn2 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 		mockColumn2.Setup(m => m.GetSorting()).Returns(new[] { new SortingItem<string>("B", null, SortDirection.Ascending) });
 
 		List<GridInternalStateSortingItem<string>> currentSorting = new List<GridInternalStateSortingItem<string>>
@@ -118,11 +118,11 @@ public class GridInternalStateSortingItemHelperTests
 		// Arrange
 
 		// this column sorts by A, then by B
-		Mock<IHxGridColumn<string>> mockColumn1 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn1 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 		mockColumn1.Setup(m => m.GetSorting()).Returns(new[] { new SortingItem<string>("A", null, SortDirection.Ascending), new SortingItem<string>("B", null, SortDirection.Ascending) });
 
 		// this column sorts by B, then by A
-		Mock<IHxGridColumn<string>> mockColumn2 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn2 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 		mockColumn2.Setup(m => m.GetSorting()).Returns(new[] { new SortingItem<string>("B", null, SortDirection.Ascending) });
 
 		List<GridInternalStateSortingItem<string>> currentSorting = new List<GridInternalStateSortingItem<string>>
@@ -149,10 +149,10 @@ public class GridInternalStateSortingItemHelperTests
 	public void GridInternalStateSortingItemHelper_ToSortingItems_TwoSameColumns()
 	{
 		// Arrange
-		Mock<IHxGridColumn<string>> mockColumn1 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn1 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 		mockColumn1.Setup(m => m.GetSorting()).Returns(new[] { new SortingItem<string>("A", null, SortDirection.Ascending) });
 
-		Mock<IHxGridColumn<string>> mockColumn2 = new Mock<IHxGridColumn<string>>(MockBehavior.Strict);
+		Mock<IEcGridColumn<string>> mockColumn2 = new Mock<IEcGridColumn<string>>(MockBehavior.Strict);
 		mockColumn2.Setup(m => m.GetSorting()).Returns(new[] { new SortingItem<string>("A", null, SortDirection.Ascending) });
 
 		List<GridInternalStateSortingItem<string>> currentSorting = new List<GridInternalStateSortingItem<string>>

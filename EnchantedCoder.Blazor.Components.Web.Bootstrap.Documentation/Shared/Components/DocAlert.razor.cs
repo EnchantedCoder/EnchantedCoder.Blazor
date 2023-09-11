@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap.Documentation.Shared.Components;
 
 /// <summary>
-/// An alert for the documentation with 3 available configurations. Wraps the <c>HxAlert</c> component.
+/// An alert for the documentation with 3 available configurations. Wraps the <c>EcAlert</c> component.
 /// </summary>
 public partial class DocAlert
 {
@@ -16,7 +16,7 @@ public partial class DocAlert
 	[Parameter] public RenderFragment ChildContent { get; set; }
 
 	/// <summary>
-	/// Additional attributes to be splatted onto an underlying <c>HxAlert</c> component.
+	/// Additional attributes to be splatted onto an underlying <c>EcAlert</c> component.
 	/// </summary>
 	[Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> AdditionalAttributes { get; set; }
 

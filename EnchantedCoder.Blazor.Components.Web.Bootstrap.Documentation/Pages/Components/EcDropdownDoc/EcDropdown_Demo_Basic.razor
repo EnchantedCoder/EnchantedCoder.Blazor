@@ -1,0 +1,17 @@
+﻿<EcDropdown>
+	<EcDropdownToggleElement ElementName="div" CssClass="bg-success p-3 text-white" role="button">
+        Custom dropdown toggle element
+        <EcIcon Icon="BootstrapIcon.Trash" />
+    </EcDropdownToggleElement>
+	<EcDropdownMenu>
+		<EcDropdownItemNavLink Href="/components/EcDropdown">Link with Href</EcDropdownItemNavLink>
+		<EcDropdownItem OnClick="HandleDropdownItemClick">Item with OnClick action</EcDropdownItem>
+		<EcDropdownDivider />
+		<EcDropdownItemText>Some text only</EcDropdownItemText>
+	</EcDropdownMenu>
+</EcDropdown>
+@message
+@code {
+	private string message;
+	private void HandleDropdownItemClick() => message = "Dropdown item clicked";
+}

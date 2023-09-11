@@ -1,0 +1,98 @@
+﻿@page "/EcButtonTest"
+
+<h1>EcButton</h1>
+
+<EcButton Text="OK" Color="ThemeColor.Primary" Icon="BootstrapIcon.Bicycle" OnClick="HandleOKClick" />
+<EcButton Text="Cancel" Color="ThemeColor.Secondary" Size="ButtonSize.Large" OnClick="HandleCancelClick" />
+<EcButton Icon="BootstrapIcon.X" Text="Save" Color="ThemeColor.Primary" />
+<EcButton Icon="BootstrapIcon.Filter" Color="ThemeColor.Light" />
+
+<EcButton Text="Click me..." Color="ThemeColor.Warning" />
+<EcButton Text="Outline..." Color="ThemeColor.Danger" Outline="true" />
+<EcButton Icon="BootstrapIcon.X" Color="ThemeColor.Warning" />
+<EcButton Text="With Tooltip" Icon="BootstrapIcon.ClockHistory" Color="ThemeColor.Warning" Tooltip="This is a tooltip with  very very long text. Is this tooltip text length enought? No. So let's make it even longer. And is the tooltip text long enought now? OK..." />
+
+<h3>EcButtonGroup</h3>
+<EcButtonGroup>
+	<EcButton Text="Button 1" Color="ThemeColor.Secondary" />
+	<EcButton Text="Button 2" Color="ThemeColor.Secondary" />
+	<EcButton Text="Button 3" Color="ThemeColor.Secondary" />
+</EcButtonGroup>
+
+<h3>OnClickStopPropagation</h3>
+<div class="card mt-4" @onclick="HandleCardClick">
+	<div class="card-header">OnClickStopPropagationTest</div>
+	<div class="card-body">
+		<EcButton Text="OnClickStopPropagation=true (default)" Color="ThemeColor.Secondary" />
+		<EcButton Text="OnClickStopPropagation=false" Color="ThemeColor.Secondary" OnClickStopPropagation="false" />
+	</div>
+	<div class="card-footer">
+		Last captured click: @lastCapturedClick
+	</div>
+</div>
+
+<h3>EditForm</h3>
+<EditForm Model="testModel">
+	@testModel.Text
+	<EcSubmit Text="Submit" Color="ThemeColor.Primary" OnValidClick="async () => await Task.Delay(2000)" />
+</EditForm>
+
+<h3>EditContext</h3>
+<EditForm EditContext="editContext">
+	@testModel.Text
+</EditForm>
+<EcButton EditContext="editContext" Text="Submit" Color="ThemeColor.Primary" OnValidClick="async () => await Task.Delay(2000)" />
+
+<h3>Spinner manual override</h3>
+<EcButton Text="OnClick + Spinner" Spinner="inProgress" OnClick="HandleProgressClick" Color="ThemeColor.Light" />
+<EcButton Text="Spinner = true" OnClick="() => inProgress = true" Color="ThemeColor.Success" />
+<EcButton Text="Spinner = false" OnClick="() => inProgress = false" Color="ThemeColor.Danger" />
+inProgress = @inProgress
+
+<h3>Spinner disabled</h3>
+<EcButton Text="Spinner=false" Spinner="false" OnClick="async () => await Task.Delay(2000)" Color="ThemeColor.Light" />
+
+
+@code
+{
+	private DateTime? lastCapturedClick = null;
+	private bool inProgress;
+
+	private TestModel testModel = new TestModel() { Text = "init" };
+	private EditContext editContext;
+
+	protected override void OnInitialized()
+	{
+		editContext = new EditContext(testModel);
+	}
+
+	private Task HandleCardClick()
+	{
+		lastCapturedClick = DateTime.Now;
+		return Task.CompletedTask;
+	}
+
+	private void HandleOKClick()
+	{
+		System.Threading.Thread.Sleep(3000);
+	}
+
+	private async Task HandleCancelClick()
+	{
+		await Task.Delay(3000);
+		StateHasChanged();
+		await Task.Delay(3000);
+	}
+
+	private async Task HandleProgressClick()
+	{
+		inProgress = true;
+		await Task.Delay(3000);
+		inProgress = false;
+	}
+
+	public class TestModel
+	{
+		public string Text { get; set; }
+	}
+}

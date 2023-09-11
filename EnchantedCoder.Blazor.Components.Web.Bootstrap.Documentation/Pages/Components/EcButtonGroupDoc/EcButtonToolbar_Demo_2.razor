@@ -1,0 +1,23 @@
+﻿<EcButtonToolbar CssClass="mb-2">
+    <EcButtonGroup CssClass="me-2">
+        <EcButton Text="1" Color="ThemeColor.Secondary" Outline="true" />
+        <EcButton Text="2" Color="ThemeColor.Secondary" Outline="true" />
+        <EcButton Text="3" Color="ThemeColor.Secondary" Outline="true" />
+        <EcButton Text="4" Color="ThemeColor.Secondary" Outline="true" />
+    </EcButtonGroup>
+    <EcInputText InputGroupStartText="@("@")" Placeholder="Input text example" @bind-Value="text" />
+</EcButtonToolbar>
+
+<EcButtonToolbar CssClass="justify-content-between">
+    <EcButtonGroup>
+        <EcButton Text="1" Color="ThemeColor.Secondary" Outline="true" />
+        <EcButton Text="2" Color="ThemeColor.Secondary" Outline="true" />
+        <EcButton Text="3" Color="ThemeColor.Secondary" Outline="true" />
+        <EcButton Text="4" Color="ThemeColor.Secondary" Outline="true" />
+    </EcButtonGroup>
+    <EcInputText InputGroupStartText="@("@")" Placeholder="Input text example" @bind-Value="text" />
+</EcButtonToolbar>
+
+@code {
+    private string text;
+}

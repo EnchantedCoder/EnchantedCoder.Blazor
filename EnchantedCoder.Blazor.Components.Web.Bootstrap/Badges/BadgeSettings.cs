@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxBadge"/> and derived components.
+/// Settings for the <see cref="EcBadge"/> and derived components.
 /// </summary>
 public record BadgeSettings
 {

@@ -1,7 +1,7 @@
 ﻿//namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 ///// <summary>
-///// Settings for the components derived from <see cref="HxInputBase"/>.
+///// Settings for the components derived from <see cref="EcInputBase"/>.
 ///// </summary>
 //public interface IInputSettings
 //{

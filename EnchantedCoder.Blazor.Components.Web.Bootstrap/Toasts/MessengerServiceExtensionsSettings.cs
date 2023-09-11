@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Defaults for <see cref="HxMessengerServiceExtensions"/>.
+/// Defaults for <see cref="EcMessengerServiceExtensions"/>.
 /// </summary>
 public record MessengerServiceExtensionsSettings
 {

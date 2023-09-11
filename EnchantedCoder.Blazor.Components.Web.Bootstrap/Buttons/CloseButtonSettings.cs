@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxCloseButton"/> and derived components.
+/// Settings for the <see cref="EcCloseButton"/> and derived components.
 /// </summary>
 public class CloseButtonSettings
 {

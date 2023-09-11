@@ -14,9 +14,9 @@ public class Startup
 		services.AddRazorPages();
 		services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-		services.AddHxServices();
-		services.AddHxMessenger();
-		services.AddHxMessageBoxHost();
+		services.AddEcServices();
+		services.AddEcMessenger();
+		services.AddEcMessageBoxHost();
 
 		services.AddTransient<IComponentApiDocModelBuilder, ComponentApiDocModelBuilder>();
 		services.AddSingleton<IDocXmlProvider, DocXmlProvider>();

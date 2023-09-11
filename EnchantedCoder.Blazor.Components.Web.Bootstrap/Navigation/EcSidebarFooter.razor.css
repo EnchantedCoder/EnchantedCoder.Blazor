@@ -1,0 +1,18 @@
+::deep .nav-link {
+	line-height: 1;
+	padding: var(--ec-sidebar-footer-item-padding);
+	margin: var(--ec-sidebar-footer-item-margin);
+	font-size: var(--ec-sidebar-footer-item-font-size);
+	color: var(--ec-sidebar-footer-item-color);
+	border-radius: var(--ec-sidebar-footer-item-radius);
+}
+
+::deep .nav-link:hover {
+	background-color: rgba(var(--ec-sidebar-footer-item-hover-background-color), var(--ec-sidebar-footer-item-hover-background-opacity));
+	color: var(--ec-sidebar-footer-item-hover-color);
+}
+
+::deep .ec-sidebar-footer-navlink {
+	display: flex;
+	align-items: center;
+}

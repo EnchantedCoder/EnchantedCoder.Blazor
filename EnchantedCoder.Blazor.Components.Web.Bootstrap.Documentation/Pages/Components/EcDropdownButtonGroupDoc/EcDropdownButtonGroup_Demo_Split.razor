@@ -1,0 +1,19 @@
+﻿<EcDropdownButtonGroup Split="true">
+	<EcButton Color="ThemeColor.Secondary" OnClick="HandleMainButtonClick">Dropdown button</EcButton>
+	<EcDropdownToggleButton Color="ThemeColor.Secondary">
+		<span class="visually-hidden">Toggle Dropdown</span>@* OPTIONAL (for accessibility) *@
+	</EcDropdownToggleButton>
+	<EcDropdownMenu>
+		<EcDropdownItemNavLink Href="#">Link with Href</EcDropdownItemNavLink>
+		<EcDropdownItem OnClick="HandleDropdownItemClick">Item with OnClick action</EcDropdownItem>
+		<EcDropdownDivider />
+		<EcDropdownItemText>Something else here</EcDropdownItemText>
+	</EcDropdownMenu>
+</EcDropdownButtonGroup>
+
+@message
+@code {
+	private string message;
+	private void HandleMainButtonClick() => message = "Main button clicked";
+	private void HandleDropdownItemClick() => message = "Dropdown item clicked";
+}

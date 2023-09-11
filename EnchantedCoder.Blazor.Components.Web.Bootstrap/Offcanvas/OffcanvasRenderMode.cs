@@ -14,7 +14,7 @@ public enum OffcanvasRenderMode
 
 	/// <summary>
 	/// Offcanvas content is always rendered (and hidden with CSS if not open).
-	/// Needed for HxFilterForm with HxChipList.
+	/// Needed for EcFilterForm with EcChipList.
 	/// </summary>
 	Always = 1
 }

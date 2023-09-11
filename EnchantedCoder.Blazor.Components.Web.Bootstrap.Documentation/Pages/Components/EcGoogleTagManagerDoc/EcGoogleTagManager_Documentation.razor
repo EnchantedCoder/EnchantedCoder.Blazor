@@ -1,0 +1,19 @@
+﻿@attribute [Route("/components/" + nameof(EcGoogleTagManager))]
+@attribute [Route("/components/" + nameof(EcGoogleTagManagerPageViewTracker))]
+@using EnchantedCoder.Blazor.GoogleTagManager
+
+<ComponentApiDoc Type="typeof(EcGoogleTagManager)">
+    <DocAlert Type="DocAlertType.Warning">
+        <code>EcGoogleTagManager</code> and related components are distributed in separate NuGet package: <a href="https://www.nuget.org/packages/EnchantedCoder.Blazor.GoogleTagManager">EnchantedCoder.Blazor.GoogleTagManager</a>.
+    </DocAlert>
+
+	<DocHeading Title="Basic usage" />
+	<p>Install GTM support through application statup:</p>
+	<CodeSnippet File="~\Pages\Components\EcGoogleTagManagerDoc\EcGoogleTagManager_ServiceRegistration.CodeSnippet.cs" />
+</ComponentApiDoc>
+
+<ComponentApiDoc Type="typeof(EcGoogleTagManagerPageViewTracker)">
+    <DocHeading Title="Basic usage" Id="EcGoogleTagManagerPageViewTracker-basic-usage" />
+	<p>Install GTM support through application statup (see above) and add <code>EcGoogleTagManagerPageViewTracker</code> to <code>App.razor</code> or <code>MainLayout.razor</code></p>
+	<CodeSnippet Language="html">@("<EcGoogleTagManagerPageViewTracker />")</CodeSnippet>
+</ComponentApiDoc>

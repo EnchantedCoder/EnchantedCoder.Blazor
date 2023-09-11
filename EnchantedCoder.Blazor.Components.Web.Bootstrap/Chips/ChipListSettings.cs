@@ -3,7 +3,7 @@
 public class ChipListSettings
 {
 	/// <summary>
-	/// Settings for the <see cref="HxBadge"/> used to render chips.
+	/// Settings for the <see cref="EcBadge"/> used to render chips.
 	/// </summary>
 	public BadgeSettings ChipBadgeSettings { get; set; }
 

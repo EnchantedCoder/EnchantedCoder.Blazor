@@ -1,0 +1,27 @@
+﻿<p><code>RenderMode="TabPanelRenderMode.AllTabs"</code> (default)</p>
+<EcTabPanel InitialActiveTabId="tab1">
+	<EcTab Id="tab1" Title="First tab">
+		<Content>
+			<ExpensiveTabContent Title="First tab" />
+		</Content>
+	</EcTab>
+	<EcTab Id="tab2" Title="Second tab">
+		<Content>
+			<ExpensiveTabContent Title="Second tab" />
+		</Content>
+	</EcTab>
+</EcTabPanel>
+
+<p><code>RenderMode="TabPanelRenderMode.ActiveTabOnly"</code></p>
+<EcTabPanel InitialActiveTabId="tab1" RenderMode="TabPanelRenderMode.ActiveTabOnly">
+	<EcTab Id="tab1" Title="First tab">
+		<Content>
+			<ExpensiveTabContent Title="First tab" />
+		</Content>
+	</EcTab>
+	<EcTab Id="tab2" Title="Second tab">
+		<Content>
+			<ExpensiveTabContent Title="Second tab" />
+		</Content>
+	</EcTab>
+</EcTabPanel>

@@ -1,7 +1,0 @@
-﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
-
-<nav id="@this.Id" class="@CssClassHelper.Combine(GetCoreCssClass(), GetOrientationCssClass(), GetVariantCssClass(), this.CssClass)">
-	<CascadingValue Value="@this" IsFixed="true">@* Used by HxDropdownToggleButton to render nav-link class *@
-		@ChildContent
-	</CascadingValue>
-</nav>

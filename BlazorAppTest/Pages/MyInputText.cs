@@ -2,7 +2,7 @@
 
 namespace BlazorAppTest.Pages;
 
-public class MyInputText : HxInputText
+public class MyInputText : EcInputText
 {
 	protected override string FormatValueAsString(string value)
 	{

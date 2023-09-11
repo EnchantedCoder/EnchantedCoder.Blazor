@@ -1,0 +1,27 @@
+﻿@page "/EcInputNumberTest"
+
+<EcInputNumber Label="byte" @bind-Value="_byte" Hint="@_byte?.ToString()" />
+<EcInputNumber Label="sbyte" @bind-Value="_sbyte" Hint="@_sbyte?.ToString()" />
+<EcInputNumber Label="short" @bind-Value="_short" Hint="@_short?.ToString()" />
+<EcInputNumber Label="ushort" @bind-Value="_ushort" Hint="@_ushort?.ToString()" />
+<EcInputNumber Label="int" @bind-Value="_int" Hint="@_uint?.ToString()"/>
+<EcInputNumber Label="uint" @bind-Value="_uint" Hint="@_uint?.ToString()" />
+<EcInputNumber Label="long" @bind-Value="_long" Hint="@_long?.ToString()" />
+<EcInputNumber Label="ulong" @bind-Value="_ulong" Hint="@_ulong?.ToString()" />
+<EcInputNumber Label="float" @bind-Value="_float" Hint="@_float?.ToString()" />
+<EcInputNumber Label="double" @bind-Value="_double" Hint="@_double?.ToString()" />
+<EcInputNumber Label="decimal" @bind-Value="_decimal" Hint="@_decimal?.ToString()" />
+
+@code {
+	private byte? _byte;
+	private sbyte? _sbyte;
+	private short? _short;
+	private ushort? _ushort;
+	private int? _int;
+	private uint? _uint;
+	private long? _long;
+	private ulong? _ulong;
+	private float? _float;
+	private double? _double;
+	private decimal? _decimal;
+}

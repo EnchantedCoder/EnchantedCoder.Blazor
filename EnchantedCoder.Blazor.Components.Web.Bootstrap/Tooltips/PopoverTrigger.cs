@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Triggers for <see cref="HxPopover"/>.
+/// Triggers for <see cref="EcPopover"/>.
 /// </summary>
 [Flags]
 public enum PopoverTrigger

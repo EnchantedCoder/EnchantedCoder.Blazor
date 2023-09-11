@@ -1,0 +1,23 @@
+﻿@attribute [Route("/components/" + nameof(EcAccordion))]
+@attribute [Route("/components/" + nameof(EcAccordionItem))]
+
+<ComponentApiDoc Type="typeof(EcAccordion)">
+	<DocAlert Type="DocAlertType.Warning">
+		Do not use constant value for <code>@nameof(EcAccordion.ExpandedItemId)</code> as it reverts the accordion to that item on every roundtrip. Use <code>@nameof(EcAccordion.InitialExpandedItemId)</code> to set the initial state.
+	</DocAlert>
+
+	<DocHeading Title="Basic usage"/>
+	<Demo Type="typeof(EcAccordion_PlainDemo)" />
+
+    <DocHeading Title="Flush" />
+    <p>Add <code>.accordion-flush</code> to remove the default <code>background-color</code>, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.</p>
+	<Demo Type="typeof(EcAccordion_Demo_Flush)" />
+
+    <DocHeading Title="Stay open" />
+	<Demo Type="typeof(EcAccordion_Demo_StayOpen)" />
+
+    <DocHeading Title="Complex demo" />
+	<Demo Type="typeof(EcAccordion_ComplexDemo)" />
+</ComponentApiDoc>
+
+<ComponentApiDoc Type="typeof(EcAccordionItem)" />

@@ -1,9 +1,0 @@
-﻿.dropdown-menu {
-    width: var(--hx-autosuggest-dropdown-menu-width);
-    overflow: auto;
-    max-height: var(--hx-autosuggest-dropdown-menu-height);
-}
-
-::deep .hx-autosuggest-item-focused:not(:active):not(:focus) {
-    background-color: var(--hx-autosuggest-item-highlighted-background-color);
-}

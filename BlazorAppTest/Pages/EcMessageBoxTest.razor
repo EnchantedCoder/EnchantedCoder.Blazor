@@ -1,0 +1,59 @@
+﻿@page "/EcMessageBoxTest"
+
+<h1>EcMessageBox</h1>
+
+<p>
+	<EcButton Text="Open MessageBox 1..." OnClick="@(async () => await box1.ShowAsync())" Color="ThemeColor.Primary" />
+	<EcMessageBox @ref="box1" Title="First" Text="Number one!" OnClosed="HandleDialogClose" />
+</p>
+
+<p>
+	<EcButton Text="OkCancel..." OnClick="@(async () => await box2.ShowAsync())" Color="ThemeColor.Primary"/>
+	<EcMessageBox @ref="box2" Title="Second?" Text="Number two?" Buttons="MessageBoxButtons.OkCancel" OnClosed="HandleDialogClose" />
+</p>
+
+<p>
+	<EcButton Text="AbortRetryIgnore..." OnClick="@(async () => await box3.ShowAsync())" Color="ThemeColor.Primary" />
+	<EcMessageBox @ref="box3" Title="Test 3" Text="Test 3" Buttons="MessageBoxButtons.AbortRetryIgnore" OnClosed="HandleDialogClose" />
+</p>
+
+<p>
+	<EcButton Text="CustomCancel..." OnClick="@(async () => await box4.ShowAsync())" Color="ThemeColor.Primary" />
+	<EcMessageBox @ref="box4" Title="Test 4" Text="Test 4" Buttons="MessageBoxButtons.CustomCancel" CustomButtonText="Custom" OnClosed="HandleDialogClose" />
+</p>
+
+<p>
+	<EcButton Text="YesNo..." OnClick="@(async () => await box5.ShowAsync())" Color="ThemeColor.Primary" />
+	<EcMessageBox @ref="box5" Title="Test 5" Text="Test 5" Buttons="MessageBoxButtons.YesNo" OnClosed="HandleDialogClose" />
+</p>
+
+<p>
+	<EcButton Text="Mix..." OnClick="@(async () => await box6.ShowAsync())" Color="ThemeColor.Primary" />
+	<EcMessageBox @ref="box6"
+				  Title="Test 6"
+				  Text="Test 6"
+				  Buttons="MessageBoxButtons.Yes | MessageBoxButtons.No | MessageBoxButtons.Ok"
+				  PrimaryButton="MessageBoxButtons.No"
+				  OnClosed="HandleDialogClose" />
+</p>
+
+<p>
+	Last result: @result.ToString("g")
+</p>
+
+@code{
+	EcMessageBox box1;
+	EcMessageBox box2;
+	EcMessageBox box3;
+	EcMessageBox box4;
+	EcMessageBox box5;
+	EcMessageBox box6;
+	MessageBoxButtons result;
+
+	private Task HandleDialogClose(MessageBoxButtons button)
+	{
+		result = button;
+
+		return Task.CompletedTask;
+	}
+}

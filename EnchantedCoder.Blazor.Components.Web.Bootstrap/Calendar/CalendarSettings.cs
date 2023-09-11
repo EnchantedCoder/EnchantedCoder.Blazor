@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxCalendar"/> and derived components.
+/// Settings for the <see cref="EcCalendar"/> and derived components.
 /// </summary>
 public record CalendarSettings
 {

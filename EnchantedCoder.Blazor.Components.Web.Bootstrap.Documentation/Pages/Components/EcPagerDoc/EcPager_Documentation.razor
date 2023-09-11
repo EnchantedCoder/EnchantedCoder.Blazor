@@ -1,0 +1,18 @@
+﻿@attribute [Route("/components/" + nameof(EcPager))]
+
+<ComponentApiDoc Type="typeof(EcPager)">
+    <MainContent>
+        <DocHeading Title="Basic usage" />
+        <p>Although <code>EcPager</code> is mainly used within <code>EcGrid</code>, you can use it on its own to solve any other paging scenarios.</p>
+        <Demo Type="typeof(EcPager_Demo)" Tabs="false" />
+
+        <DocHeading Title="Customization" />
+        <p>There are several parameters which allow you pager customization.</p>
+        <Demo Type="typeof(EcPager_Demo_Customization)" />
+    </MainContent>
+    <CssVariables>
+        <ComponentApiDocCssVariable Name="--ec-pager-margin" Default="1rem">
+			Pager margin.
+		</ComponentApiDocCssVariable>
+    </CssVariables>
+</ComponentApiDoc>

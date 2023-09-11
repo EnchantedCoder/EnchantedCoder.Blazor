@@ -1,0 +1,11 @@
+﻿@page "/EcSelectPickerTest"
+
+<h1>EcSelectPicker (derived from EcSelectBase)</h1>
+
+<BlazorAppTest.Pages.Pickers.EcSelectPicker @bind-Value="lcid" />
+lcid: @lcid
+
+@code
+{
+	int? lcid = 1029;
+}

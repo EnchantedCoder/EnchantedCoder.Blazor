@@ -17,7 +17,7 @@ public static class JSRuntimeExtensions
 
 	internal static ValueTask<IJSObjectReference> ImportEnchantedCoderBlazorWebModuleAsync(this IJSRuntime jsRuntime, string moduleNameWithoutExtension)
 	{
-		versionIdentifierEnchantedCoderBlazorWeb ??= GetAssemblyVersionIdentifierForUri(typeof(HxDynamicElement).Assembly);
+		versionIdentifierEnchantedCoderBlazorWeb ??= GetAssemblyVersionIdentifierForUri(typeof(EcDynamicElement).Assembly);
 
 		var path = "./_content/EnchantedCoder.Blazor.Components.Web/" + moduleNameWithoutExtension + ".js?v=" + versionIdentifierEnchantedCoderBlazorWeb;
 		return jsRuntime.InvokeAsync<IJSObjectReference>("import", path);

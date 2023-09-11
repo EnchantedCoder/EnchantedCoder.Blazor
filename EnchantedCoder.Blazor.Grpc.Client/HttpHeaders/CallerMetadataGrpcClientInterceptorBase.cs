@@ -1,5 +1,5 @@
-﻿using Grpc.Core.Interceptors;
-using Grpc.Core;
+﻿using Grpc.Core;
+using Grpc.Core.Interceptors;
 
 namespace EnchantedCoder.Blazor.Grpc.Client.HttpHeaders;
 

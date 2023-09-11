@@ -1,0 +1,67 @@
+.ec-input-date-icon {
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.ec-input-date:has(input:not(:disabled)) + .ec-input-date-icon {
+	cursor: pointer;
+}
+
+::deep .ec-input-date-dropdown-menu {
+	--bs-dropdown-padding-x: 0.5rem;
+	--bs-dropdown-padding-y: 0.5rem;
+	width: min-content;
+}
+
+::deep .ec-input-date-dropdown-buttons {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ec-input-date-dropdown-buttons ::deep .ec-button:nth-child(2):last-child {
+    margin-left: auto;
+}
+
+.ec-input-date-has-calendar-icon ::deep .is-invalid {
+	background-position: right calc(0.375em + 2rem) center;
+}
+
+.ec-input-date-has-calendar-icon .form-control {
+	padding-right: 4.25rem;
+}
+
+.ec-input-date-has-calendar-icon.input-group-lg .form-control {
+	padding-right: 4.75rem;
+}
+
+.ec-input-date-has-calendar-icon.input-group-sm .form-control {
+	padding-right: 4rem;
+}
+
+.input-group-sm > .ec-input-date-icon {
+	font-size: .75rem;
+}
+
+.ec-input-date-icon,
+::deep .form-floating label {
+	z-index: 10;
+}
+
+.ec-input-date-wrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+::deep .ec-input-date {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: 0;
+}

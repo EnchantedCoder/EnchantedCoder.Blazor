@@ -1,0 +1,38 @@
+.ec-autosuggest-input-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.input-group .ec-autosuggest-input-wrapper {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+}
+
+.input-group .ec-autosuggest-input-wrapper:not(:first-child) ::deep .ec-autosuggest-input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group .ec-autosuggest-input-wrapper:not(:last-child) ::deep .ec-autosuggest-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-control-sm ~ .ec-autosuggest-input-icon {
+    font-size: .75rem;
+}
+
+.ec-autosuggest-input-icon div[role="button"]:not(:hover) ::deep .ec-icon {
+    opacity: var(--ec-autosuggest-input-close-icon-opacity);
+}
+::deep .form-floating > label {
+    z-index: 20;
+}

@@ -1,0 +1,12 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+@* PERF!!! Heavily used in data-lists/grids/etc. => do not over-use subcomponents unless absolutely necessary => don't use EcDropdown components here *@
+<div class="@CssClassHelper.Combine("ec-context-menu", this.CssClassEffective)">
+	<div class="@CssClassHelper.Combine("dropdown", this.DropdownCssClassEffective)">
+		<div role="button" class="ec-context-menu-btn" id="@id" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @onclick:stopPropagation>
+			<EcIcon Icon="this.IconEffective" CssClass="@this.IconCssClassEffective" />
+		</div>
+		<ul class="@CssClassHelper.Combine("dropdown-menu", this.DropdownMenuAlignmentEffective.GetCssClass(), this.DropdownMenuCssClassEffective)" aria-labelledby="@id">
+			@ChildContent
+		</ul>
+	</div>
+</div>

@@ -10,36 +10,36 @@
 	<div class="card-header">OnClick propagation test</div>
 	<div class="card-body">
 
-        <HxFilterForm @ref="filterForm" TModel="FormModel" @bind-Model="@model" OnChipsUpdated="HandleChipUpdated">
+        <EcFilterForm @ref="filterForm" TModel="FormModel" @bind-Model="@model" OnChipsUpdated="HandleChipUpdated">
 			<DataAnnotationsValidator />
 			<ValidationSummary />
 
-			<HxInputText LabelType="LabelType.Floating" Label="Text (large)" InputSize="InputSize.Large" @bind-Value="@context.TextBasic" Hint="@context.TextBasic" />
+			<EcInputText LabelType="LabelType.Floating" Label="Text (large)" InputSize="InputSize.Large" @bind-Value="@context.TextBasic" Hint="@context.TextBasic" />
 
-			<HxInputText LabelType="LabelType.Floating" Label="Text (oninput)" @bind-Value="@context.TextOnInput" BindEvent="BindEvent.OnInput">
+			<EcInputText LabelType="LabelType.Floating" Label="Text (oninput)" @bind-Value="@context.TextOnInput" BindEvent="BindEvent.OnInput">
 				<HintTemplate>
 					Hint: @context.TextOnInput
 				</HintTemplate>
-			</HxInputText>
+			</EcInputText>
 
-			<HxInputText LabelType="LabelType.Floating" Label="Text (disabled)" Enabled="false" @bind-Value="@context.TextDisabled" />
-			<HxInputText LabelType="LabelType.Floating" Label="Text (password)" Type="InputType.Password" @bind-Value="@context.TextPassword" />
-			<HxInputText LabelType="LabelType.Floating" Label="Text (email)" Type="InputType.Email" @bind-Value="@context.TextEmail" />
+			<EcInputText LabelType="LabelType.Floating" Label="Text (disabled)" Enabled="false" @bind-Value="@context.TextDisabled" />
+			<EcInputText LabelType="LabelType.Floating" Label="Text (password)" Type="InputType.Password" @bind-Value="@context.TextPassword" />
+			<EcInputText LabelType="LabelType.Floating" Label="Text (email)" Type="InputType.Email" @bind-Value="@context.TextEmail" />
 
-			<HxInputTextArea LabelType="LabelType.Floating" Label="TextArea" @bind-Value="@context.TextLong" />
+			<EcInputTextArea LabelType="LabelType.Floating" Label="TextArea" @bind-Value="@context.TextLong" />
 
-			<HxInputNumber LabelType="LabelType.Floating" Label="Integer" @bind-Value="@context.IntegerValue" ParsingErrorMessage="Enter correct Integer." />
-			<HxInputNumber LabelType="LabelType.Floating" Label="Integer (nullable)" @bind-Value="@context.NullableIntegerValue" ParsingErrorMessage="Enter correct Integer." />
+			<EcInputNumber LabelType="LabelType.Floating" Label="Integer" @bind-Value="@context.IntegerValue" ParsingErrorMessage="Enter correct Integer." />
+			<EcInputNumber LabelType="LabelType.Floating" Label="Integer (nullable)" @bind-Value="@context.NullableIntegerValue" ParsingErrorMessage="Enter correct Integer." />
 
-			<HxInputNumber LabelType="LabelType.Floating" Label="Decimal" @bind-Value="@context.DecimalValue" ParsingErrorMessage="Enter correct Decimal." />
-			<HxInputNumber LabelType="LabelType.Floating" Label="Decimal (nullable)" @bind-Value="@context.NullableDecimalValue" ParsingErrorMessage="Enter correct Decimal." />
+			<EcInputNumber LabelType="LabelType.Floating" Label="Decimal" @bind-Value="@context.DecimalValue" ParsingErrorMessage="Enter correct Decimal." />
+			<EcInputNumber LabelType="LabelType.Floating" Label="Decimal (nullable)" @bind-Value="@context.NullableDecimalValue" ParsingErrorMessage="Enter correct Decimal." />
 
-			<HxInputPercent LabelType="LabelType.Floating" Label="Percent" @bind-Value="@context.PercentValue" ParsingErrorMessage="Enter correct Percent." InputGroupEndText="" />
+			<EcInputPercent LabelType="LabelType.Floating" Label="Percent" @bind-Value="@context.PercentValue" ParsingErrorMessage="Enter correct Percent." InputGroupEndText="" />
 
-			<HxInputDate LabelType="LabelType.Floating" Label="Date" @bind-Value="@context.DateValue" ParsingErrorMessage="Enter correct Date." />
-			<HxInputDate LabelType="LabelType.Floating" Label="Date (nullable)" @bind-Value="@context.NullableDateValue" ParsingErrorMessage="Enter correct Date." InputGroupEndTemplate="null" />
+			<EcInputDate LabelType="LabelType.Floating" Label="Date" @bind-Value="@context.DateValue" ParsingErrorMessage="Enter correct Date." />
+			<EcInputDate LabelType="LabelType.Floating" Label="Date (nullable)" @bind-Value="@context.NullableDateValue" ParsingErrorMessage="Enter correct Date." InputGroupEndTemplate="null" />
 
-            <HxSearchBox LabelType="LabelType.Floating"
+            <EcSearchBox LabelType="LabelType.Floating"
 			 DataProvider="ProvideSearchResults"
              ItemTitleSelector="i => i.Title"
              ItemSubtitleSelector="i => i.Subtitle"
@@ -51,35 +51,35 @@
              @bind-TextQuery="textQuery"
              OnTextQueryTriggered="OnTextQueryTriggered" />
 
-			@*<HxInputDateRange LabelType="LabelType.Floating" Label="DateRange" @bind-Value="@context.DateRange" ParsingErrorMessage="Enter correct DateRange." />
+			@*<EcInputDateRange LabelType="LabelType.Floating" Label="DateRange" @bind-Value="@context.DateRange" ParsingErrorMessage="Enter correct DateRange." />
 
-		<HxSelect LabelType="LabelType.Floating" Label="Select (TValueType: string)" @bind-Value="@context.CultureInfoSelectName" ValueSelector="@(item => item.DisplayName)" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" />
-		<HxSelect LabelType="LabelType.Floating" Label="Select (TValueType: CultureInfo, small)" @bind-Value="@context.CultureInfoSelect" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" InputSize="InputSize.Small" />
-		<HxSelect LabelType="LabelType.Floating" Label="Select (Data == null, small)" TItem="CultureInfo" TValue="CultureInfo" @bind-Value="@context.CultureInfoSelect" TextSelector="@(item => item.DisplayName)" NullDataText="No data available." InputSize="InputSize.Small" />*@
+		<EcSelect LabelType="LabelType.Floating" Label="Select (TValueType: string)" @bind-Value="@context.CultureInfoSelectName" ValueSelector="@(item => item.DisplayName)" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" />
+		<EcSelect LabelType="LabelType.Floating" Label="Select (TValueType: CultureInfo, small)" @bind-Value="@context.CultureInfoSelect" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" InputSize="InputSize.Small" />
+		<EcSelect LabelType="LabelType.Floating" Label="Select (Data == null, small)" TItem="CultureInfo" TValue="CultureInfo" @bind-Value="@context.CultureInfoSelect" TextSelector="@(item => item.DisplayName)" NullDataText="No data available." InputSize="InputSize.Small" />*@
 
-			<HxAutosuggest LabelType="LabelType.Floating" Label="Autosuggest (large)" @bind-Value="@context.CultureInfoAutosuggest" TextSelector="@(item => item.DisplayName)" DataProvider="CulturesAutosuggestDataProvider" InputSize="InputSize.Large">
+			<EcAutosuggest LabelType="LabelType.Floating" Label="Autosuggest (large)" @bind-Value="@context.CultureInfoAutosuggest" TextSelector="@(item => item.DisplayName)" DataProvider="CulturesAutosuggestDataProvider" InputSize="InputSize.Large">
 				<HintTemplate>@context.CultureInfoAutosuggest?.DisplayName</HintTemplate>
-			</HxAutosuggest>
+			</EcAutosuggest>
 
-            <HxInputTags Label="Tags (Bootstrap theme colors suggested)"
+            <EcInputTags Label="Tags (Bootstrap theme colors suggested)"
              LabelType="LabelType.Floating"
 			 @bind-Value="values"
 			 DataProvider="GetNewItemSuggestions" />
 
-			<HxSubmit Icon="@BootstrapIcon.Check" Color="ThemeColor.Primary">Submit</HxSubmit>
-		</HxFilterForm>
+			<EcSubmit Icon="@BootstrapIcon.Check" Color="ThemeColor.Primary">Submit</EcSubmit>
+		</EcFilterForm>
 
 	</div>
 	<div class="card-footer">
 		<p>Last captured click: @lastCapturedClick</p>
-		<HxChipList Chips="@chips" OnChipRemoveClick="HandleChipRemoveClick" />
+		<EcChipList Chips="@chips" OnChipRemoveClick="HandleChipRemoveClick" />
 	</div>
 </div>
 
 @code
 {
 	private FormModel model = new FormModel();
-	private HxFilterForm<FormModel> filterForm;
+	private EcFilterForm<FormModel> filterForm;
 	private ChipItem[] chips;
 	private DateTime? lastCapturedClick = null;
 	private List<CultureInfo> cultureInfos = new List<CultureInfo> { CultureInfo.GetCultureInfo("cs-CZ"), CultureInfo.GetCultureInfo("en-US"), CultureInfo.GetCultureInfo("sk-SK"), CultureInfo.GetCultureInfo("es-ES") };

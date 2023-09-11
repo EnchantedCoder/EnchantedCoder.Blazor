@@ -19,9 +19,9 @@ public class DemosSmokeTests
 		var ctx = new Bunit.TestContext();
 		ctx.JSInterop.Mode = JSRuntimeMode.Loose;
 		ctx.Services.AddLogging();
-		ctx.Services.AddHxServices();
-		ctx.Services.AddHxMessenger();
-		ctx.Services.AddHxMessageBoxHost();
+		ctx.Services.AddEcServices();
+		ctx.Services.AddEcMessenger();
+		ctx.Services.AddEcMessageBoxHost();
 
 		ctx.Services.AddTransient<IDemoDataService, DemoDataService>();
 

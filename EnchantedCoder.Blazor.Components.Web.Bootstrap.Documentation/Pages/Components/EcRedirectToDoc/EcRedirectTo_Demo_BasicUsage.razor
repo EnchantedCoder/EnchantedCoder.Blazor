@@ -1,0 +1,10 @@
+<EcButton Text="Redirect" OnClick="() => redirectCondition = true" Color="ThemeColor.Primary" />
+@if (redirectCondition)
+{
+    <EcRedirectTo Uri="put_your_URI_here" />
+}
+
+@code
+{
+    private bool redirectCondition;
+}

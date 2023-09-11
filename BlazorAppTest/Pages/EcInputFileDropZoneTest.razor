@@ -1,0 +1,33 @@
+﻿@page "/EcInputFileDropZoneTest"
+
+<h1>EcInputFileDropZone</h1>
+
+<h3>Single</h3>
+<EcInputFileDropZone />
+
+<h3>Multiple</h3>
+<EcInputFileDropZone @ref="component" Multiple />
+<EcButton Text="Clear" OnClick="@(async () => await component.ResetAsync())" Color="ThemeColor.Secondary" />
+
+<h3>Enabled="false"</h3>
+<EcInputFileDropZone Enabled="false" />
+
+<h3>EcFormState</h3>
+<EcSwitch Text="Enabled" @bind-Value="@enabled" />
+<EcFormState Enabled="@enabled">
+	<EcInputFileDropZone />
+</EcFormState>
+
+<h3>Custom NoFilesTemplate</h3>
+<EcInputFileDropZone Multiple>
+	<NoFilesTemplate>
+		<div class="display-3 text-center"><EcIcon Icon="BootstrapIcon.CloudUpload" /></div>
+        <div>Bla bla bla tady upload, drag sem.</div>
+	</NoFilesTemplate>
+</EcInputFileDropZone>
+
+@code
+{
+	private bool enabled = true;
+	private EcInputFileDropZone component;
+}

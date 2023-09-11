@@ -1,0 +1,17 @@
+﻿@attribute [Route("/components/" + nameof(EcInputFile))]
+@attribute [Route("/components/" + nameof(EcInputFileCore))]
+
+<ComponentApiDoc Type="typeof(EcInputFile)">
+
+    <DocHeading Title="Limit file size and/or accepted types" Id="limit-file-size-and-types" />
+	<Demo Type="typeof(EcInputFile_Demo_Limits)" Tabs="false" />
+
+    <DocHeading Title="Simple single file upload" Id="single-file-upload" />
+	<Demo Type="typeof(EcInputFile_SimpleDemo)" />
+
+	<DocHeading Title="Complex demo" />
+	<Demo Type="typeof(EcInputFile_ComplexDemo)" />
+
+</ComponentApiDoc>
+
+<ComponentApiDoc Type="typeof(EcInputFileCore)" />

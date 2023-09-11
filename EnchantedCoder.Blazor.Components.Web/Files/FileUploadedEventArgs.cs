@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Components.Web;
 
 /// <summary>
-/// Arguments for <see cref="HxInputFileCore.OnFileUploaded"/> event.
+/// Arguments for <see cref="EcInputFileCore.OnFileUploaded"/> event.
 /// </summary>
 public class FileUploadedEventArgs
 {

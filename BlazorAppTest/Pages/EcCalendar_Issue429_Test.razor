@@ -1,0 +1,29 @@
+﻿@page "/EcCalendar_Issue429_Test"
+
+<h1>EcCalendar</h1>
+
+<EcCalendar @ref="calendar" MinDate="minDate" MaxDate="maxDate" />
+<p>Min date: @minDate</p>
+<p>Max date: @maxDate</p>
+
+
+<EcButton Text="1. Min date today" Color="ThemeColor.Secondary" OnClick="HandleMinDateClick" />
+<EcButton Text="2. Max date yesterday" Color="ThemeColor.Secondary" OnClick="HandleMaxDateClick" />
+
+@code {
+    private EcCalendar calendar;
+    DateTime? minDate = null;
+    DateTime? maxDate = null;
+
+    private void HandleMinDateClick()
+    {
+        minDate = DateTime.Today;
+        maxDate = null;
+    }
+
+    private void HandleMaxDateClick()
+    {
+        minDate = null;
+        maxDate = DateTime.Today.AddDays(-1);
+    }
+}

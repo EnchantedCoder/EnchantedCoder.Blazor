@@ -7,7 +7,7 @@ public static class ServiceCollectionExtensions
 	/// <summary>
 	/// Adds services needed for EnchantedCoder Blazor library.
 	/// </summary>
-	public static IServiceCollection AddHxServices(this IServiceCollection services)
+	public static IServiceCollection AddEcServices(this IServiceCollection services)
 	{
 		services.AddLocalization();
 

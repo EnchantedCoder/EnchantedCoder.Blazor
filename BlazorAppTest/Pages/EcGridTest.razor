@@ -1,0 +1,153 @@
+﻿@page "/EcGridTest"
+@using System.Globalization
+
+<h1>EcGrid</h1>
+
+<h2>Client paging, auto sorting</h2>
+<EcGrid DataProvider="@ClientCultureInfosDataProvider" @bind-SelectedDataItem="@clientSideCurrentCultureInfo" PageSize="@PageSize" TableContainerCssClass="mt-5" HeaderRowCssClass="myheader" PagerSettings="pagerSettings" @bind-CurrentUserState="clientSideGridUserState">
+	<Columns>
+		<EcGridColumn Order="3" TItem="CultureInfo" HeaderText="Link">
+			<ItemTemplate>
+				<a href="https://www.EnchantedCoder.cz" @onclick:stopPropagation>link to a page</a>
+				<EcButton Text="Go" Color="ThemeColor.Secondary" Outline="true" />
+			</ItemTemplate>
+		</EcGridColumn>
+		<EcGridColumn Id="Name" Order="2" TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)" ItemCssClassSelector="@(item => item.Name.Contains('Z') ? "text-end" : null)" />
+		<EcGridColumn Id="DisplayName" Order="1" TItem="CultureInfo" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" IsDefaultSortColumn="true">
+			<HeaderTemplate Context="context">
+				Display Name (total count: @context.TotalCount)
+			</HeaderTemplate>
+		</EcGridColumn>
+		<EcContextMenuGridColumn Order="99" TItem="CultureInfo" Context="item">
+			<EcContextMenu>
+				<EcContextMenuItem Text="Setup as default" OnClick="async () => await AlarmClicked(item)" />
+				<EcContextMenuItem ConfirmationQuestion="Item with confirmation" OnClick="async () => await AlarmClicked(item)">
+					<EcIcon Icon="BootstrapIcon.Alarm" /> Item with icon
+				</EcContextMenuItem>
+				<EcContextMenuItem Enabled="false" Text="Disabled" OnClick="async () => await AlarmClicked(item)" />
+				<EcContextMenuItem Enabled="false" ConfirmationQuestion="Disabled item with confirmation?" OnClick="async () => await AlarmClicked(item)">
+					<EcIcon Icon="BootstrapIcon.Alarm" /> Disabled with icon
+				</EcContextMenuItem>
+				<EcContextMenuItem Enabled="@item.Name.StartsWith("a")" Text="Conditionaly Disabled" OnClick="async () => await AlarmClicked(item)" />
+			</EcContextMenu>
+		</EcContextMenuGridColumn>
+	</Columns>
+</EcGrid>
+
+@{
+	string name = "Name";
+}
+<EcButton Text="Sort by name" Color="ThemeColor.Secondary" OnClick="() => clientSideGridUserState = clientSideGridUserState with { Sorting = new List<GridUserStateSortingItem> { new GridUserStateSortingItem { ColumnId = name } } }" />
+<EcButton Text="Sort by name (reverse)" Color="ThemeColor.Secondary" OnClick="() => clientSideGridUserState = clientSideGridUserState with { Sorting = new List<GridUserStateSortingItem> { new GridUserStateSortingItem { ColumnId = name, ReverseDirection = true } } }" />
+
+<p>Current CultureInfo: @clientSideCurrentCultureInfo?.DisplayName</p>
+<p>Clicked context menu item: @clickedItem?.DisplayName</p>
+
+<h2>Server paging, server sorting</h2>
+<EcGrid TItem="CultureInfo" @ref="serverSideGrid" @bind-SelectedDataItem="@serverSideCurrentCultureInfo" DataProvider="@ServerCultureInfosDataProvider" @bind-CurrentUserState="serverSideGridUserState" PageSize="@PageSize" MultiSelectionEnabled="@multiSelectionEnabled" SelectionEnabled="false">
+	<Columns>
+		<EcGridColumn TItem="CultureInfo" HeaderText="Display Name" ItemTextSelector="@(item => item.DisplayName)" SortString="@nameof(CultureInfo.DisplayName)" FooterText="This is a footer" />
+		<EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortString="@nameof(CultureInfo.Name)" />
+	</Columns>
+</EcGrid>
+<p>Current CultureInfo: @serverSideCurrentCultureInfo?.DisplayName</p>
+<EcButton Text="Toggle multiselect" Color="ThemeColor.Secondary" OnClick="() => multiSelectionEnabled = !multiSelectionEnabled" />
+<EcButton Text="Next page" Color="ThemeColor.Secondary" OnClick="() => serverSideGridUserState = serverSideGridUserState with { PageIndex = serverSideGridUserState.PageIndex + 1 }" />
+
+<h2>Empty data with @nameof(EcGrid<object>.EmptyDataTemplate)</h2>
+<EcGrid TItem="CultureInfo" DataProvider="@EmptyCultureInfosDataProvider">
+	<Columns>
+		<EcGridColumn TItem="CultureInfo" HeaderText="Display Name" ItemTextSelector="@(item => item.DisplayName)" FooterText="This is a footer" />
+		<EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" />
+	</Columns>
+	<EmptyDataTemplate>
+		<EcGridEmptyDataTemplateDefaultContent>
+			<EcButton Text="Create new item... " Color="ThemeColor.Primary" />
+		</EcGridEmptyDataTemplateDefaultContent>
+	</EmptyDataTemplate>
+</EcGrid>
+
+@code {
+	private const int PageSize = 10;
+
+	private EcGrid<CultureInfo> serverSideGrid;
+
+	private bool multiSelectionEnabled = true;
+	private int skip = 0;
+
+	// LOCAL
+	private CultureInfo clientSideCurrentCultureInfo = null;
+	private GridUserState clientSideGridUserState = new GridUserState { Sorting = new List<GridUserStateSortingItem> { new GridUserStateSortingItem { ColumnId = "Name" } } };
+
+	// SERVER SIDE (simulation)
+	private GridUserState serverSideGridUserState = new GridUserState();
+	private CultureInfo serverSideCurrentCultureInfo = null;
+	private CultureInfo clickedItem = null;
+
+	private PagerSettings pagerSettings = new PagerSettings
+		{
+			FirstPageIcon = BootstrapIcon.ArrowLeftSquareFill,
+			PreviousPageIcon = BootstrapIcon.ArrowLeftSquare,
+			NextPageIcon = BootstrapIcon.ArrowRightSquare,
+			LastPageIcon = BootstrapIcon.ArrowRightSquareFill
+		};
+
+	protected override Task OnInitializedAsync()
+	{
+		EcProgressIndicator.Defaults.Delay = 0; // TEST
+
+		return base.OnInitializedAsync();
+	}
+
+	private List<CultureInfo> GetCultureInfos()
+	{
+		return CultureInfo.GetCultures(CultureTypes.SpecificCultures).OrderBy(item => item.EnglishName /* only for skip! */).Skip(skip).ToList();
+	}
+
+	private async Task<GridDataProviderResult<CultureInfo>> ClientCultureInfosDataProvider(GridDataProviderRequest<CultureInfo> request)
+	{
+		await Task.Delay(3000); // simulate server call
+
+		var cultures = GetCultureInfos();
+		return request.ApplyTo(cultures);
+	}
+
+	private async Task<GridDataProviderResult<CultureInfo>> ServerCultureInfosDataProvider(GridDataProviderRequest<CultureInfo> request)
+	{
+		await Task.Delay(3000); // simulate server call
+
+		var cultures = GetCultureInfos();
+		cultures.Sort(request.Sorting.ToGenericPropertyComparer());
+
+		return new GridDataProviderResult<CultureInfo>()
+			{
+				TotalCount = cultures.Count(),
+				Data = cultures
+						.Skip(request.StartIndex)
+						.Take(PageSize)
+						.ToList()
+			};
+	}
+
+	//private void HandleServerSideGridNextPageButtonClick()
+	//{
+	//	serverSideGridUserState = serverSideGridUserState with { PageIndex = serverSideGridUserState.PageIndex + 1 };
+	//}
+
+	private async Task<GridDataProviderResult<CultureInfo>> EmptyCultureInfosDataProvider(GridDataProviderRequest<CultureInfo> request)
+	{
+		await Task.Delay(3000);
+		return new GridDataProviderResult<CultureInfo>
+			{
+				Data = new List<CultureInfo>(),
+				TotalCount = 0
+			};
+	}
+
+
+	private Task AlarmClicked(System.Globalization.CultureInfo item)
+	{
+		clickedItem = item;
+		return Task.CompletedTask;
+	}
+}

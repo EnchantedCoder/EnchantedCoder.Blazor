@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Fullscreen behavior for <see cref="HxModal"/>.
+/// Fullscreen behavior for <see cref="EcModal"/>.
 /// </summary>
 public enum ModalFullscreen
 {

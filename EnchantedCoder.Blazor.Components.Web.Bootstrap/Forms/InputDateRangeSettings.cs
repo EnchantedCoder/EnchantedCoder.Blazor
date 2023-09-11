@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for <see cref="HxInputDateRange"/>.
+/// Settings for <see cref="EcInputDateRange"/>.
 /// </summary>
 public record InputDateRangeSettings : InputSettings, IInputSettingsWithSize
 {
@@ -33,7 +33,7 @@ public record InputDateRangeSettings : InputSettings, IInputSettingsWithSize
 	public CalendarDateCustomizationProviderDelegate CalendarDateCustomizationProvider { get; set; }
 
 	/// <summary>
-	/// When enabled, shows predefined day ranges (from <see cref="HxInputDateRange.PredefinedDateRanges"/>, e.g. Today).
+	/// When enabled, shows predefined day ranges (from <see cref="EcInputDateRange.PredefinedDateRanges"/>, e.g. Today).
 	/// </summary>
 	public bool? ShowPredefinedDateRanges { get; set; }
 

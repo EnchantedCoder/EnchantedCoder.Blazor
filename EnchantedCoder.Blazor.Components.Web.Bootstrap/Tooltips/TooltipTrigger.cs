@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Triggers for <see cref="HxTooltip"/>.
+/// Triggers for <see cref="EcTooltip"/>.
 /// </summary>
 [Flags]
 public enum TooltipTrigger

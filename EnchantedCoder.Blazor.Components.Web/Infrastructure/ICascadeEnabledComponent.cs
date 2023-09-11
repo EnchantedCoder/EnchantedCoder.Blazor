@@ -13,7 +13,7 @@ public interface ICascadeEnabledComponent
 	/// <summary>
 	/// When <c>null</c> (default), the Enabled value is received from cascading <see cref="FormState" />.
 	/// When value is <c>false</c>, input is rendered as disabled.
-	/// To set multiple controls as disabled use <seealso cref="HxFormState" />.
+	/// To set multiple controls as disabled use <seealso cref="EcFormState" />.
 	/// </summary>
 	public bool? Enabled { get; set; }
 }

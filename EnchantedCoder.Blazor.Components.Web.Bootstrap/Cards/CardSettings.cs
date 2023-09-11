@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for <see cref="HxCard"/>.
+/// Settings for <see cref="EcCard"/>.
 /// </summary>
 public record CardSettings
 {

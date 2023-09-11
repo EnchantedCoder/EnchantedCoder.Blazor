@@ -4,8 +4,8 @@
 /// Enum for <see href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">HTML input types</see>.
 /// </summary>
 /// <remarks>
-/// As the enum is currently used only for <c>HxInputText</c> component, only relevant types are included.
-/// As all the values will by needed, they can be added any later (add restrictions/validation to <c>HxInputText</c> then).
+/// As the enum is currently used only for <c>EcInputText</c> component, only relevant types are included.
+/// As all the values will by needed, they can be added any later (add restrictions/validation to <c>EcInputText</c> then).
 /// </remarks>
 public enum InputType
 {

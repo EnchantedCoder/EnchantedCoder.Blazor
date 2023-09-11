@@ -1,0 +1,26 @@
+﻿@page "/EcListLayoutWithoutFilterTest"
+
+<h1>EcListLayout - without Filter</h1>
+
+<EcListLayout Title="Title" TFilterModel="EcListLayout.NoFilter">
+	<CommandsTemplate>
+		<EcButton Text="New invoice" Color="ThemeColor.Secondary" CssClass="ms-1" OnClick="@HandleNewItemClicked" />
+	</CommandsTemplate>
+	<DataTemplate>
+		<EcGrid @ref="gridComponent" TItem="DataItemDto" PageSize="20" DataProvider="LoadDataItems">
+			<Columns>
+				<EcGridColumn TItem="DataItemDto" HeaderText="Id" ItemTextSelector="@(item => item.ItemId.ToString())" SortString="@nameof(DataItemDto.ItemId)" IsDefaultSortColumn="true" />
+				<EcGridColumn TItem="DataItemDto" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortString="@nameof(DataItemDto.Name)" />
+				<EcContextMenuGridColumn Context="item">
+					<EcContextMenu>
+						<EcContextMenuItem Text="Smazat" OnClick="async () => await HandleDeleteItemClicked(item)" ConfirmationQuestion="@($"Do you realy want to delete {item.Name}?")" />
+					</EcContextMenu>
+				</EcContextMenuGridColumn>
+			</Columns>
+
+		</EcGrid>
+	</DataTemplate>
+	<DetailTemplate>
+		Edit: @currentItem?.ItemId
+	</DetailTemplate>
+</EcListLayout>

@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxButton"/> and derived components.
+/// Settings for the <see cref="EcButton"/> and derived components.
 /// </summary>
 public record ButtonSettings
 {

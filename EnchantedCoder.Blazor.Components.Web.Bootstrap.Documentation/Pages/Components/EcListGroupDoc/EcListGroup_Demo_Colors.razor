@@ -1,0 +1,21 @@
+﻿<EcListGroup>
+    <EcListGroupItem Color="ThemeColor.Primary" OnClick="() => HandleClick(ThemeColor.Primary)">Primary</EcListGroupItem>
+    <EcListGroupItem Color="ThemeColor.Secondary" OnClick="() => HandleClick(ThemeColor.Secondary)">Secondary</EcListGroupItem>
+    <EcListGroupItem Color="ThemeColor.Success" OnClick="() => HandleClick(ThemeColor.Success)">Success</EcListGroupItem>
+    <EcListGroupItem Color="ThemeColor.Danger" OnClick="() => HandleClick(ThemeColor.Danger)">Danger</EcListGroupItem>
+    <EcListGroupItem Color="ThemeColor.Warning" OnClick="() => HandleClick(ThemeColor.Warning)">Warning</EcListGroupItem>
+    <EcListGroupItem Color="ThemeColor.Info" OnClick="() => HandleClick(ThemeColor.Info)">Info</EcListGroupItem>
+    <EcListGroupItem Color="ThemeColor.Light" OnClick="() => HandleClick(ThemeColor.Light)">Light</EcListGroupItem>
+    <EcListGroupItem Color="ThemeColor.Dark" OnClick="() => HandleClick(ThemeColor.Dark)">Dark</EcListGroupItem>
+</EcListGroup>
+
+<p class="mt-3">Last click color: @lastClickColor</p>
+
+@code
+{
+	private ThemeColor? lastClickColor;
+	private void HandleClick(ThemeColor color)
+	{
+		lastClickColor = color;
+	}
+}

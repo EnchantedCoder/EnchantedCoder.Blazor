@@ -1,0 +1,121 @@
+﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
+
+/// <summary>
+/// Edit form derived from EcModelEditForm with support for chip generators.<br />
+/// Full documentation and demos: <see href="https://EnchantedCoder.blazor.eu/components/EcFilterForm">https://EnchantedCoder.blazor.eu/components/EcFilterForm</see>
+/// </summary>
+public class EcFilterForm<TModel> : EcModelEditForm<TModel>, IDisposable
+{
+	public const string ChipGeneratorRegistrationCascadingValueName = "ChipGeneratorsRegistration";
+
+	[Parameter] public EventCallback<ChipItem[]> OnChipsUpdated { get; set; }
+	/// <summary>
+	/// Triggers the <see cref="OnChipsUpdated"/> event. Allows interception of the event in derived components.
+	/// </summary>
+	protected virtual Task InvokeOnChipsUpdatedAsync(ChipItem[] newChips) => OnChipsUpdated.InvokeAsync(newChips);
+
+	private List<IEcChipGenerator> chipGenerators;
+	private CollectionRegistration<IEcChipGenerator> chipGeneratorsRegistration;
+	private bool isDisposed = false;
+	private bool notifyChipsUpdatedAfterRender;
+
+	public EcFilterForm()
+	{
+		chipGenerators = new List<IEcChipGenerator>();
+		chipGeneratorsRegistration = new CollectionRegistration<IEcChipGenerator>(chipGenerators, null, () => isDisposed);
+	}
+
+	protected override void OnModelSet()
+	{
+		base.OnModelSet();
+		notifyChipsUpdatedAfterRender = true;
+	}
+
+	public override async Task UpdateModelAsync()
+	{
+		await NotifyChipsUpdatedAsync();
+		await UpdateModelWithoutChipUpdateAsync();
+	}
+
+	private async Task UpdateModelWithoutChipUpdateAsync()
+	{
+		await base.UpdateModelAsync(); // call base class!
+	}
+
+	private async Task NotifyChipsUpdatedAsync()
+	{
+		var chips = GetChips();
+
+		// Generated chips are connected to ModelInEdit.
+		// When the model is changed, the chips are updated.
+		// As a solution we create a new ModelInEdit so the one used for chips in not changed anymore so the chips do not update the content.
+		ModelInEdit = CloneModel(ModelInEdit);
+		StateHasChanged(); // also called from OnAfterRender
+
+		await InvokeOnChipsUpdatedAsync(chips);
+	}
+
+	private ChipItem[] GetChips()
+	{
+		List<ChipItem> result = new List<ChipItem>();
+
+		foreach (IEcChipGenerator chipGenerator in chipGenerators.ToArray())
+		{
+			result.AddRange(chipGenerator.GetChips());
+		}
+
+		return result.ToArray();
+	}
+
+	/// <summary>
+	/// Tries to remove chip.
+	/// Execution is postponed to OnAfterRender, so this method cannot have a return value.
+	/// </summary>
+	public Task RemoveChipAsync(ChipItem chipToRemove)
+	{
+		// starts to edit the Model (the clone, to be precise)
+		TModel newModelInEdit = CloneModel(Model);
+		chipToRemove.RemoveAction(newModelInEdit); // process the chip removal
+		ModelInEdit = newModelInEdit; // place the model to the edit
+
+		// propagate the model in edit to the Model and notify model changed
+		// if used with await the chip is removed from UI much later
+		_ = InvokeAsync(UpdateModelWithoutChipUpdateAsync);
+
+		notifyChipsUpdatedAfterRender = true; // notify the chips update after the model is "rendered"
+		StateHasChanged(); // added as fix for #59236 EcListLayout/EcFilterForm - loses all chips, when one of chips gets removed
+
+		return Task.CompletedTask;
+	}
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		await base.OnAfterRenderAsync(firstRender);
+
+		if (notifyChipsUpdatedAfterRender)
+		{
+			notifyChipsUpdatedAfterRender = false;
+			await NotifyChipsUpdatedAsync();
+		}
+	}
+
+	protected override void BuildRenderTree(RenderTreeBuilder builder)
+	{
+		builder.OpenComponent<CascadingValue<CollectionRegistration<IEcChipGenerator>>>(0);
+		builder.AddAttribute(1, nameof(CascadingValue<CollectionRegistration<IEcChipGenerator>>.Name), ChipGeneratorRegistrationCascadingValueName);
+		builder.AddAttribute(2, nameof(CascadingValue<CollectionRegistration<IEcChipGenerator>>.Value), chipGeneratorsRegistration);
+		builder.AddAttribute(3, nameof(CascadingValue<CollectionRegistration<IEcChipGenerator>>.IsFixed), true);
+		builder.AddAttribute(4, nameof(CascadingValue<CollectionRegistration<IEcChipGenerator>>.ChildContent), (RenderFragment)base.BuildRenderTree);
+		builder.CloseComponent();
+	}
+
+	public void Dispose()
+	{
+		Dispose(true);
+	}
+
+	protected virtual void Dispose(bool disposing)
+	{
+		isDisposed = true;
+	}
+}

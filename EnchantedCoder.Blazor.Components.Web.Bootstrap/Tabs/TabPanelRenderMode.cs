@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// <see cref="HxTabPanel"/> render mode.
+/// <see cref="EcTabPanel"/> render mode.
 /// </summary>
 public enum TabPanelRenderMode
 {

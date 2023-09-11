@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxSelect{TValue, TItem}"/> component.
+/// Settings for the <see cref="EcSelect{TValue, TItem}"/> component.
 /// </summary>
 public record SelectSettings : InputSettings, IInputSettingsWithSize
 {

@@ -1,0 +1,29 @@
+﻿@page "/EcGrid_Issue405_Test"
+@using System.Globalization
+
+<EcGrid MultiSelectionEnabled="true" Responsive="true" @bind-SelectedDataItems="selectedCultureInfos" TItem="CultureInfo" DataProvider="ClientSideProcessingDataProvider" PageSize="10">
+    <Columns>
+        <EcGridColumn TItem="CultureInfo" HeaderText="LCID" ItemTextSelector="@(item => item.LCID.ToString())" SortKeySelector="@(item => item.LCID)" IsDefaultSortColumn="true" />
+        <EcGridColumn TItem="CultureInfo" HeaderText="DisplayName" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" />
+        <EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)" />
+        <EcGridColumn TItem="CultureInfo" HeaderText="EnglishName" ItemTextSelector="@(item => item.EnglishName)" SortKeySelector="@(item => item.EnglishName)" />
+    </Columns>
+</EcGrid>
+
+<p>
+    Selected culture infos:
+    @foreach (var cultureInfo in selectedCultureInfos)
+    {
+        <span key="cultureInfo">&nbsp;@cultureInfo.Name</span>
+    }
+</p>
+
+@code {
+    private HashSet<CultureInfo> selectedCultureInfos = new();
+    private List<CultureInfo> localCultureInfos = CultureInfo.GetCultures(CultureTypes.AllCultures).ToList();
+
+    private Task<GridDataProviderResult<CultureInfo>> ClientSideProcessingDataProvider(GridDataProviderRequest<CultureInfo> request)
+    {
+        return Task.FromResult(new GridDataProviderResult<CultureInfo>() { Data = null, TotalCount = 0 });
+    }
+}

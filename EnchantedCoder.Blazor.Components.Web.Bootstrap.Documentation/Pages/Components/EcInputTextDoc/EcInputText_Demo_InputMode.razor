@@ -1,0 +1,10 @@
+﻿<EcInputText @bind-Value="inputTextContent" Label="Default InputMode (not set)" />
+<EcInputText @bind-Value="inputTextContent" Label="InputMode.Email" InputMode="InputMode.Email" />
+<EcInputText @bind-Value="inputTextContent" Label="InputMode.Tel" InputMode="InputMode.Tel" />
+<EcInputText @bind-Value="inputTextContent" Label="InputMode.Url" InputMode="InputMode.Url" />
+<EcInputText @bind-Value="inputTextContent" Label="InputMode.Search" InputMode="InputMode.Search" />
+<EcInputText @bind-Value="inputTextContent" Label="InputMode.None" InputMode="InputMode.None" />
+
+@code {
+    private string inputTextContent;
+}

@@ -1,0 +1,13 @@
+<EditForm Model="testModel">
+    @* Your form with validations goes here *@
+    <EcSubmit Text="Submit" Color="ThemeColor.Primary" OnValidClick="async () => await Task.Delay(1000)" />
+    <EcButton Text="Save & Print" Color="ThemeColor.Secondary" OnValidClick="async () => await Task.Delay(2000)" />
+</EditForm>
+
+@code {
+    private TestModel testModel = new TestModel();
+
+    public class TestModel
+    {
+    }
+}

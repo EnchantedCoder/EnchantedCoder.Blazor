@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Size for <see cref="HxModal"/>.
+/// Size for <see cref="EcModal"/>.
 /// </summary>
 public enum ModalSize
 {

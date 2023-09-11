@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
-using Grpc.Net.Client.Web;
 using EnchantedCoder.Blazor.Grpc.Client.Cancellation;
 using EnchantedCoder.Blazor.Grpc.Client.HttpHeaders;
 using EnchantedCoder.Blazor.Grpc.Client.ServerExceptions;
 using EnchantedCoder.Blazor.Grpc.Core;
 using EnchantedCoder.ComponentModel;
+using Grpc.Net.Client.Web;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using ProtoBuf.Grpc.ClientFactory;

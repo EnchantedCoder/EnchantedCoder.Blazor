@@ -1,0 +1,30 @@
+﻿.dropdown-menu {
+    width: 100%;
+    overflow: auto;
+    max-height: var(--ec-multi-select-dropdown-menu-height);
+}
+
+.form-select[readonly]:not([disabled]) {
+    background-color: var(--ec-multi-select-background-color);
+}
+
+button.dropdown-item,
+.form-control[readonly] {
+    cursor: default;
+}
+
+.form-check {
+    margin-bottom: 0;
+}
+
+.form-check-input {
+    margin-left: -1.625em;
+}
+
+.ec-multi-select-input:hover {
+    cursor: default;
+}
+
+.form-check-label {
+	color: inherit;
+}

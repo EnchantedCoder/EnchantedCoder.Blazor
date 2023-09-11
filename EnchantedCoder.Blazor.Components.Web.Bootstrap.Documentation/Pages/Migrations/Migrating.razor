@@ -12,9 +12,9 @@
 <DocHeading Title="CSS" Level="3" />
 <p>If you are using Bootstrap CSS from CDN, update the following line in your HTML head section, it's either <code>index.html</code> or <code>_Host.cshtml</code>/<code>_Layout.cshtml</code> depending on whether you're running WebAssembly or Server:</p>
 <CodeSnippet Language="razor">
-@@HxSetup.RenderBootstrapCssReference(BootstrapFlavor.PlainBootstrap)
+@@EcSetup.RenderBootstrapCssReference(BootstrapFlavor.PlainBootstrap)
 or
-@HxSetup.RenderBootstrapCssReference(BootstrapFlavor.PlainBootstrap)
+@EcSetup.RenderBootstrapCssReference(BootstrapFlavor.PlainBootstrap)
 </CodeSnippet>
 <p>
     If you are referencing our Bootstrap CSS build <code>_content/EnchantedCoder.Blazor.Components.Web.Bootstrap/bootstrap.css</code>, it is updated automatically.
@@ -24,21 +24,21 @@ or
 <DocHeading Title="Bootstrap JavaScript" Id="javascript" Level="3" />
 <p>At the end of HTML <code>&lt;body&gt;</code> section of either <code>index.html</code> or <code>_Host.cshtml</code>/<code>_Layout.cshtml</code> update this line referencing Bootstrap JavaScript Bundle (with Popper) from CDN:</p>
 <CodeSnippet Language="razor">
-@@HxSetup.RenderBootstrapJavaScriptReference()
+@@EcSetup.RenderBootstrapJavaScriptReference()
 or
-@HxSetup.RenderBootstrapJavaScriptReference()
+@EcSetup.RenderBootstrapJavaScriptReference()
 </CodeSnippet>
 
 <DocHeading Title="3. Breaking changes ⚠️" Id="breaking-changes" />
 
 <DocHeading Title="Dropped obsolete components" Level="3" />
 <p>
-	We replaced <code>HxInputCheckbox</code> with new <code>HxCheckbox</code> and <code>HxInputSwitch</code> with new <code>HxSwitch</code>.<br />
-	The original <code>Label</code> parameter is now <code>Text</code> (the <code>Label</code> parameter of new components has a different purpose, see <a href="/components/HxCheckbox"><code>HxCheckbox</code> documentation</a>).
+	We replaced <code>EcInputCheckbox</code> with new <code>EcCheckbox</code> and <code>EcInputSwitch</code> with new <code>EcSwitch</code>.<br />
+	The original <code>Label</code> parameter is now <code>Text</code> (the <code>Label</code> parameter of new components has a different purpose, see <a href="/components/EcCheckbox"><code>EcCheckbox</code> documentation</a>).
 </p>
-<CodeSnippet Language="razor" File="~\Pages\Migrations\Migrating_HxCheckbox_HxSwitch.CodeSnippet.razor" />
+<CodeSnippet Language="razor" File="~\Pages\Migrations\Migrating_EcCheckbox_EcSwitch.CodeSnippet.razor" />
 
-<DocHeading Title="HxNavbar colors" Level="3" />
+<DocHeading Title="EcNavbar colors" Level="3" />
 <p>
 	As <a href="https://getbootstrap.com/docs/5.3/components/navbar/#color-schemes">Bootstrap 5.3 deprecated the original color schemes</a>, the <code>ColorScheme</code> parameter was removed.<br />
 	Use the new parameter <code>ColorMode="ColorMode.Dark"</code> if needed (Light is the default).
@@ -48,19 +48,19 @@ or
 	we changed the default value of <code>Color</code> parameter to <code>ThemeColor.None</code> to not interfere with your CSS classes. You can still use <code>Color="ThemeColor.Light"</code> to get the original navbar default color.
 </p>
 
-<DocHeading Title="HxGrid ContextMenu" Level="3" />
+<DocHeading Title="EcGrid ContextMenu" Level="3" />
 <p>
-	The <code>ContextMenu</code> parameter was removed from <code>HxGrid</code> as it was replaced by <code>HxContextMenuGridColumn</code> a while ago and was already marked as [Obsolete].<br />
+	The <code>ContextMenu</code> parameter was removed from <code>EcGrid</code> as it was replaced by <code>EcContextMenuGridColumn</code> a while ago and was already marked as [Obsolete].<br />
 </p>
-<CodeSnippet Language="razor" File="~\Pages\Migrations\Migrating_HxGrid_ContextMenu.CodeSnippet.razor" />
+<CodeSnippet Language="razor" File="~\Pages\Migrations\Migrating_EcGrid_ContextMenu.CodeSnippet.razor" />
 
 
 <DocHeading Title="4. Verify CSS customizations" />
 <p>Check your CSS customizations and adjust according to the new Bootstrap 5.3 and EnchantedCoder.Blazor setup. Focus on these areas where there were some changes which might affect your visual:</p>
 <ul>
 	<li>check the <a href="https://getbootstrap.com/docs/5.3/migration/#v530">Bootstrap 5.3 migration guide</a></li>
-    <li>check your chip-lists (<code>HxListLayout</code> filters),</li>
-	<li>check the <code>HxMultiSelect</code></li>
+    <li>check your chip-lists (<code>EcListLayout</code> filters),</li>
+	<li>check the <code>EcMultiSelect</code></li>
 </ul>
 
 <DocHeading Title="5. Enjoy the new dark color mode" />

@@ -1,0 +1,23 @@
+@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+@using EnchantedCoder.Blazor.Components.Web.Bootstrap.Internal
+@typeparam TItem
+
+<div class="@CssClassHelper.Combine("ec-tree-view", this.CssClass)">
+    <CascadingValue Value="this" IsFixed="true">
+        @foreach (var item in this.Items)
+        {
+            <EcTreeViewItemInternal @key="item"
+                                TItem="TItem"
+                                Item="item"
+                                Level="0"
+                                TitleSelector="this.ItemTitleSelector"
+                                IconSelector="this.ItemIconSelector"
+                                InitialExpandedSelector="this.ItemInitialExpandedSelector"
+                                CssClass="@this.ItemCssClass"
+                                CssClassSelector="this.ItemCssClassSelector"
+                                ChildrenSelector="this.ItemChildrenSelector"
+                                ContentTemplate="this.ItemTemplate"
+                                OnItemSelected="HandleItemSelected" />
+        }
+    </CascadingValue>
+</div>

@@ -14,7 +14,7 @@
 public partial class BootstrapIcon : IconBase
 {
 	/// <inheritdoc cref="IconBase.RendererComponentType" />
-	public override Type RendererComponentType => typeof(HxBootstrapIcon);
+	public override Type RendererComponentType => typeof(EcBootstrapIcon);
 
 	/// <summary>
 	/// Name of the bootstrap icon.

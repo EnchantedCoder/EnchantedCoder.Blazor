@@ -1,0 +1,34 @@
+﻿@attribute [Route("/components/" + nameof(EcContextMenu))]
+
+<ComponentApiDoc Type="typeof(EcContextMenu)">
+    <MainContent>
+        <DocHeading Title="Basic usage" />
+        <Demo Type="typeof(EcContextMenu_Demo)" Tabs="false" />
+
+        <DocHeading Title="Items with icons" Id="icons" />
+        <p>You can set <code>Icon</code> parameter for some of the menu items.</p>
+        <Demo Type="typeof(EcContextMenu_Demo_WithIcons)" />
+    </MainContent>
+    <CssVariables>
+        <ComponentApiDocCssVariable Name="--ec-context-menu-button-color" Default="unset">
+            Color of the button content.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-context-menu-button-border-radius" Default="var(--bs-border-radius-sm)">
+            Border.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-context-menu-button-border" Default="unset">
+            Border radius.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-context-menu-button-hover-background" Default="var(--bs-secondary-bg)">
+            Background of the context menu button on hover.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-context-menu-button-padding" Default="0 .25rem">
+            Padding of the context menu button.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-context-menu-item-icon-margin" Default="0 .5rem 0 0">
+            Margin of the item icon.
+        </ComponentApiDocCssVariable>
+    </CssVariables>
+</ComponentApiDoc>
+
+<ComponentApiDoc Type="typeof(EcContextMenuItem)" />

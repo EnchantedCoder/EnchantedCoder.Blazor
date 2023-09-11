@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxGrid{TItem}"/> and derived components.
+/// Settings for the <see cref="EcGrid{TItem}"/> and derived components.
 /// </summary>
 public record GridSettings
 {
@@ -51,7 +51,7 @@ public record GridSettings
 
 	/// <summary>
 	/// Custom CSS class to render with <c>div</c> element wrapping the main <c>table</c>
-	/// (<see cref="HxPager"/> is not wrapped in this <c>div</c> element).
+	/// (<see cref="EcPager"/> is not wrapped in this <c>div</c> element).
 	/// </summary>
 	public string TableContainerCssClass { get; set; }
 

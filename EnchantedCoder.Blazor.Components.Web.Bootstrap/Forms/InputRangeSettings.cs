@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxInputRange{TValue}"/> component.
+/// Settings for the <see cref="EcInputRange{TValue}"/> component.
 /// </summary>
 public record InputRangeSettings : InputSettings
 {

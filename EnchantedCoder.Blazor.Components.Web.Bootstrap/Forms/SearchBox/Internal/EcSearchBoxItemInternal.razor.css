@@ -1,0 +1,19 @@
+.ec-search-box-item {
+    display: flex;
+    align-items: center;
+}
+
+::deep .ec-search-box-item-icon {
+    margin: var(--ec-search-box-item-icon-margin);
+    font-size: var(--ec-search-box-item-icon-font-size);
+}
+
+.ec-search-box-item-title {
+    font-size: var(--ec-search-box-item-title-font-size);
+	display: block;
+}
+
+.ec-search-box-item-subtitle {
+    font-size: var(--ec-search-box-item-subtitle-font-size);
+	display: block;
+}

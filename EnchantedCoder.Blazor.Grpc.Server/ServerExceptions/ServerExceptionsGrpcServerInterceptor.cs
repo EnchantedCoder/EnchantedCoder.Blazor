@@ -1,6 +1,6 @@
 ﻿using System.Security;
-using Grpc.Core;
 using EnchantedCoder.AspNetCore.ExceptionMonitoring.Services;
+using Grpc.Core;
 using Microsoft.Extensions.Logging;
 using ProtoBuf.Grpc.Configuration;
 
@@ -28,7 +28,7 @@ public class ServerExceptionsGrpcServerInterceptor : ServerExceptionsInterceptor
 
 		if (exception is OperationFailedException)
 		{
-			// see ServerExceptionsGrpcClientInterceptor - gets propagated to HxMessenger + client-side OperationFailedException
+			// see ServerExceptionsGrpcClientInterceptor - gets propagated to EcMessenger + client-side OperationFailedException
 			status = new Status(StatusCode.FailedPrecondition, exception.Message);
 
 			logger.LogInformation(exception, exception.Message); // e.g. for ApplicationInsights (where Warning and higher levels get tracked by default)

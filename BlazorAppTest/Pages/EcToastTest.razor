@@ -1,0 +1,38 @@
+﻿@page "/EcToastTest"
+
+<h1>EcToast</h1>
+
+@if (isVisible)
+{
+	<EcToastContainer>
+		<EcToast HeaderText="F20/00578" HeaderIcon="BootstrapIcon.InfoCircleFill" ContentText="Invoice has been created." />
+
+		<EcToast HeaderText="Confirmation">
+			<ContentTemplate>
+				<EcIcon Icon="BootstrapIcon.InfoCircleFill" CssClass="me-2" />
+				Hi! All messages have been deleted and cannot be restored.
+			</ContentTemplate>
+		</EcToast>
+
+		<EcToast AutohideDelay="5000">
+			<ContentTemplate>
+				This message should disappear.
+				Close button should be here.
+			</ContentTemplate>
+		</EcToast>
+
+		<EcToast ShowCloseButton="false">
+			<ContentTemplate>
+				No close button here.
+			</ContentTemplate>
+		</EcToast>
+	</EcToastContainer>
+}
+
+<p>
+	<EcButton Text="Toggle" OnClick="() => { isVisible = !isVisible; }" Color="ThemeColor.Primary" />
+</p>
+
+@code{
+	private bool isVisible = true;
+}

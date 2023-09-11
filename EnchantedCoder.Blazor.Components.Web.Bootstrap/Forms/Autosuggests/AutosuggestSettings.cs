@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxAutosuggest{TItem, TValue} "/> and derived components.
+/// Settings for the <see cref="EcAutosuggest{TItem, TValue} "/> and derived components.
 /// </summary>
 public record AutosuggestSettings : InputSettings, IInputSettingsWithSize
 {

@@ -15,7 +15,7 @@ internal class GridInternalStateSortingItem<TItem>
 	/// <summary>
 	/// Sorting column
 	/// </summary>
-	public IHxGridColumn<TItem> Column { get; init; }
+	public IEcGridColumn<TItem> Column { get; init; }
 
 	/// <summary>
 	/// Indicates whether the sorting should be performed in the reverse direction.

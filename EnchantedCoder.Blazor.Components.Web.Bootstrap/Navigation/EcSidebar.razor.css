@@ -1,0 +1,103 @@
+﻿.ec-sidebar {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	flex-basis: var(--ec-sidebar-width);
+	flex-grow: 1;
+	background-color: var(--ec-sidebar-background-color);
+}
+
+.ec-sidebar-collapse {
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+	.ec-sidebar,
+	.ec-sidebar .nav-menu {
+		max-height: 100vh;
+	}
+}
+
+
+.ec-sidebar.collapsed {
+	flex-basis: var(--ec-sidebar-collapsed-width);
+	min-width: auto;
+}
+
+.ec-sidebar-header {
+	padding: var(--ec-sidebar-header-padding);
+}
+
+.ec-sidebar-body {
+	padding: var(--ec-sidebar-body-padding);
+}
+
+.ec-sidebar-footer {
+	display: flex;
+	width: 100%;
+	flex-grow: 0;
+	padding: var(--ec-sidebar-footer-padding);
+}
+
+::deep .ec-sidebar-navbar-toggler {
+	font-size: 1.875rem;
+	padding: 0;
+	border: none !important;
+	width: 2.5rem !important;
+	height: 2.5rem !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+::deep .ec-sidebar-navbar-toggler:focus-within {
+	box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.ec-sidebar-toggler {
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translate(-50%, -50%);
+}
+
+.ec-sidebar-toggler-icon-wrapper {
+	opacity: 0;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	border: var(--ec-sidebar-toggler-border);
+	align-items: center;
+	justify-content: center;
+	background-color: var(--ec-sidebar-toggler-background);
+	color: var(--ec-sidebar-toggler-color);
+	transition: all .25s ease-in-out;
+}
+
+.ec-sidebar:hover .ec-sidebar-toggler-icon-wrapper {
+	opacity: .75;
+}
+
+.ec-sidebar .ec-sidebar-toggler-icon-wrapper:hover {
+	opacity: 1;
+}
+
+.ec-sidebar-navbar-toggler:hover {
+	color: var(--bs-primary);
+}
+
+::deep a[aria-expanded="true"] .bi-chevron-right {
+	transform: rotate(90deg);
+}
+
+/*Desktop collapsed*/
+.ec-sidebar.collapsed {
+	width: var(--ec-sidebar-collapsed-width);
+}
+
+.ec-sidebar.collapsed ::deep .ec-sidebar-brand-name,
+.ec-sidebar.collapsed ::deep .ec-sidebar-item-navlink-content-inner,
+.ec-sidebar.collapsed ::deep .expand-icon {
+	display: none;
+}

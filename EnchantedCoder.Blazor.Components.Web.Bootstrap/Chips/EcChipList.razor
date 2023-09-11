@@ -1,0 +1,32 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+<div class="@CssClassHelper.Combine("ec-chip-list", this.CssClassEffective)">
+	@if (Chips != null)
+	{
+		foreach (EnchantedCoder.Blazor.Components.Web.Bootstrap.ChipItem chipItem in Chips)
+		{
+			<EcBadge @key="@chipItem" Settings="this.ChipBadgeSettingsEffective">
+				@chipItem.ChipTemplate
+				@if (chipItem.Removable)
+				{
+					<span role="button" class="ec-chip-list-remove-btn" @onclick="() => InvokeOnChipRemoveClickAsync(chipItem)" @onclick:stopPropagation>
+						<EcIcon Icon="BootstrapIcon.X" />
+					</span>
+				}
+			</EcBadge>
+		}
+		@if (Chips.Any() && this.ShowResetButtonEffective)
+		{
+			@if (ResetButtonTemplate is not null)
+			{
+				@ResetButtonTemplate
+			}
+			else
+			{
+				<span role="button" class="ec-chip-list-reset-btn" @onclick="() => InvokeOnResetClickAsync()" @onclick:stopPropagation>
+					@ResetButtonText
+					<EcIcon Icon="BootstrapIcon.X" />
+				</span>
+			}
+		}
+	}
+</div>

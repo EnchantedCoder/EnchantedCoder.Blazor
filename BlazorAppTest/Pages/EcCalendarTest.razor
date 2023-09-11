@@ -1,0 +1,26 @@
+﻿@page "/EcCalendarTest"
+
+<h1>EcCalendar</h1>
+
+<EcCalendar @ref="calendar" DateCustomizationProvider="HandleDateCustomization"/>
+
+<EcButton Text="Refresh" Color="ThemeColor.Secondary" OnClick="HandleClickAsync" />
+
+@code {
+    private EcCalendar calendar;
+    int i = 0;
+
+    private async Task HandleClickAsync()
+    {
+        i = (i + 1) % 30;
+        await calendar.RefreshAsync();
+    }
+
+    private CalendarDateCustomizationResult HandleDateCustomization(CalendarDateCustomizationRequest request)
+    {
+        return new CalendarDateCustomizationResult
+        {
+            Enabled = request.Date.Day > i
+        };
+    }
+}

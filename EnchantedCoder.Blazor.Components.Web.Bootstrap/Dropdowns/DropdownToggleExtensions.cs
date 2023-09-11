@@ -2,7 +2,7 @@
 
 internal static class DropdownToggleExtensions
 {
-	internal static string GetDropdownDataBsReference(this IHxDropdownToggle toggle)
+	internal static string GetDropdownDataBsReference(this IEcDropdownToggle toggle)
 	{
 		if (String.IsNullOrWhiteSpace(toggle.DropdownReference))
 		{
@@ -15,7 +15,7 @@ internal static class DropdownToggleExtensions
 		return null;
 	}
 
-	internal static string GetDropdownJsOptionsReference(this IHxDropdownToggle toggle)
+	internal static string GetDropdownJsOptionsReference(this IEcDropdownToggle toggle)
 	{
 		if (String.IsNullOrWhiteSpace(toggle.DropdownReference))
 		{

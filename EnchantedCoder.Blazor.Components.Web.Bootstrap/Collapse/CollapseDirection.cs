@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Direction of the animation for <see cref="HxCollapse"/>.
+/// Direction of the animation for <see cref="EcCollapse"/>.
 /// Default is <see cref="Vertical"/>.
 /// </summary>
 public enum CollapseDirection

@@ -1,0 +1,13 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+
+<div class="ec-progress-overlay">
+	@if (progressIndicatorVisible)
+	{
+		<div class="ec-progress-indicator">
+			<div class="ec-progress-indicator-spinner spinner-border" role="status">
+				<span class="visually-hidden"></span>
+			</div>
+		</div>
+	}
+	@ChildContent
+</div>

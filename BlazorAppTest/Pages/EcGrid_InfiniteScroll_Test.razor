@@ -1,0 +1,49 @@
+﻿@page "/EcGrid_InfiniteScroll_Test"
+@using System.Globalization
+@using Microsoft.Extensions.Logging
+
+<h1>EcGrid with infinite scroll</h1>
+
+<EcGrid TItem="CultureInfo" DataProvider="@ClientCultureInfosDataProvider" ContentNavigationMode="GridContentNavigationMode.InfiniteScroll" TableContainerCssClass="mt-5" ItemRowHeight="50" HeaderRowCssClass="myheader">
+	<Columns>
+		<EcGridColumn TItem="CultureInfo" HeaderText="Display Name" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" IsDefaultSortColumn="true">
+			<PlaceholderTemplate>
+				Loading...
+			</PlaceholderTemplate>
+		</EcGridColumn>
+		<EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)" ItemCssClassSelector="@(item => item.Name.Contains('Z') ? "text-end" : null)" />
+
+		<EcContextMenuGridColumn Context="item">
+			<EcContextMenu>
+				<EcContextMenuItem Text="Delete" Icon="BootstrapIcon.Trash" />
+			</EcContextMenu>
+		</EcContextMenuGridColumn>
+	</Columns>
+</EcGrid>
+
+@code {
+    [Inject] private ILogger<EcGrid_InfiniteScroll_Test> Logger { get; set; }
+
+	protected override Task OnInitializedAsync()
+	{
+		EcProgressIndicator.Defaults.Delay = 0; // TEST
+
+		return base.OnInitializedAsync();
+	}
+
+	private List<CultureInfo> GetCultureInfos()
+	{
+		return CultureInfo.GetCultures(CultureTypes.SpecificCultures).OrderBy(item => item.EnglishName /* only for skip! */).ToList();
+	}
+
+	private async Task<GridDataProviderResult<CultureInfo>> ClientCultureInfosDataProvider(GridDataProviderRequest<CultureInfo> request)
+	{
+		Logger.LogInformation($"Requesting culture infos[{request.StartIndex}, {request.Count}].");
+		await Task.Delay(500); // simulate server call
+
+		var cultures = GetCultureInfos();
+		Logger.LogInformation($"Culture infos loaded (cancelled: {request.CancellationToken.IsCancellationRequested}).");
+
+		return request.ApplyTo(cultures);
+	}
+}

@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Item for <see cref="HxInputDate{TValue}.PredefinedDates" />.
+/// Item for <see cref="EcInputDate{TValue}.PredefinedDates" />.
 /// </summary>
 public class InputDatePredefinedDatesItem
 {

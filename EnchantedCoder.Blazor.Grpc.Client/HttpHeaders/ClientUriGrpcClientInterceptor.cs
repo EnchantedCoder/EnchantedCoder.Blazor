@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components;
 namespace EnchantedCoder.Blazor.Grpc.Client.HttpHeaders;
 
 /// <summary>
-/// gRPC Service interceptor (client-side) which adds "hx-client-uri" HTTP header from NavigationManager.Uri (to be able to log calling page on server side).
+/// gRPC Service interceptor (client-side) which adds "ec-client-uri" HTTP header from NavigationManager.Uri (to be able to log calling page on server side).
 /// </summary>
 public class ClientUriGrpcClientInterceptor : CallerMetadataGrpcClientInterceptorBase
 {
@@ -16,6 +16,6 @@ public class ClientUriGrpcClientInterceptor : CallerMetadataGrpcClientIntercepto
 	}
 	protected override void AddCallerMetadata<TRequest, TResponse>(ref ClientInterceptorContext<TRequest, TResponse> context)
 	{
-		context.Options.Headers.Add("hx-client-uri", navigationManager.Uri);
+		context.Options.Headers.Add("ec-client-uri", navigationManager.Uri);
 	}
 }

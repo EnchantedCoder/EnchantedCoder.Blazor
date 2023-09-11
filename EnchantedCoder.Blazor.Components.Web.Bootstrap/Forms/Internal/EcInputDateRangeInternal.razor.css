@@ -1,0 +1,32 @@
+.ec-input-date-range {
+    display: flex;
+}
+
+::deep .feedback-floating {
+    left: 0;
+}
+
+::deep .ec-input-date-range-dropdown-menu {
+	--bs-dropdown-padding-x: 0.5rem;
+	--bs-dropdown-padding-y: 0.5rem;
+	width: min-content;
+}
+
+.ec-input-date-range-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ec-input-date-range-buttons ::deep .ec-button:nth-child(2):last-child {
+    margin-left: auto;
+}
+
+::deep .dropdown {
+    flex: 1 0 50%;
+}
+
+::deep .dropdown:focus-within,
+::deep .dropdown:has(.is-invalid),
+::deep .dropdown:has(.is-valid) {
+    z-index: 6; /* Assures that the inputs' box shadows are always fully visible (rendered on top). Must be larger than 5 because otherwise the validation message is rendered on top. */
+}

@@ -1,0 +1,22 @@
+﻿<EcSidebar>
+	<HeaderTemplate>
+		<EcSidebarBrand BrandName="EnchantedCoder Blazor">
+            <LogoTemplate>
+                <img src="/logo.png" width="35" height="35" />
+            </LogoTemplate>
+        </EcSidebarBrand>
+	</HeaderTemplate>
+    <ItemsTemplate>
+        <EcSidebarItem Text="Dashboard" Href="TEST" Icon="BootstrapIcon.Columns"/>
+        <EcSidebarItem Text="Employees (plain)" Icon="BootstrapIcon.People">
+            <EcSidebarItem Text="Overview" Href="/EcSidebarTest#x1" Match="NavLinkMatch.All"/>
+            <EcSidebarItem Text="Absences" Href="TEST"/>
+        </EcSidebarItem>
+        <EcSidebarItem Text="Mine (with icons)" Href="TEST" Icon="BootstrapIcon.Person">
+            <EcSidebarItem Text="Overview" Icon="BootstrapIcon.Wallet2" Href="#"/>
+            <EcSidebarItem Text="Timesheets" Icon="BootstrapIcon.Clock"Href="TEST"/>
+            <EcSidebarItem Text="What a stylish logo!" Icon="BootstrapIcon.Exclamation" Href="TEST"/>
+        </EcSidebarItem>
+    </ItemsTemplate>
+
+</EcSidebar>

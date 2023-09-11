@@ -1,0 +1,20 @@
+﻿@page "/EcProgressIndicatorTest"
+<h3>EcProgressIndicator</h3>
+
+<EcProgressIndicator InProgress="@inProgress">
+	<div>Content...</div>
+	<EcButton Text="3sec progress" Color="ThemeColor.Primary" OnClick="HandleToggleProgressClick" Spinner="true" />
+</EcProgressIndicator>
+
+<p>inProgress:  @inProgress</p>
+
+@code
+{
+	private bool inProgress = false;
+	private async Task HandleToggleProgressClick()
+	{
+		inProgress = true;
+		await Task.Delay(3000);
+		inProgress = false;
+	}
+}

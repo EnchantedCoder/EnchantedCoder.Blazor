@@ -1,0 +1,39 @@
+@attribute [Route("/components/" + nameof(EcDropdownButtonGroup))]
+@attribute [Route("/components/" + nameof(EcDropdownToggleButton))]
+
+@inherits PerformanceLoggingComponentBase
+@using Components.EcNavDoc
+
+
+<ComponentApiDoc Type="typeof(EcDropdownButtonGroup)">
+
+    <DocHeading Title="Basic usage" />
+    <p>Dropdowns are usualy used in combination with a button. For such case use the <a href="components/EcDropdownButtonGroup"><code>EcDropdownButtonGroup</code></a> and <a href="components/EcDropdownToggleButton"><code>EcDropdownToggleButton</code></a>.</p>
+    <Demo Type="typeof(EcDropdownButtonGroup_Demo_Basic)" Tabs="false" />
+
+    <DocHeading Title="Button variants" />
+    <Demo Type="typeof(EcDropdownButtonGroup_Demo_Colors)" />
+
+    <DocHeading Title="Split button" />
+    <p>Set <code>EcDropdownButtonGroup.Split="true"</code> and leave the <code>EcDrodownButtonToggle.Text</code> empty (you can use the <code>ChildContent</code> to improve accessibility).</p>
+    <Demo Type="typeof(EcDropdownButtonGroup_Demo_Split)" />
+
+    <DocHeading Title="Sizing" />
+    <p>EcDropdowns work with buttons of all sizes, including default and split dropdown buttons.</p>
+    <Demo Type="typeof(EcDropdownButtonGroup_Demo_Sizing)" />
+
+    <DocHeading Title="Other" />
+    <p>You can use all the generic <a href="components/EcDropdown"><code>EcDropdown</code></a> features such as:</p>
+    <ul>
+        <li><a href="components/EcDropdown#directions">Directions</a></li>
+        <li><a href="components/EcDropdown#header-disabled-active">Header, Disabled, Active</a></li>
+        <li><a href="components/EcDropdown#custom-content">Custom content</a></li>
+        <li><a href="components/EcDropdown#offset-reference">Dropdown offset and reference</a></li>
+        <li><a href="components/EcDropdown#autoclose-behavior">AutoClose behavior</a></li>
+        <li><a href="components/EcDropdown#dark">Dark dropdowns</a></li>
+        <li>etc.</li>
+    </ul>
+
+</ComponentApiDoc>
+
+<ComponentApiDoc Type="typeof(EcDropdownToggleButton)" />

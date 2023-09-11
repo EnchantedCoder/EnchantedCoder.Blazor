@@ -1,0 +1,20 @@
+.ec-offcanvas-footer {
+  display: flex;
+  align-items: center;
+  padding: var(--ec-offcanvas-footer-padding-y)
+    var(--ec-offcanvas-footer-padding-x);
+}
+
+.offcanvas-start.ec-offcanvas-sm,
+.offcanvas-end.ec-offcanvas-sm {
+  width: var(--ec-offcanvas-horizontal-width-sm);
+}
+.offcanvas-start.ec-offcanvas-lg,
+.offcanvas-end.ec-offcanvas-lg {
+  width: var(--ec-offcanvas-horizontal-width-lg);
+}
+
+.ec-offcanvas-close-button {
+    --bs-text-opacity: 1;
+    color: inherit;
+}

@@ -1,0 +1,4 @@
+﻿.ec-toast-container {
+	z-index: 1080;
+	margin: var(--ec-toast-container-margin);
+}

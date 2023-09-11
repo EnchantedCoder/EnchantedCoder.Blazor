@@ -1,0 +1,30 @@
+﻿.ec-sidebar-brand-logo {
+	width: var(--ec-sidebar-brand-logo-width);
+	height: var(--ec-sidebar-brand-logo-height);
+}
+
+.ec-sidebar-brand-shortname {
+	background-color: var(--ec-sidebar-brand-shortname-background-color);
+	border-radius: var(--ec-sidebar-brand-shortname-border-radius);
+	width: var(--ec-sidebar-brand-shortname-width);
+	height: var(--ec-sidebar-brand-shortname-height);
+	font-weight: var(--ec-sidebar-brand-shortname-font-weight);
+	color: var(--ec-sidebar-brand-shortname-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+a {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	font-size: .875rem;
+}
+
+.ec-sidebar-brand-name {
+	font-size: 1.25rem;
+	margin-left: .5rem;
+	color: var(--ec-sidebar-brand-name-color);
+	font-weight: var(--ec-sidebar-brand-name-font-weight);
+}

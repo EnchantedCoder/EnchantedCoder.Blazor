@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Responsive horizontal setting (breakpoint) for <see cref="HxListGroup"/>.
+/// Responsive horizontal setting (breakpoint) for <see cref="EcListGroup"/>.
 /// Default is <see cref="Never"/>.
 /// </summary>
 public enum ListGroupHorizontal

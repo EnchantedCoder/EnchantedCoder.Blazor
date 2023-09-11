@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxModal"/> component
+/// Settings for the <see cref="EcModal"/> component
 /// </summary>
 public record ModalSettings
 {
@@ -39,7 +39,7 @@ public record ModalSettings
 	/// <summary>
 	/// Indicates whether to apply a backdrop on body while the modal is open.
 	/// If set to <see cref="ModalBackdrop.Static"/>, the modal cannot be closed by clicking on the backdrop.
-	/// Default value (from <see cref="HxModal.Defaults"/>) is <see cref="ModalBackdrop.True"/>.
+	/// Default value (from <see cref="EcModal.Defaults"/>) is <see cref="ModalBackdrop.True"/>.
 	/// </summary>
 	public ModalBackdrop? Backdrop { get; set; }
 

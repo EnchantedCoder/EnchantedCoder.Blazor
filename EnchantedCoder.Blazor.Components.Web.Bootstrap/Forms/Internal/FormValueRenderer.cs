@@ -9,7 +9,7 @@ public abstract class FormValueRenderer
 	/// <summary>
 	/// Current renderer.
 	/// </summary>
-	public static FormValueRenderer Current { get; set; } = new HxFormValueRenderer();
+	public static FormValueRenderer Current { get; set; } = new EcFormValueRenderer();
 
 	/// <summary>
 	/// Renders <see cref="IFormValueComponent" />.

@@ -1,13 +1,13 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web;
 
 /// <summary>
-/// Defaults for the <see cref="HxInputFileCore"/>.
+/// Defaults for the <see cref="EcInputFileCore"/>.
 /// </summary>
 public record InputFileCoreSettings
 {
 	/// <summary>
 	/// The maximum files size in bytes.
-	/// When exceeded, the <see cref="HxInputFileCore.OnFileUploaded"/> returns <c>413-RequestEntityTooLarge</c> as <see cref="FileUploadedEventArgs.ResponseStatus"/>.
+	/// When exceeded, the <see cref="EcInputFileCore.OnFileUploaded"/> returns <c>413-RequestEntityTooLarge</c> as <see cref="FileUploadedEventArgs.ResponseStatus"/>.
 	/// </summary>
 	public long? MaxFileSize { get; set; }
 

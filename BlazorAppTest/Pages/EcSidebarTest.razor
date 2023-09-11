@@ -1,0 +1,37 @@
+﻿@page "/EcSidebarTest"
+<h1>EcSidebarTest</h1>
+
+<div class="border d-inline-block">
+	<EcSidebar>
+		<HeaderTemplate>
+			<EcSidebarBrand BrandName="Brand name" BrandNameShort="BN" />
+		</HeaderTemplate>
+
+		<ItemsTemplate>
+			<EcSidebarItem Text="Match Test 1" Icon="BootstrapIcon.Person" Href="/EcSidebarTest" Match="NavLinkMatch.Prefix">
+				<EcSidebarItem Text="Item 1" Href="/EcSidebarTest#x1" Match="NavLinkMatch.All" />
+				<EcSidebarItem Text="Another item" Href="TEST" />
+				<EcSidebarItem Text="Item 3" Href="TEST" />
+				<EcSidebarItem Text="Another item 4" Href="TEST" />
+			</EcSidebarItem>
+			<EcSidebarItem Text="Plain section" Icon="BootstrapIcon.Person">
+				<EcSidebarItem Text="Item 1" Href="/EcSidebarTest#x1" Match="NavLinkMatch.All" />
+				<EcSidebarItem Text="Another item" Href="TEST" />
+				<EcSidebarItem Text="Item 3" Href="TEST" />
+				<EcSidebarItem Text="Another item 4" Href="TEST" />
+			</EcSidebarItem>
+			<EcSidebarItem Text="Subitems with icons" Href="TEST" Icon="BootstrapIcon.Clock">
+				<EcSidebarItem Text="Item 1" Icon="BootstrapIcon.Person" Href="#" />
+				<EcSidebarItem Text="Another item" Icon="BootstrapIcon.Clock" Href="TEST" />
+				<EcSidebarItem Text="Item 3" Icon="BootstrapIcon.Wallet2"Href="TEST" />
+				<EcSidebarItem Text="Another item 4" Icon="BootstrapIcon.ClipboardData" Href="TEST" />
+			</EcSidebarItem>
+			<EcSidebarItem Text="First-level item 1" Href="TEST" Icon="BootstrapIcon.Wallet2" />
+			<EcSidebarItem Text="First-level item 2" Href="TEST" Icon="BootstrapIcon.ClipboardData" />
+		</ItemsTemplate>
+
+		<FooterTemplate>
+			<EcSidebarFooter Href="https://github.com/EnchantedCoder/EnchantedCoder.Blazor" Icon="BootstrapIcon.Github" Text="GitHub repository" />
+		</FooterTemplate>
+	</EcSidebar>
+</div>

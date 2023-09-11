@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Type (shape) for <see cref="HxBadge"/>
+/// Type (shape) for <see cref="EcBadge"/>
 /// </summary>
 public enum BadgeType
 {

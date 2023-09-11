@@ -1,0 +1,30 @@
+﻿@page "/EcGoogleTagManagerTest"
+@page "/EcGoogleTagManagerTest2"
+@page "/EcGoogleTagManagerTest3"
+@using EnchantedCoder.Blazor.GoogleTagManager
+@inject IEcGoogleTagManager Gtm
+
+<h1>EcGoogleTagManager</h1>
+
+<EcButton Text="Push ec.simpleEvent" OnClick="HandlePushSimpleEventClick" Color="ThemeColor.Primary" />
+<EcButton Text="Push ec.click event with args" OnClick="HandlePushEventClick" Color="ThemeColor.Primary" />
+
+<h3>Navigation</h3>
+<a href="/EcGoogleTagManagerTest">/EcGoogleTagManagerTest</a>
+<a href="/EcGoogleTagManagerTest2">/EcGoogleTagManagerTest2</a>
+<a href="/EcGoogleTagManagerTest3">/EcGoogleTagManagerTest3</a>
+
+<EcGoogleTagManagerPageViewTracker />
+
+@code
+{
+	private async Task HandlePushSimpleEventClick()
+	{
+		await Gtm.PushEventAsync("ec.simpleEvent");
+	}
+
+	private async Task HandlePushEventClick(MouseEventArgs args)
+	{
+		await Gtm.PushEventAsync("ec.click", args);
+	}
+}

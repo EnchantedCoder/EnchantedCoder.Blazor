@@ -1,0 +1,11 @@
+﻿<EcProgress Animated="true" MinValue="0" MaxValue="1">
+    <EcProgressBar Value="@value" />
+</EcProgress>
+
+<br />
+
+<EcInputPercent @bind-Value="value" Decimals="0" />
+
+@code {
+    private float value = 0.75f;
+}

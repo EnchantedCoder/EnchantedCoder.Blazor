@@ -23,98 +23,98 @@ If you enjoy using [EnchantedCoder Blazor](https://EnchantedCoder.blazor.eu/), y
 
 ## Forms
 
-* [`HxAutosuggest`](https://EnchantedCoder.blazor.eu/components/HxAutosuggest) - Component for single item selection with dynamic suggestions.
-* [`HxCalendar`](https://EnchantedCoder.blazor.eu/components/HxCalendar) - Basic calendar building block.
-* [`HxInputDate`](https://EnchantedCoder.blazor.eu/components/HxInputDate) - Date picker. Form input component for entering a date.
-* [`HxInputDateRange`](https://EnchantedCoder.blazor.eu/components/HxInputDateRange) - Date range picker. Form input component for entering start date and end date.
-* [`HxInputFile[Core]`](https://EnchantedCoder.blazor.eu/components/HxInputFile[Core]) - Wraps HxInputFileCore as Bootstrap form control (incl. Label etc.).
-* [`HxInputFileDropZone`](https://EnchantedCoder.blazor.eu/components/HxInputFileDropZone) - Ready-made UX for drag&amp;drop file upload.
-* [`HxInputNumber`](https://EnchantedCoder.blazor.eu/components/HxInputNumber) - Numeric input.
-* [`HxInputPercent`](https://EnchantedCoder.blazor.eu/components/HxInputPercent) - Numeric input in percentages with value normalization (0% = 0, 100% = 1.0).
-* [`HxInputRange`](https://EnchantedCoder.blazor.eu/components/HxInputRange) - Range input (slider).
-* [`HxInputTags`](https://EnchantedCoder.blazor.eu/components/HxInputTags) - Input for entering tags.
-* [`HxInputText`](https://EnchantedCoder.blazor.eu/components/HxInputText) - Text input (also password, search, etc.)
-* [`HxInputTextArea`](https://EnchantedCoder.blazor.eu/components/HxInputTextArea) - [Textarea](https://getbootstrap.com/docs/5.3/forms/floating-labels/#textareas).
-* [`HxCheckbox`](https://EnchantedCoder.blazor.eu/components/HxCheckbox) - Checkbox input.
-* [`HxCheckboxList`](https://EnchantedCoder.blazor.eu/components/HxCheckboxList) - Multiple choice by checkboxes.
-* [`HxFormState`](https://EnchantedCoder.blazor.eu/components/HxFormState) - Propagates form states as a cascading parementer to child components.
-* [`HxFormValue`](https://EnchantedCoder.blazor.eu/components/HxFormValue) - Displays a read-only value in the form control visual.
-* [`HxRadioButtonList`](https://EnchantedCoder.blazor.eu/components/HxRadioButtonList) - Select.
-* [`HxSelect`](https://EnchantedCoder.blazor.eu/components/HxSelect) - Select - DropDownList - single-item picker.
-* [`HxMultiSelect`](https://EnchantedCoder.blazor.eu/components/HxMultiSelect) - Unlike a normal select, multiselect allows the user to select multiple options at once.
-* [`HxSearchBox`](https://EnchantedCoder.blazor.eu/components/HxSearchBox) - A search input component witch automatic suggestions, initial dropdown template and free-text queries support.
-* [`HxSwitch`](https://EnchantedCoder.blazor.eu/components/HxSwitch) - Switch input.
-* [`HxFilterForm`](https://EnchantedCoder.blazor.eu/components/HxFilterForm) - Edit form derived from HxModelEditForm with support for chip generators.
-* [`HxValidationMessage`](https://EnchantedCoder.blazor.eu/components/HxValidationMessage) - Displays a list of validation messages for a specified field.
+* [`EcAutosuggest`](https://EnchantedCoder.blazor.eu/components/EcAutosuggest) - Component for single item selection with dynamic suggestions.
+* [`EcCalendar`](https://EnchantedCoder.blazor.eu/components/EcCalendar) - Basic calendar building block.
+* [`EcInputDate`](https://EnchantedCoder.blazor.eu/components/EcInputDate) - Date picker. Form input component for entering a date.
+* [`EcInputDateRange`](https://EnchantedCoder.blazor.eu/components/EcInputDateRange) - Date range picker. Form input component for entering start date and end date.
+* [`EcInputFile[Core]`](https://EnchantedCoder.blazor.eu/components/EcInputFile[Core]) - Wraps EcInputFileCore as Bootstrap form control (incl. Label etc.).
+* [`EcInputFileDropZone`](https://EnchantedCoder.blazor.eu/components/EcInputFileDropZone) - Ready-made UX for drag&amp;drop file upload.
+* [`EcInputNumber`](https://EnchantedCoder.blazor.eu/components/EcInputNumber) - Numeric input.
+* [`EcInputPercent`](https://EnchantedCoder.blazor.eu/components/EcInputPercent) - Numeric input in percentages with value normalization (0% = 0, 100% = 1.0).
+* [`EcInputRange`](https://EnchantedCoder.blazor.eu/components/EcInputRange) - Range input (slider).
+* [`EcInputTags`](https://EnchantedCoder.blazor.eu/components/EcInputTags) - Input for entering tags.
+* [`EcInputText`](https://EnchantedCoder.blazor.eu/components/EcInputText) - Text input (also password, search, etc.)
+* [`EcInputTextArea`](https://EnchantedCoder.blazor.eu/components/EcInputTextArea) - [Textarea](https://getbootstrap.com/docs/5.3/forms/floating-labels/#textareas).
+* [`EcCheckbox`](https://EnchantedCoder.blazor.eu/components/EcCheckbox) - Checkbox input.
+* [`EcCheckboxList`](https://EnchantedCoder.blazor.eu/components/EcCheckboxList) - Multiple choice by checkboxes.
+* [`EcFormState`](https://EnchantedCoder.blazor.eu/components/EcFormState) - Propagates form states as a cascading parementer to child components.
+* [`EcFormValue`](https://EnchantedCoder.blazor.eu/components/EcFormValue) - Displays a read-only value in the form control visual.
+* [`EcRadioButtonList`](https://EnchantedCoder.blazor.eu/components/EcRadioButtonList) - Select.
+* [`EcSelect`](https://EnchantedCoder.blazor.eu/components/EcSelect) - Select - DropDownList - single-item picker.
+* [`EcMultiSelect`](https://EnchantedCoder.blazor.eu/components/EcMultiSelect) - Unlike a normal select, multiselect allows the user to select multiple options at once.
+* [`EcSearchBox`](https://EnchantedCoder.blazor.eu/components/EcSearchBox) - A search input component witch automatic suggestions, initial dropdown template and free-text queries support.
+* [`EcSwitch`](https://EnchantedCoder.blazor.eu/components/EcSwitch) - Switch input.
+* [`EcFilterForm`](https://EnchantedCoder.blazor.eu/components/EcFilterForm) - Edit form derived from EcModelEditForm with support for chip generators.
+* [`EcValidationMessage`](https://EnchantedCoder.blazor.eu/components/EcValidationMessage) - Displays a list of validation messages for a specified field.
 
 ## Buttons & Indicators
 
-* [`HxButton`](https://EnchantedCoder.blazor.eu/components/HxButton) - Bootstrap [button](https://getbootstrap.com/docs/5.3/components/buttons/).
-* [`HxButtonGroup`](https://EnchantedCoder.blazor.eu/components/HxButtonGroup) - Bootstrap [ButtonGroups](https://getbootstrap.com/docs/5.3/components/button-group/).
-* [`HxButtonToolbar`](https://EnchantedCoder.blazor.eu/components/HxButtonToolbar) - Bootstrap [ButtonGroups](https://getbootstrap.com/docs/5.3/components/button-group/).
-* [`HxCloseButton`](https://EnchantedCoder.blazor.eu/components/HxCloseButton) - Bootstrap [close-button](https://getbootstrap.com/docs/5.3/components/close-button/).
-* [`HxSubmit`](https://EnchantedCoder.blazor.eu/components/HxSubmit) - Submit button.
-* [`HxDropdown`](https://EnchantedCoder.blazor.eu/components/HxDropdown) - [Bootstrap 5 Dropdown](https://getbootstrap.com/docs/5.3/components/dropdowns/).
-* [`HxBadge`](https://EnchantedCoder.blazor.eu/components/HxBadge) - [Bootstrap Badge](https://getbootstrap.com/docs/5.3/components/badge/) component.
-* [`HxChipList`](https://EnchantedCoder.blazor.eu/components/HxChipList) - Presents a list of chips as badges.
-* [`HxIcon`](https://EnchantedCoder.blazor.eu/components/HxIcon) - Displays an icon.
-* [`HxSpinner`](https://EnchantedCoder.blazor.eu/components/HxSpinner) - Bootstrap [Spinner](https://getbootstrap.com/docs/5.3/components/spinners/) (usually indicates operation in progress).
-* [`HxProgressIndicator`](https://EnchantedCoder.blazor.eu/components/HxProgressIndicator) - Displays the content of the component as "in progress".
-* [`HxTooltip`](https://EnchantedCoder.blazor.eu/components/HxTooltip) - [Bootstrap Tooltip](https://getbootstrap.com/docs/5.3/components/tooltips/) component, activates on hover.
-* [`HxPopover`](https://EnchantedCoder.blazor.eu/components/HxPopover) - [Bootstrap Popover](https://getbootstrap.com/docs/5.3/components/popovers/) component.
+* [`EcButton`](https://EnchantedCoder.blazor.eu/components/EcButton) - Bootstrap [button](https://getbootstrap.com/docs/5.3/components/buttons/).
+* [`EcButtonGroup`](https://EnchantedCoder.blazor.eu/components/EcButtonGroup) - Bootstrap [ButtonGroups](https://getbootstrap.com/docs/5.3/components/button-group/).
+* [`EcButtonToolbar`](https://EnchantedCoder.blazor.eu/components/EcButtonToolbar) - Bootstrap [ButtonGroups](https://getbootstrap.com/docs/5.3/components/button-group/).
+* [`EcCloseButton`](https://EnchantedCoder.blazor.eu/components/EcCloseButton) - Bootstrap [close-button](https://getbootstrap.com/docs/5.3/components/close-button/).
+* [`EcSubmit`](https://EnchantedCoder.blazor.eu/components/EcSubmit) - Submit button.
+* [`EcDropdown`](https://EnchantedCoder.blazor.eu/components/EcDropdown) - [Bootstrap 5 Dropdown](https://getbootstrap.com/docs/5.3/components/dropdowns/).
+* [`EcBadge`](https://EnchantedCoder.blazor.eu/components/EcBadge) - [Bootstrap Badge](https://getbootstrap.com/docs/5.3/components/badge/) component.
+* [`EcChipList`](https://EnchantedCoder.blazor.eu/components/EcChipList) - Presents a list of chips as badges.
+* [`EcIcon`](https://EnchantedCoder.blazor.eu/components/EcIcon) - Displays an icon.
+* [`EcSpinner`](https://EnchantedCoder.blazor.eu/components/EcSpinner) - Bootstrap [Spinner](https://getbootstrap.com/docs/5.3/components/spinners/) (usually indicates operation in progress).
+* [`EcProgressIndicator`](https://EnchantedCoder.blazor.eu/components/EcProgressIndicator) - Displays the content of the component as "in progress".
+* [`EcTooltip`](https://EnchantedCoder.blazor.eu/components/EcTooltip) - [Bootstrap Tooltip](https://getbootstrap.com/docs/5.3/components/tooltips/) component, activates on hover.
+* [`EcPopover`](https://EnchantedCoder.blazor.eu/components/EcPopover) - [Bootstrap Popover](https://getbootstrap.com/docs/5.3/components/popovers/) component.
 
 ## Data & Grid
 
-* [`HxGrid`](https://EnchantedCoder.blazor.eu/components/HxGrid) - Grid to display tabular data from data source.
-* [`HxContextMenu`](https://EnchantedCoder.blazor.eu/components/HxContextMenu) - Ready-made context menu.
-* [`HxPager`](https://EnchantedCoder.blazor.eu/components/HxPager) - Pager.
-* [`HxRepeater`](https://EnchantedCoder.blazor.eu/components/HxRepeater) - A data-bound list component.
-* [`HxTreeView`](https://EnchantedCoder.blazor.eu/components/HxTreeView) - Component to display hierarchy data structure.
+* [`EcGrid`](https://EnchantedCoder.blazor.eu/components/EcGrid) - Grid to display tabular data from data source.
+* [`EcContextMenu`](https://EnchantedCoder.blazor.eu/components/EcContextMenu) - Ready-made context menu.
+* [`EcPager`](https://EnchantedCoder.blazor.eu/components/EcPager) - Pager.
+* [`EcRepeater`](https://EnchantedCoder.blazor.eu/components/EcRepeater) - A data-bound list component.
+* [`EcTreeView`](https://EnchantedCoder.blazor.eu/components/EcTreeView) - Component to display hierarchy data structure.
 
 ## Layout & Typography
 
-* [`HxAccordion`](https://EnchantedCoder.blazor.eu/components/HxAccordion) - [Bootstrap accordion](https://getbootstrap.com/docs/5.3/components/accordion/) component.
-* [`HxAlert`](https://EnchantedCoder.blazor.eu/components/HxAlert) - Bootstrap Alert.
-* [`HxBadge`](https://EnchantedCoder.blazor.eu/components/HxBadge) - [Bootstrap Badge](https://getbootstrap.com/docs/5.3/components/badge/) component.
-* [`HxCard`](https://EnchantedCoder.blazor.eu/components/HxCard) - [Bootstrap Card](https://getbootstrap.com/docs/5.3/components/card/) component.
-* [`HxCarousel`](https://EnchantedCoder.blazor.eu/components/HxCarousel) - A slideshow component for cycling through elements—images or slides of text—like a carousel.
-* [`HxCollapse`](https://EnchantedCoder.blazor.eu/components/HxCollapse) - [Bootstrap 5 Collapse](https://getbootstrap.com/docs/5.3/components/collapse/) component.
-* [`HxDropdown`](https://EnchantedCoder.blazor.eu/components/HxDropdown) - [Bootstrap 5 Dropdown](https://getbootstrap.com/docs/5.3/components/dropdowns/).
-* [`HxIcon`](https://EnchantedCoder.blazor.eu/components/HxIcon) - Displays an icon.
-* [`HxSpinner`](https://EnchantedCoder.blazor.eu/components/HxSpinner) - [Bootstrap Spinner](https://getbootstrap.com/docs/5.3/components/spinners/) (usually indicates operation in progress).
-* [`HxPlaceholder`](https://EnchantedCoder.blazor.eu/components/HxPlaceholder) - [Bootstrap 5 Placeholder](https://getbootstrap.com/docs/5.3/components/placeholders/) component, aka Skeleton.
-* [`HxProgress`](https://EnchantedCoder.blazor.eu/components/HxProgress) - [Bootstrap 5 Progress](https://getbootstrap.com/docs/5.3/components/progress/) component.
-* [`HxProgressIndicator`](https://EnchantedCoder.blazor.eu/components/HxProgressIndicator) - Displays the content of the component as "in progress".
-* [`HxTooltip`](https://EnchantedCoder.blazor.eu/components/HxTooltip) - [Bootstrap Tooltip](https://getbootstrap.com/docs/5.3/components/tooltips/) component, activates on hover.
-* [`HxTabPanel`](https://EnchantedCoder.blazor.eu/components/HxTabPanel) - Container for `HxTab`.
-* [`HxListGroup`](https://EnchantedCoder.blazor.eu/components/HxListGroup) - [Bootstrap 5 List group](https://getbootstrap.com/docs/5.3/components/list-group/) component.
-* [`HxListLayout`](https://EnchantedCoder.blazor.eu/components/HxListLayout) - Page layout for data presentation (usualy `HxGrid` with filter in `HxOffcanvas`).
-* [`HxFormValue`](https://EnchantedCoder.blazor.eu/components/HxFormValue) - Displays a read-only value in the form control visual (as `.form-control`, with label, border, etc.).
+* [`EcAccordion`](https://EnchantedCoder.blazor.eu/components/EcAccordion) - [Bootstrap accordion](https://getbootstrap.com/docs/5.3/components/accordion/) component.
+* [`EcAlert`](https://EnchantedCoder.blazor.eu/components/EcAlert) - Bootstrap Alert.
+* [`EcBadge`](https://EnchantedCoder.blazor.eu/components/EcBadge) - [Bootstrap Badge](https://getbootstrap.com/docs/5.3/components/badge/) component.
+* [`EcCard`](https://EnchantedCoder.blazor.eu/components/EcCard) - [Bootstrap Card](https://getbootstrap.com/docs/5.3/components/card/) component.
+* [`EcCarousel`](https://EnchantedCoder.blazor.eu/components/EcCarousel) - A slideshow component for cycling through elements—images or slides of text—like a carousel.
+* [`EcCollapse`](https://EnchantedCoder.blazor.eu/components/EcCollapse) - [Bootstrap 5 Collapse](https://getbootstrap.com/docs/5.3/components/collapse/) component.
+* [`EcDropdown`](https://EnchantedCoder.blazor.eu/components/EcDropdown) - [Bootstrap 5 Dropdown](https://getbootstrap.com/docs/5.3/components/dropdowns/).
+* [`EcIcon`](https://EnchantedCoder.blazor.eu/components/EcIcon) - Displays an icon.
+* [`EcSpinner`](https://EnchantedCoder.blazor.eu/components/EcSpinner) - [Bootstrap Spinner](https://getbootstrap.com/docs/5.3/components/spinners/) (usually indicates operation in progress).
+* [`EcPlaceholder`](https://EnchantedCoder.blazor.eu/components/EcPlaceholder) - [Bootstrap 5 Placeholder](https://getbootstrap.com/docs/5.3/components/placeholders/) component, aka Skeleton.
+* [`EcProgress`](https://EnchantedCoder.blazor.eu/components/EcProgress) - [Bootstrap 5 Progress](https://getbootstrap.com/docs/5.3/components/progress/) component.
+* [`EcProgressIndicator`](https://EnchantedCoder.blazor.eu/components/EcProgressIndicator) - Displays the content of the component as "in progress".
+* [`EcTooltip`](https://EnchantedCoder.blazor.eu/components/EcTooltip) - [Bootstrap Tooltip](https://getbootstrap.com/docs/5.3/components/tooltips/) component, activates on hover.
+* [`EcTabPanel`](https://EnchantedCoder.blazor.eu/components/EcTabPanel) - Container for `EcTab`.
+* [`EcListGroup`](https://EnchantedCoder.blazor.eu/components/EcListGroup) - [Bootstrap 5 List group](https://getbootstrap.com/docs/5.3/components/list-group/) component.
+* [`EcListLayout`](https://EnchantedCoder.blazor.eu/components/EcListLayout) - Page layout for data presentation (usualy `EcGrid` with filter in `EcOffcanvas`).
+* [`EcFormValue`](https://EnchantedCoder.blazor.eu/components/EcFormValue) - Displays a read-only value in the form control visual (as `.form-control`, with label, border, etc.).
 
 ## Navigation
 
-* [`HxNavbar`](https://EnchantedCoder.blazor.eu/components/HxNavbar) - [Bootstrap 5 Navbar](https://getbootstrap.com/docs/5.3/components/navbar/) component - responsive navigation header.
-* [`HxSidebar`](https://EnchantedCoder.blazor.eu/components/HxSidebar) - Sidebar component - responsive navigation sidebar.
-* [`HxNav`](https://EnchantedCoder.blazor.eu/components/HxNav) - [Bootstrap Nav](https://getbootstrap.com/docs/5.3/components/navs-tabs/) component.
-* [`HxNavLink`](https://EnchantedCoder.blazor.eu/components/HxNavLink) - [Bootstrap Nav](https://getbootstrap.com/docs/5.3/components/navs-tabs/) component.
-* [`HxScrollspy`](https://EnchantedCoder.blazor.eu/components/HxScrollspy) - [Bootstrap Scrollspy](https://getbootstrap.com/docs/5.3/components/scrollspy/) component.
-* [`HxBreadcrumb`](https://EnchantedCoder.blazor.eu/components/HxBreadcrumb) - [Bootstrap 5 Breadcrumb](https://getbootstrap.com/docs/5.3/components/breadcrumb/) component. Indicates the current page’s location within a navigational hierarchy.
-* [`HxAnchorFragmentNavigation`](https://EnchantedCoder.blazor.eu/components/HxAnchorFragmentNavigation) - Compensates Blazor deficiency in anchor-fragments (scrolling to <code>page#id</code> URLs).
-* [`HxContextMenu`](https://EnchantedCoder.blazor.eu/components/HxContextMenu) - Ready-made context menu.
-* [`HxDropdown`](https://EnchantedCoder.blazor.eu/components/HxDropdown) - [Bootstrap 5 Dropdown](https://getbootstrap.com/docs/5.3/components/dropdowns/).
-* [`HxTabPanel`](https://EnchantedCoder.blazor.eu/components/HxTabPanel) - Container for `HxTab` for easier implementation of tabbed UI.
-* [`HxRedirectTo`](https://EnchantedCoder.blazor.eu/components/HxRedirectTo) - Rendering a `HxRedirectTo` will navigate to a new location.
+* [`EcNavbar`](https://EnchantedCoder.blazor.eu/components/EcNavbar) - [Bootstrap 5 Navbar](https://getbootstrap.com/docs/5.3/components/navbar/) component - responsive navigation header.
+* [`EcSidebar`](https://EnchantedCoder.blazor.eu/components/EcSidebar) - Sidebar component - responsive navigation sidebar.
+* [`EcNav`](https://EnchantedCoder.blazor.eu/components/EcNav) - [Bootstrap Nav](https://getbootstrap.com/docs/5.3/components/navs-tabs/) component.
+* [`EcNavLink`](https://EnchantedCoder.blazor.eu/components/EcNavLink) - [Bootstrap Nav](https://getbootstrap.com/docs/5.3/components/navs-tabs/) component.
+* [`EcScrollspy`](https://EnchantedCoder.blazor.eu/components/EcScrollspy) - [Bootstrap Scrollspy](https://getbootstrap.com/docs/5.3/components/scrollspy/) component.
+* [`EcBreadcrumb`](https://EnchantedCoder.blazor.eu/components/EcBreadcrumb) - [Bootstrap 5 Breadcrumb](https://getbootstrap.com/docs/5.3/components/breadcrumb/) component. Indicates the current page’s location within a navigational hierarchy.
+* [`EcAnchorFragmentNavigation`](https://EnchantedCoder.blazor.eu/components/EcAnchorFragmentNavigation) - Compensates Blazor deficiency in anchor-fragments (scrolling to <code>page#id</code> URLs).
+* [`EcContextMenu`](https://EnchantedCoder.blazor.eu/components/EcContextMenu) - Ready-made context menu.
+* [`EcDropdown`](https://EnchantedCoder.blazor.eu/components/EcDropdown) - [Bootstrap 5 Dropdown](https://getbootstrap.com/docs/5.3/components/dropdowns/).
+* [`EcTabPanel`](https://EnchantedCoder.blazor.eu/components/EcTabPanel) - Container for `EcTab` for easier implementation of tabbed UI.
+* [`EcRedirectTo`](https://EnchantedCoder.blazor.eu/components/EcRedirectTo) - Rendering a `EcRedirectTo` will navigate to a new location.
 
 ## Modals & Interactions
 
-* [`HxMessageBox`](https://EnchantedCoder.blazor.eu/components/HxMessageBox) - Component to display message-boxes.
-* [`HxModal`](https://EnchantedCoder.blazor.eu/components/HxModal) - Component to render modal dialog as a [Bootstrap Modal](https://getbootstrap.com/docs/5.3/components/modal/).
-* [`HxDialogBase`](https://EnchantedCoder.blazor.eu/components/HxDialogBase) - Base class to simplify custom modal dialog implementation.
-* [`HxOffcanvas`](https://EnchantedCoder.blazor.eu/components/HxOffcanvas) - [Bootstrap Offcanvas](https://getbootstrap.com/docs/5.3/components/offcanvas/) component (aka Drawer).
-* [`HxMessenger`](https://EnchantedCoder.blazor.eu/components/HxMessenger) - `HxToastContainer` wrapper for displaying `HxToast` messages dispatched through `IHxMessengerService`.
-* [`HxToast`](https://EnchantedCoder.blazor.eu/components/HxToast) - [Bootstrap Toast](https://getbootstrap.com/docs/5.3/components/toasts/) component. Not intented to be used in user code, use `HxMessenger`.
+* [`EcMessageBox`](https://EnchantedCoder.blazor.eu/components/EcMessageBox) - Component to display message-boxes.
+* [`EcModal`](https://EnchantedCoder.blazor.eu/components/EcModal) - Component to render modal dialog as a [Bootstrap Modal](https://getbootstrap.com/docs/5.3/components/modal/).
+* [`EcDialogBase`](https://EnchantedCoder.blazor.eu/components/EcDialogBase) - Base class to simplify custom modal dialog implementation.
+* [`EcOffcanvas`](https://EnchantedCoder.blazor.eu/components/EcOffcanvas) - [Bootstrap Offcanvas](https://getbootstrap.com/docs/5.3/components/offcanvas/) component (aka Drawer).
+* [`EcMessenger`](https://EnchantedCoder.blazor.eu/components/EcMessenger) - `EcToastContainer` wrapper for displaying `EcToast` messages dispatched through `IEcMessengerService`.
+* [`EcToast`](https://EnchantedCoder.blazor.eu/components/EcToast) - [Bootstrap Toast](https://getbootstrap.com/docs/5.3/components/toasts/) component. Not intented to be used in user code, use `EcMessenger`.
 
 ## Special
 
-* [`HxDynamicElement`](https://EnchantedCoder.blazor.eu/components/HxDynamicElement) - Renders an element with the specified name, attributes and child-content.
-* [`HxGoogleTagManager`](https://EnchantedCoder.blazor.eu/components/HxGoogleTagManager) - Support for [Google Tag Manager](https://developers.google.com/tag-manager/devguide) - initialization and pushing data to data-layer.
+* [`EcDynamicElement`](https://EnchantedCoder.blazor.eu/components/EcDynamicElement) - Renders an element with the specified name, attributes and child-content.
+* [`EcGoogleTagManager`](https://EnchantedCoder.blazor.eu/components/EcGoogleTagManager) - Support for [Google Tag Manager](https://developers.google.com/tag-manager/devguide) - initialization and pushing data to data-layer.

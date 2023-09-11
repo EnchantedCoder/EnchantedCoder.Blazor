@@ -5,9 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddHxServices();
-builder.Services.AddHxMessageBoxHost();
-builder.Services.AddHxMessenger();
+builder.Services.AddEcServices();
+builder.Services.AddEcMessageBoxHost();
+builder.Services.AddEcMessenger();
 
 var app = builder.Build();
 

@@ -1,0 +1,23 @@
+<EcSidebar>
+    <HeaderTemplate>
+        <EcSidebarBrand BrandName="Brand name" BrandNameShort="BN"/>
+    </HeaderTemplate>
+
+    <ItemsTemplate>
+        <EcSidebarItem Text="Dashboard" Href="TEST" Icon="BootstrapIcon.Columns"/>
+        <EcSidebarItem Text="Employees (plain)" Icon="BootstrapIcon.People">
+            <EcSidebarItem Text="Overview" Href="/EcSidebarTest#x1" Match="NavLinkMatch.All"/>
+            <EcSidebarItem Text="Absences" Href="TEST"/>
+        </EcSidebarItem>
+        <EcSidebarItem Text="Mine (with icons)" Href="TEST" Icon="BootstrapIcon.Person">
+            <EcSidebarItem Text="Overview" Icon="BootstrapIcon.Wallet2" Href="#"/>
+            <EcSidebarItem Text="Timesheets" Icon="BootstrapIcon.Clock"Href="TEST"/>
+            <EcSidebarItem Text="Absences" Icon="BootstrapIcon.Exclamation" Href="TEST"/>
+        </EcSidebarItem>
+        <EcSidebarItem Text="Administration" Href="TEST" Icon="BootstrapIcon.Gear"/>
+    </ItemsTemplate>
+
+    <FooterTemplate>
+        <EcSidebarFooter Href="/login" Icon="BootstrapIcon.Person" Text="@(context.SidebarCollapsed ? null : "Login")"/>
+    </FooterTemplate>
+</EcSidebar>

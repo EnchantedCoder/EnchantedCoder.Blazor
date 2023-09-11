@@ -9,96 +9,96 @@
 	<div class="card-header">OnClick propagation test</div>
 	<div class="card-body">
 
-		<HxSwitch Text="Enabled" @bind-Value="@enabled" />
-		<HxSelect Label="Validation message display mode" @bind-Value="@validationMessageMode" Data="@validationMessageModes" Nullable="false" />
+		<EcSwitch Text="Enabled" @bind-Value="@enabled" />
+		<EcSelect Label="Validation message display mode" @bind-Value="@validationMessageMode" Data="@validationMessageModes" Nullable="false" />
 
-		<HxFormState Enabled="@enabled">
+		<EcFormState Enabled="@enabled">
 
-			<HxFilterForm @ref="filterForm" TModel="FormModel" @bind-Model="@model" OnChipsUpdated="HandleChipUpdated">
+			<EcFilterForm @ref="filterForm" TModel="FormModel" @bind-Model="@model" OnChipsUpdated="HandleChipUpdated">
 				<DataAnnotationsValidator />
 				<ValidationSummary />
 
-				<HxFormValue Label="Text" Hint="This item cannot be edited.">
+				<EcFormValue Label="Text" Hint="This item cannot be edited.">
 					<InputGroupEndTemplate>
-						<HxDropdownToggleButton Text="Dropdown" Color="ThemeColor.Secondary" Outline="true" />
-						<HxDropdownMenu>
-							<HxDropdownItemNavLink Href="#">Item 1</HxDropdownItemNavLink>
-							<HxDropdownItemNavLink Href="#">Item 2</HxDropdownItemNavLink>
-						</HxDropdownMenu>
+						<EcDropdownToggleButton Text="Dropdown" Color="ThemeColor.Secondary" Outline="true" />
+						<EcDropdownMenu>
+							<EcDropdownItemNavLink Href="#">Item 1</EcDropdownItemNavLink>
+							<EcDropdownItemNavLink Href="#">Item 2</EcDropdownItemNavLink>
+						</EcDropdownMenu>
 					</InputGroupEndTemplate>
 					<ValueTemplate>
-						<HxIcon Icon="@BootstrapIcon.Wrench" />Text Only...
+						<EcIcon Icon="@BootstrapIcon.Wrench" />Text Only...
 					</ValueTemplate>
-				</HxFormValue>
-				<HxFormValue Label="Empty" Hint="This item cannot be edited." />
-				<HxInputText Label="Text (large)" InputSize="InputSize.Large" @bind-Value="@context.TextBasic" Hint="@context.TextBasic" ValidationMessageMode="@validationMessageMode" />
+				</EcFormValue>
+				<EcFormValue Label="Empty" Hint="This item cannot be edited." />
+				<EcInputText Label="Text (large)" InputSize="InputSize.Large" @bind-Value="@context.TextBasic" Hint="@context.TextBasic" ValidationMessageMode="@validationMessageMode" />
 
-				<HxInputText Label="Text (oninput)" @bind-Value="@context.TextOnInput" BindEvent="BindEvent.OnInput" Placeholder="Model updates oninput." ValidationMessageMode="@validationMessageMode">
+				<EcInputText Label="Text (oninput)" @bind-Value="@context.TextOnInput" BindEvent="BindEvent.OnInput" Placeholder="Model updates oninput." ValidationMessageMode="@validationMessageMode">
 					<HintTemplate>
 						Hint: @context.TextOnInput
 					</HintTemplate>
-				</HxInputText>
+				</EcInputText>
 
-				<HxInputText Label="Text (always disabled)" Enabled="false" @bind-Value="@context.TextDisabled" ValidationMessageMode="@validationMessageMode" />
-				<HxInputText Label="Text (password)" Type="InputType.Password" @bind-Value="@context.TextPassword" ValidationMessageMode="@validationMessageMode" />
-				@*<HxInputText Label="Text (email)" Type="InputType.Email" @bind-Value="@context.TextEmail" />*@
+				<EcInputText Label="Text (always disabled)" Enabled="false" @bind-Value="@context.TextDisabled" ValidationMessageMode="@validationMessageMode" />
+				<EcInputText Label="Text (password)" Type="InputType.Password" @bind-Value="@context.TextPassword" ValidationMessageMode="@validationMessageMode" />
+				@*<EcInputText Label="Text (email)" Type="InputType.Email" @bind-Value="@context.TextEmail" />*@
 
-				<HxInputTextArea Label="TextArea" @bind-Value="@context.TextLong" ValidationMessageMode="@validationMessageMode" />
+				<EcInputTextArea Label="TextArea" @bind-Value="@context.TextLong" ValidationMessageMode="@validationMessageMode" />
 
-				<HxInputNumber Label="Integer" @bind-Value="@context.IntegerValue" InputGroupStartText="€" InputGroupEndText=".00" ParsingErrorMessage="Enter correct Integer." ValidationMessageMode="@validationMessageMode" />
-				<HxInputNumber Label="Integer (nullable)" @bind-Value="@context.NullableIntegerValue" ParsingErrorMessage="Enter correct Integer." ValidationMessageMode="@validationMessageMode" />
-				<HxInputNumber Label="Decimal" @bind-Value="@context.DecimalValue" ParsingErrorMessage="Enter correct Decimal." ValidationMessageMode="@validationMessageMode" />
-				<HxInputNumber Label="Decimal (nullable)" @bind-Value="@context.NullableDecimalValue" ParsingErrorMessage="Enter correct Decimal." ValidationMessageMode="@validationMessageMode" />
-				<HxInputDate Label="Date" @bind-Value="@context.DateValue" ParsingErrorMessage="Enter correct Date." ValidationMessageMode="@validationMessageMode" />
-				<HxInputDate Label="Date (nullable)" @bind-Value="@context.NullableDateValue" ParsingErrorMessage="Enter correct Date." ValidationMessageMode="@validationMessageMode" />
-				<HxInputDateRange Label="DateRange" @bind-Value="@context.DateRange" FromParsingErrorMessage="Enter correct From." ToParsingErrorMessage="Enter correct To." ValidationMessageMode="@validationMessageMode" />
+				<EcInputNumber Label="Integer" @bind-Value="@context.IntegerValue" InputGroupStartText="€" InputGroupEndText=".00" ParsingErrorMessage="Enter correct Integer." ValidationMessageMode="@validationMessageMode" />
+				<EcInputNumber Label="Integer (nullable)" @bind-Value="@context.NullableIntegerValue" ParsingErrorMessage="Enter correct Integer." ValidationMessageMode="@validationMessageMode" />
+				<EcInputNumber Label="Decimal" @bind-Value="@context.DecimalValue" ParsingErrorMessage="Enter correct Decimal." ValidationMessageMode="@validationMessageMode" />
+				<EcInputNumber Label="Decimal (nullable)" @bind-Value="@context.NullableDecimalValue" ParsingErrorMessage="Enter correct Decimal." ValidationMessageMode="@validationMessageMode" />
+				<EcInputDate Label="Date" @bind-Value="@context.DateValue" ParsingErrorMessage="Enter correct Date." ValidationMessageMode="@validationMessageMode" />
+				<EcInputDate Label="Date (nullable)" @bind-Value="@context.NullableDateValue" ParsingErrorMessage="Enter correct Date." ValidationMessageMode="@validationMessageMode" />
+				<EcInputDateRange Label="DateRange" @bind-Value="@context.DateRange" FromParsingErrorMessage="Enter correct From." ToParsingErrorMessage="Enter correct To." ValidationMessageMode="@validationMessageMode" />
 
-				<HxSelect Label="Select (TValueType: string)" @bind-Value="@context.CultureInfoSelectName" ValueSelector="@(item => item.DisplayName)" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" ValidationMessageMode="@validationMessageMode" />
-				<HxSelect Label="Select (TValueType: CultureInfo, small)" @bind-Value="@context.CultureInfoSelect" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" InputSize="InputSize.Small" ValidationMessageMode="@validationMessageMode" />
-				<HxSelect Label="Select (Data == null, small)" TItem="CultureInfo" TValue="CultureInfo" @bind-Value="@context.CultureInfoSelect" TextSelector="@(item => item.DisplayName)" NullDataText="No data available." InputSize="InputSize.Small" ValidationMessageMode="@validationMessageMode" />
+				<EcSelect Label="Select (TValueType: string)" @bind-Value="@context.CultureInfoSelectName" ValueSelector="@(item => item.DisplayName)" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" ValidationMessageMode="@validationMessageMode" />
+				<EcSelect Label="Select (TValueType: CultureInfo, small)" @bind-Value="@context.CultureInfoSelect" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" InputSize="InputSize.Small" ValidationMessageMode="@validationMessageMode" />
+				<EcSelect Label="Select (Data == null, small)" TItem="CultureInfo" TValue="CultureInfo" @bind-Value="@context.CultureInfoSelect" TextSelector="@(item => item.DisplayName)" NullDataText="No data available." InputSize="InputSize.Small" ValidationMessageMode="@validationMessageMode" />
 
-				<HxMultiSelect Label="MultiSelect" @bind-Value="@context.CultureInfoMultiSelectNames" ValueSelector="@(item => item.DisplayName)" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" ValidationMessageMode="@validationMessageMode" />
+				<EcMultiSelect Label="MultiSelect" @bind-Value="@context.CultureInfoMultiSelectNames" ValueSelector="@(item => item.DisplayName)" Data="@cultureInfos" TextSelector="@(item => item.DisplayName)" ValidationMessageMode="@validationMessageMode" />
 
-				<HxAutosuggest Label="Autosuggest" @bind-Value="@context.CultureInfoAutosuggest" TextSelector="@(item => item.DisplayName)" DataProvider="CulturesAutosuggestDataProvider" ValidationMessageMode="@validationMessageMode">
+				<EcAutosuggest Label="Autosuggest" @bind-Value="@context.CultureInfoAutosuggest" TextSelector="@(item => item.DisplayName)" DataProvider="CulturesAutosuggestDataProvider" ValidationMessageMode="@validationMessageMode">
 					<HintTemplate>@context.CultureInfoAutosuggest?.DisplayName</HintTemplate>
 					<InputGroupStartTemplate>
-						<HxButton Color="ThemeColor.Secondary" Text="Start" />
+						<EcButton Color="ThemeColor.Secondary" Text="Start" />
 					</InputGroupStartTemplate>
 					<InputGroupEndTemplate>
-						<HxButton Color="ThemeColor.Secondary" Text="End" />
+						<EcButton Color="ThemeColor.Secondary" Text="End" />
 					</InputGroupEndTemplate>
 					<ItemTemplate Context="item">@item.EnglishName <sup>@item.LCID</sup></ItemTemplate>
 					<EmptyTemplate>
 						<span class="p-2">Couldn't find any matching locale</span>
 					</EmptyTemplate>
-				</HxAutosuggest>
+				</EcAutosuggest>
 
-				<HxCheckbox Text="Checkbox" @bind-Value="@context.BoolCheckbox" Hint="@context.BoolCheckbox.ToString()" ValidationMessageMode="@validationMessageMode" />
+				<EcCheckbox Text="Checkbox" @bind-Value="@context.BoolCheckbox" Hint="@context.BoolCheckbox.ToString()" ValidationMessageMode="@validationMessageMode" />
 
-				<HxCheckbox Label="CheckBox" @bind-Value="@context.BoolCheckbox" Hint="@context.BoolCheckbox.ToString()" ValidationMessageMode="@validationMessageMode">
+				<EcCheckbox Label="CheckBox" @bind-Value="@context.BoolCheckbox" Hint="@context.BoolCheckbox.ToString()" ValidationMessageMode="@validationMessageMode">
 					<TextTemplate>
 						Some <i>text</i> content to render...
 					</TextTemplate>
-				</HxCheckbox>
+				</EcCheckbox>
 
-				<HxCheckboxList TItem="CultureInfo"
+				<EcCheckboxList TItem="CultureInfo"
 								TValue="string"
-								Label="HxCheckboxList"
+								Label="EcCheckboxList"
 								ItemTextSelector="@(item => item.EnglishName)"
 								ItemValueSelector="@(item => item.EnglishName)"
 								Data="@cultureInfos"
 								@bind-Value="@model.CultureInfoMultiSelectNames" />
 
 
-				<HxSwitch Text="Switch" @bind-Value="@context.BoolSwitch" ValidationMessageMode="@validationMessageMode" />
+				<EcSwitch Text="Switch" @bind-Value="@context.BoolSwitch" ValidationMessageMode="@validationMessageMode" />
 
-				<HxSubmit Icon="@BootstrapIcon.Check" Color="ThemeColor.Primary">Submit</HxSubmit>
-			</HxFilterForm>
-		</HxFormState>
+				<EcSubmit Icon="@BootstrapIcon.Check" Color="ThemeColor.Primary">Submit</EcSubmit>
+			</EcFilterForm>
+		</EcFormState>
 	</div>
 	<div class="card-footer">
 		<p>Last captured click: @lastCapturedClick</p>
-		<HxChipList Chips="@chips" OnChipRemoveClick="HandleChipRemoveClick" />
+		<EcChipList Chips="@chips" OnChipRemoveClick="HandleChipRemoveClick" />
 	</div>
 </div>
 
@@ -108,7 +108,7 @@
 	private ValidationMessageMode validationMessageMode = ValidationMessageMode.Tooltip;
 
 	private FormModel model = new FormModel();
-	private HxFilterForm<FormModel> filterForm;
+	private EcFilterForm<FormModel> filterForm;
 	private ChipItem[] chips;
 	private DateTime? lastCapturedClick = null;
 	private List<ValidationMessageMode> validationMessageModes = Enum.GetValues<ValidationMessageMode>().ToList();

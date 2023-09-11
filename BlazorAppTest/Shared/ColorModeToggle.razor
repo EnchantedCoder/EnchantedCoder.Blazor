@@ -1,12 +1,12 @@
 ﻿@using Microsoft.JSInterop;
 
-<HxDropdownButtonGroup CssClass="align-self-center ms-auto">
-	<HxDropdownToggleButton Outline="true" Color="ThemeColor.Primary">Color mode</HxDropdownToggleButton>
-	<HxDropdownMenu>
-		<HxDropdownItem OnClick="() => SetColorModeAsync(ColorMode.Dark)">Dark color mode</HxDropdownItem>
-		<HxDropdownItem OnClick="() => SetColorModeAsync(ColorMode.Light)">Light color mode</HxDropdownItem>
-	</HxDropdownMenu>
-</HxDropdownButtonGroup>
+<EcDropdownButtonGroup CssClass="align-self-center ms-auto">
+	<EcDropdownToggleButton Outline="true" Color="ThemeColor.Primary">Color mode</EcDropdownToggleButton>
+	<EcDropdownMenu>
+		<EcDropdownItem OnClick="() => SetColorModeAsync(ColorMode.Dark)">Dark color mode</EcDropdownItem>
+		<EcDropdownItem OnClick="() => SetColorModeAsync(ColorMode.Light)">Light color mode</EcDropdownItem>
+	</EcDropdownMenu>
+</EcDropdownButtonGroup>
 
 @code {
 	[Inject] protected IJSRuntime JSRuntime { get; set; }

@@ -1,0 +1,19 @@
+﻿<EcCarousel @ref="carousel" Ride="CarouselRide.False" Controls="true" Interval="1000" CssClass="mb-2">
+	<EcCarouselItem Active="true">
+		<DemoImage Text="First Slide" Color="#666" />
+	</EcCarouselItem>
+	<EcCarouselItem>
+		<DemoImage Text="Second Slide" Color="#555" />
+	</EcCarouselItem>
+	<EcCarouselItem>
+		<DemoImage Text="Third Slide" Color="#444" />
+	</EcCarouselItem>
+</EcCarousel>
+
+<EcButton Color="ThemeColor.Success" OnClick="() => carousel.CycleAsync()" Text="Cycle" />
+<EcButton Color="ThemeColor.Danger" OnClick="() => carousel.PauseAsync()" Text="Pause" />
+<EcButton Color="ThemeColor.Dark" OnClick="() => carousel.SlideToAsync(1)" Text="Slide item 1" />
+
+@code {
+    private EcCarousel carousel;
+}

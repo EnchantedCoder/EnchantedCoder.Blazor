@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxOffcanvas"/> component.
+/// Settings for the <see cref="EcOffcanvas"/> component.
 /// </summary>
 public record OffcanvasSettings
 {

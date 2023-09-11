@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Direction for <see cref="HxDropdown"/>.
+/// Direction for <see cref="EcDropdown"/>.
 /// <see href="https://getbootstrap.com/docs/5.3/components/dropdowns/#directions">https://getbootstrap.com/docs/5.3/components/dropdowns/#directions</see>.
 /// </summary>
 public enum DropdownDirection

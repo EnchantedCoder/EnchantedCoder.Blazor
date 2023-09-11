@@ -1,0 +1,27 @@
+﻿@page "/EcTooltip_Issue563_Test"
+
+<h4>Tooltip manual with text change on show</h4>
+
+<EcButton Text="Set text and show tooltip" OnClick="ShowManualTooltipAsync" Color="ThemeColor.Primary" />
+<EcButton Text="Unset text and hide tooltip" OnClick="HideManualTooltipAsync" Color="ThemeColor.Danger" />
+
+<EcTooltip @ref="manualTooltip" Trigger="TooltipTrigger.Manual" Text="@manualTooltipText">
+	<p>Content with manual tooltip</p>
+</EcTooltip>
+
+@code {
+	private EcTooltip manualTooltip;
+	private string manualTooltipText; // = "text";
+
+	private Task ShowManualTooltipAsync()
+	{
+		manualTooltipText = "Manual tooltip text shown.";
+		return manualTooltip.ShowAsync();
+	}
+
+	private Task HideManualTooltipAsync()
+	{
+		manualTooltipText = null;
+		return manualTooltip.HideAsync();
+	}
+}

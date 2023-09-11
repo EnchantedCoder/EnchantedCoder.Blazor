@@ -1,0 +1,16 @@
+﻿@page "/EcIcon_Issue455_Test"
+
+<h1>EcIcon_Issue455_Test</h1>
+
+<EcIcon Icon="icon" />
+
+<EcButton Text="Toggle icon" Color="ThemeColor.Primary" OnClick="ToggleIcon" />
+
+@code {
+	private IconBase icon = BootstrapIcon.YinYang;
+
+	private void ToggleIcon()
+	{
+		icon = (icon != BootstrapIcon.YinYang) ? BootstrapIcon.YinYang : BootstrapIcon.Fingerprint;
+	}
+}

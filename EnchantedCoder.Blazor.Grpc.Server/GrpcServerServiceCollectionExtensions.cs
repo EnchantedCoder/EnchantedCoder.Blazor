@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
-using Grpc.AspNetCore.Server;
 using EnchantedCoder.Blazor.Grpc.Core;
 using EnchantedCoder.Blazor.Grpc.Server.GlobalizationLocalization;
 using EnchantedCoder.Blazor.Grpc.Server.ServerExceptions;
+using Grpc.AspNetCore.Server;
 using Microsoft.Extensions.DependencyInjection;
 using ProtoBuf.Grpc.Configuration;
 using ProtoBuf.Grpc.Server;

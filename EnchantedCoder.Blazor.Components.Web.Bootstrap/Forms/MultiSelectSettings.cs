@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxMultiSelect{TValue, TItem}"/> component.
+/// Settings for the <see cref="EcMultiSelect{TValue, TItem}"/> component.
 /// </summary>
 public record MultiSelectSettings : InputSettings, IInputSettingsWithSize
 {

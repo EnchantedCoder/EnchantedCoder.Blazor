@@ -1,0 +1,13 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+<a href="./">
+	@if (LogoTemplate != null)
+	{
+		<div class="ec-sidebar-brand-logo">@LogoTemplate(new() { SidebarCollapsed = ParentSidebar.Collapsed })</div>
+	}
+	else
+	{
+		<div class="ec-sidebar-brand-shortname">@BrandNameShort</div>
+	}
+
+	<span class="ec-sidebar-brand-name">@BrandName</span>
+</a>

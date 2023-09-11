@@ -1,0 +1,16 @@
+﻿<p>
+    <EcButton Text="Show" OnClick="() => collapseComponent.ShowAsync()" Color="ThemeColor.Primary" />
+    <EcButton Text="Hide" OnClick="() => collapseComponent.HideAsync()" Color="ThemeColor.Primary" />
+</p>
+<EcCollapse @ref="collapseComponent" Id="myCollapse" CssClass="mt-3">
+    <EcCard>
+        <BodyTemplate>
+            Some placeholder content for the collapse component.
+            This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </BodyTemplate>
+    </EcCard>
+</EcCollapse>
+
+@code {
+    private EcCollapse collapseComponent;
+}

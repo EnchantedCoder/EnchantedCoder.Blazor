@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// User state of the <see cref="HxGrid"/>.
+/// User state of the <see cref="EcGrid"/>.
 /// </summary>
 public record class GridUserState
 {

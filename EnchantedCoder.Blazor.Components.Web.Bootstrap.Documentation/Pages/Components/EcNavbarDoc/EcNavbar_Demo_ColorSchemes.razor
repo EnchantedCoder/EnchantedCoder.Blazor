@@ -1,0 +1,78 @@
+﻿<EcNavbar ColorMode="ColorMode.Dark" Color="ThemeColor.Dark">
+	<EcNavbarBrand>Navbar</EcNavbarBrand>
+	<EcNavbarToggler />
+	<EcNavbarCollapse>
+		<EcNav CssClass="me-auto mb-2 mb-lg-0">
+			<EcNavLink Href="/components/EcNavbar">Home</EcNavLink>
+			<EcNavLink Href="#">Link</EcNavLink>
+			<EcDropdown>
+                <EcDropdownToggleElement ElementName="a" Caret="true" role="button">Dropdown</EcDropdownToggleElement>
+				<EcDropdownMenu>
+					<EcDropdownItemNavLink Href="#">Action</EcDropdownItemNavLink>
+					<EcDropdownItemNavLink Href="#">Another action</EcDropdownItemNavLink>
+					<EcDropdownDivider />
+					<EcDropdownItemNavLink Href="#">Something else here</EcDropdownItemNavLink>
+				</EcDropdownMenu>
+			</EcDropdown>
+			<EcNavLink Enabled="false">Disabled</EcNavLink>
+		</EcNav>
+		<div class="d-flex">
+			<EcInputText CssClass="me-2" Placeholder="Search" @bind-Value="@query" />
+			<EcSubmit Color="ThemeColor.Light" Outline="true">Search</EcSubmit>
+		</div>
+	</EcNavbarCollapse>
+</EcNavbar>
+
+<EcNavbar ColorMode="ColorMode.Dark" Color="ThemeColor.Primary" CssClass="mt-3">
+	<EcNavbarBrand>Navbar</EcNavbarBrand>
+	<EcNavbarToggler />
+	<EcNavbarCollapse>
+		<EcNav CssClass="me-auto mb-2 mb-lg-0">
+			<EcNavLink Href="/components/EcNavbar">Home</EcNavLink>
+			<EcNavLink Href="#">Link</EcNavLink>
+			<EcDropdown>
+                <EcDropdownToggleElement ElementName="a" Caret="true" role="button">Dropdown</EcDropdownToggleElement>
+				<EcDropdownMenu>
+					<EcDropdownItemNavLink Href="#">Action</EcDropdownItemNavLink>
+					<EcDropdownItemNavLink Href="#">Another action</EcDropdownItemNavLink>
+					<EcDropdownDivider />
+					<EcDropdownItemNavLink Href="#">Something else here</EcDropdownItemNavLink>
+				</EcDropdownMenu>
+			</EcDropdown>
+			<EcNavLink Enabled="false">Disabled</EcNavLink>
+		</EcNav>
+		<div class="d-flex">
+			<EcInputText CssClass="me-2" Placeholder="Search" @bind-Value="@query" />
+			<EcSubmit Color="ThemeColor.Light" Outline="true">Search</EcSubmit>
+		</div>
+	</EcNavbarCollapse>
+</EcNavbar>
+
+<EcNavbar Color="ThemeColor.Warning" CssClass="mt-3">
+	<EcNavbarBrand>Navbar</EcNavbarBrand>
+	<EcNavbarToggler />
+	<EcNavbarCollapse>
+		<EcNav CssClass="me-auto mb-2 mb-lg-0">
+			<EcNavLink Href="/components/EcNavbar">Home</EcNavLink>
+			<EcNavLink Href="#">Link</EcNavLink>
+			<EcDropdown>
+                <EcDropdownToggleElement ElementName="a" Caret="true" role="button">Dropdown</EcDropdownToggleElement>
+				<EcDropdownMenu>
+					<EcDropdownItemNavLink Href="#">Action</EcDropdownItemNavLink>
+					<EcDropdownItemNavLink Href="#">Another action</EcDropdownItemNavLink>
+					<EcDropdownDivider />
+					<EcDropdownItemNavLink Href="#">Something else here</EcDropdownItemNavLink>
+				</EcDropdownMenu>
+			</EcDropdown>
+			<EcNavLink Enabled="false">Disabled</EcNavLink>
+		</EcNav>
+		<div class="d-flex">
+			<EcInputText CssClass="me-2" Placeholder="Search" @bind-Value="@query" />
+			<EcSubmit Color="ThemeColor.Light" Outline="true">Search</EcSubmit>
+		</div>
+	</EcNavbarCollapse>
+</EcNavbar>
+
+@code {
+	private string query = String.Empty;
+}

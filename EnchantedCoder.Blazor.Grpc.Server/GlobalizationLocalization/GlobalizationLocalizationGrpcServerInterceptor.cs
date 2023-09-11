@@ -1,18 +1,18 @@
 ﻿using System.Globalization;
-using Grpc.Core.Interceptors;
 using Grpc.Core;
+using Grpc.Core.Interceptors;
 
 namespace EnchantedCoder.Blazor.Grpc.Server.GlobalizationLocalization;
 
 /// <summary>
-/// gRPC Service (server-side) interceptor which looks for <c>hx-sulture</c> request header and uses the value (if found)
+/// gRPC Service (server-side) interceptor which looks for <c>ec-sulture</c> request header and uses the value (if found)
 /// for setting <see cref="Thread.CurrentCulture"/> and <see cref="Thread.CurrentUICulture"/>.
 /// </summary>
 public class GlobalizationLocalizationGrpcServerInterceptor : Interceptor   // DI SINGLETON !!
 {
 	private void SetCultureFromMetadata(ServerCallContext context)
 	{
-		var cultureInfoName = context.RequestHeaders.SingleOrDefault(h => h.Key == "hx-culture")?.Value;
+		var cultureInfoName = context.RequestHeaders.SingleOrDefault(h => h.Key == "ec-culture")?.Value;
 		if (!String.IsNullOrWhiteSpace(cultureInfoName))
 		{
 			var cultureInfo = new CultureInfo(cultureInfoName);

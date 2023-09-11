@@ -1,0 +1,7 @@
+﻿<EcInputFileDropZone @ref="component" Multiple />
+<EcButton Text="Clear" CssClass="mt-3" OnClick="@(async () => await component.ResetAsync())" Color="ThemeColor.Secondary" />
+
+@code
+{
+    private EcInputFileDropZone component;
+}

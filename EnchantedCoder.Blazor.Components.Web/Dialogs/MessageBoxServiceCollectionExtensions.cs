@@ -3,15 +3,15 @@
 namespace EnchantedCoder.Blazor.Components.Web;
 
 /// <summary>
-/// Extension methods for installation of <see cref="IHxMessageBoxService"/> support.
+/// Extension methods for installation of <see cref="IEcMessageBoxService"/> support.
 /// </summary>
 public static class MessageBoxServiceCollectionExtensions
 {
 	/// <summary>
-	/// Adds <see cref="IHxMessageBoxService"/> support to be able to display message boxes using HxMessageBoxHost.
+	/// Adds <see cref="IEcMessageBoxService"/> support to be able to display message boxes using EcMessageBoxHost.
 	/// </summary>
-	public static IServiceCollection AddHxMessageBoxHost(this IServiceCollection services)
+	public static IServiceCollection AddEcMessageBoxHost(this IServiceCollection services)
 	{
-		return services.AddScoped<IHxMessageBoxService, HxMessageBoxService>();
+		return services.AddScoped<IEcMessageBoxService, EcMessageBoxService>();
 	}
 }

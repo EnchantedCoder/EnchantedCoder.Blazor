@@ -1,0 +1,49 @@
+.ec-grid-sorted ::deep .ec-grid-sort-icon {
+    color: var(--ec-grid-sorted-icon-color);
+}
+
+.ec-grid-sortable ::deep .ec-grid-sort-icon {
+    visibility: hidden;
+}
+
+th:hover.ec-grid-sortable ::deep .ec-grid-sort-icon {
+	visibility: visible;
+}
+
+th > .ec-grid-header-cell-container {
+    display: inline-flex;
+    gap: .5rem;
+}
+
+th.ec-grid-sortable.text-end .ec-grid-sort-icon,
+th.ec-grid-sorted.text-end .ec-grid-sort-icon {
+    order: 0;
+}
+
+th.ec-grid-sortable.text-end .ec-grid-header-cell-template,
+th.ec-grid-sorted.text-end .ec-grid-header-cell-template {
+    order: 1;
+}
+
+.ec-grid-header-cell-container ::deep .ec-icon {
+    align-self: center;
+}
+
+::deep .ec-grid-btn {
+    border-radius: var(--ec-grid-button-border-radius);
+    padding: 0 .25rem;
+    background: transparent;
+    border: none;
+}
+
+::deep .ec-grid-btn:hover {
+    background: var(--ec-grid-button-hover-background);
+}
+
+::deep .ec-grid-btn:active {
+    color: currentColor;
+}
+
+::deep .ec-context-menu-grid-column {
+	vertical-align: middle;
+}

@@ -1,0 +1,9 @@
+﻿.dropdown-menu {
+    width: var(--ec-autosuggest-dropdown-menu-width);
+    overflow: auto;
+    max-height: var(--ec-autosuggest-dropdown-menu-height);
+}
+
+::deep .ec-autosuggest-item-focused:not(:active):not(:focus) {
+    background-color: var(--ec-autosuggest-item-highlighted-background-color);
+}

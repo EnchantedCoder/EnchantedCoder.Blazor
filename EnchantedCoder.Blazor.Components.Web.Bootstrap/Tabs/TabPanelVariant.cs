@@ -1,7 +1,7 @@
 namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Render variations for <see cref="HxTabPanel"/>.
+/// Render variations for <see cref="EcTabPanel"/>.
 /// </summary>
 public enum TabPanelVariant
 {

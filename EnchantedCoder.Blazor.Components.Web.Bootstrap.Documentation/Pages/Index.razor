@@ -51,9 +51,9 @@
 
 <DocHeading Title="Bootstrap JavaScript" Id="javascript" Level="4" />
 <p>At the end of HTML <code>&lt;body&gt;</code> section of either <code>index.html</code> add this (Bootstrap JavaScript Bundle with Popper):</p>
-<CodeSnippet Language="razor">&lt;!-- JavaScript Bundle with Popper --&gt;&#10;@HxSetup.RenderBootstrapJavaScriptReference()</CodeSnippet>
+<CodeSnippet Language="razor">&lt;!-- JavaScript Bundle with Popper --&gt;&#10;@EcSetup.RenderBootstrapJavaScriptReference()</CodeSnippet>
 <p>It you are hosting you Blazor app in ASP.NET Core server-generated HTML file (e.g. <code>_Host.cshtml</code>/<code>_Layout.cshtml</code>), you can use our helper-method to emit the <code>&lt;script /&gt;</code> tag and automate versioning:</p>
-<CodeSnippet Language="razor">&lt;!-- JavaScript Bundle with Popper --&gt;&#10;@@Html.Raw(HxSetup.RenderBootstrapJavaScriptReference())</CodeSnippet>
+<CodeSnippet Language="razor">&lt;!-- JavaScript Bundle with Popper --&gt;&#10;@@Html.Raw(EcSetup.RenderBootstrapJavaScriptReference())</CodeSnippet>
 
 <DocHeading Title="3. Import namespaces" Level="3" />
 <p>Add following to your <code>_Imports.razor</code> file:</p>
@@ -71,12 +71,12 @@
 <p>[OPTIONAL] Some of the components need a specific project setup to work. This usually includes registering a service and adding a host-component to <code>App.razor</code> or layout component.</p>
 <p>For instructions see documentation of those components:</p>
 <ul>
-	<li><a href="/components/@nameof(HxMessenger)">@nameof(HxMessenger)</a> - displaying new toast-messages from your code easily</li>
-	<li><a href="/components/@nameof(HxMessageBoxHost)">@nameof(HxMessageBoxHost)</a> - opening message-boxes (and await results) from your code</li>
+	<li><a href="/components/@nameof(EcMessenger)">@nameof(EcMessenger)</a> - displaying new toast-messages from your code easily</li>
+	<li><a href="/components/@nameof(EcMessageBoxHost)">@nameof(EcMessageBoxHost)</a> - opening message-boxes (and await results) from your code</li>
 </ul>
 
 <DocHeading Title="Ready, set, go!" Id="done" Level="2" />
-<p>Now you are ready to use all the components in your razor files. They come with <code>Hx</code> prefix. IntelliSense will be your friend...</p>
+<p>Now you are ready to use all the components in your razor files. They come with <code>Ec</code> prefix. IntelliSense will be your friend...</p>
 <Demo Type="typeof(GettingStarted_Demo)" Tabs="false" />
 
 <DocAlert Type="DocAlertType.Info">

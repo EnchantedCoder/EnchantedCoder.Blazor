@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxFormValue"/> and derived components.
+/// Settings for the <see cref="EcFormValue"/> and derived components.
 /// </summary>
 public record FormValueSettings : IInputSettingsWithSize
 {

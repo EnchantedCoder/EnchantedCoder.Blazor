@@ -1,5 +1,5 @@
-﻿using Grpc.Core.Interceptors;
-using Grpc.Core;
+﻿using Grpc.Core;
+using Grpc.Core.Interceptors;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 
 namespace EnchantedCoder.Blazor.Grpc.Client.WebAssembly;

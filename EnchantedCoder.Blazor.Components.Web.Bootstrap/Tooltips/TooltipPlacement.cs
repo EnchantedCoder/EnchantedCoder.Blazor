@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Placement of the tooltip for <see cref="HxTooltip"/>.
+/// Placement of the tooltip for <see cref="EcTooltip"/>.
 /// </summary>
 public enum TooltipPlacement
 {

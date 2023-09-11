@@ -1,0 +1,39 @@
+.ec-chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--ec-chip-list-gap);
+}
+::deep .badge {
+    display: inline-flex;
+    align-items: center;
+}
+
+ .ec-chip-list-remove-btn {
+    display: flex;
+    align-items: center;
+    margin: var(--ec-chip-list-chip-remove-btn-margin);
+    opacity: var(--ec-chip-list-chip-remove-btn-opacity);
+}
+
+::deep .ec-chip-list-remove-btn .ec-icon {
+    display: flex;
+}
+
+::deep .ec-chip-list-remove-btn:hover {
+    opacity: 1;
+}
+
+::deep .ec-chip-list-label {
+    font-weight: var(--ec-chip-list-chip-label-font-weight);
+    margin-right: var(--ec-chip-list-chip-label-margin);
+    opacity: var(--ec-chip-list-chip-label-opacity);
+}
+
+.ec-chip-list-reset-btn {
+    display: flex;
+    align-items: center;
+    font-size: .75em;
+    line-height: 1;
+    color: var(--bs-secondary);
+    padding: var(--ec-chip-list-chip-reset-btn-padding);
+}

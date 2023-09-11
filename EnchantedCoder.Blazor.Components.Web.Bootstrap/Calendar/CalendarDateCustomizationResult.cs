@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Customization result for specific date in calendar (<see cref="HxCalendar"/>, <see cref="HxInputDate{TValue}"/>, <see cref="HxInputDateRange"/>).
+/// Customization result for specific date in calendar (<see cref="EcCalendar"/>, <see cref="EcInputDate{TValue}"/>, <see cref="EcInputDateRange"/>).
 /// </summary>
 public class CalendarDateCustomizationResult
 {

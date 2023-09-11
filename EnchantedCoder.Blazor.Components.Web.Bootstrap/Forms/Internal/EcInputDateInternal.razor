@@ -1,0 +1,78 @@
+﻿@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap.Internal
+@typeparam TValue
+@inherits Microsoft.AspNetCore.Components.Forms.InputBase<TValue>
+
+@if (FieldIdentifier.Model != null)
+{
+    <div class="@CssClassHelper.Combine(
+                                    "ec-input-date-wrapper input-group",
+                                    ((IInputWithSize)this).GetInputGroupSizeCssClass(),
+                                    InputSizeEffective.AsInputGroupCssClass(),
+                                    (ShowPredefinedDatesEffective && (PredefinedDatesEffective?.Any() ?? false)) ? "ec-input-date-predefined-dates" : null,
+                                    (this.CalendarIconEffective is not null) ? "ec-input-date-has-calendar-icon" : null)">
+        <EcDropdown CssClass="@CssClassHelper.Combine(
+					     "ec-input-date",
+					     (LabelTypeEffective == LabelType.Floating) ? "form-floating" : null,
+					     InputGroupCssClass)"
+                AutoClose="DropdownAutoClose.Outside">
+
+            @if (InputGroupStartText is not null)
+            {
+                <span class="input-group-text">@InputGroupStartText</span>
+            }
+
+            @InputGroupStartTemplate
+
+            <EcDropdownToggleElement @ref="ecDropdownToggleElement"
+                                 ElementName="input"
+                                 CssClass="@CssClassHelper.Combine(InputCssClass, ((IInputWithSize)this).GetInputSizeCssClass())"
+                                 type="text"
+                                 Caret="false"
+                                 id="@InputId"
+                                 value="@CurrentValueAsString" @onchange="HandleValueChanged"
+                                 placeholder="@Placeholder"
+                                 disabled="@(!EnabledEffective)"
+                                 @attributes="AdditionalAttributes" />
+
+            @InputGroupEndTemplate
+
+            @if (InputGroupEndText is not null)
+            {
+                <span class="@CssClassHelper.Combine("input-group-text", RenderPredefinedDates ? null : " rounded-end")">@InputGroupEndText</span>
+            }
+
+            @if (LabelTypeEffective == EnchantedCoder.Blazor.Components.Web.Bootstrap.LabelType.Floating)
+            {
+                <EcFormValueComponentRenderer_Label FormValueComponent="@FormValueComponent" />
+            }
+
+            <EcDropdownContent CssClass="ec-input-date-dropdown-menu">
+                @if (EnabledEffective)
+                {
+                    <div class="ec-input-date-calendar">
+                        <EcCalendar Value="@GetDateTimeFromValue(Value)" ValueChanged="HandleCalendarValueChangedAsync" MinDate="@MinDateEffective" MaxDate="@MaxDateEffective" DateCustomizationProvider="GetCalendarDateCustomization" KeyboardNavigation="false" />
+                    </div>
+                    <div class="ec-input-date-dropdown-buttons">
+                        @if (ShowClearButtonEffective)
+                        {
+                            <EcButton Text="@StringLocalizerFactory.GetLocalizedValue("Clear", typeof(EcInputDate))" Color="ThemeColor.Link" Size="ButtonSize.Small" OnClick="HandleClearClickAsync" tabindex="-1" />
+                        }
+                        @if (RenderPredefinedDates)
+                        {
+                            foreach (var item in PredefinedDatesEffective)
+                            {
+                                <EcButton @key="@item" Text="@StringLocalizerFactory.GetLocalizedValue(item.Label, item.ResourceType)" Color="ThemeColor.Link" Size="ButtonSize.Small" OnClick="() => HandleCustomDateClick(item.Date)" tabindex="-1" />
+                            }
+                        }
+                    </div>
+                }
+            </EcDropdownContent>
+        </EcDropdown>
+        @if (RenderIcon)
+        {
+            <div @ref="iconWrapperElement" class="ec-input-date-icon">
+                <EcIcon Icon="CalendarIconEffective" />
+            </div>
+        }
+    </div>
+}

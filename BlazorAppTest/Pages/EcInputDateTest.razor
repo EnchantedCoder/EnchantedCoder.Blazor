@@ -1,0 +1,52 @@
+﻿@page "/EcInputDateTest"
+@namespace System.ComponentModel.DataAnnotations
+
+<EditForm Model="@model">
+	<DataAnnotationsValidator />
+	<ValidationSummary />
+
+	<EcInputDate Label="EcInputDate (default, DateTime), Floating Label" @bind-Value="@model.DateTime" LabelType="LabelType.Floating"/>
+	<EcInputDate InputSize="InputSize.Small" Label="EcInputDate (default, DateTime) InputSize: Small" @bind-Value="@model.DateTime" />
+	<EcInputDate InputSize="InputSize.Large" Label="EcInputDate (default, DateTime) InputSize: Large" @bind-Value="@model.DateTime" />
+	<EcInputDate Label="EcInputDate (default, DateTime?)" @bind-Value="@model.NullableDateTime" Placeholder="Datum narození" />
+	<EcInputDate Label="EcInputDate (default, DateTimeOffset)" @bind-Value="@model.DateTimeOffset" />
+	<EcInputDate Label="EcInputDate (default, DateTimeOffset?)" @bind-Value="@model.NullableDateTimeOffset" />
+	<EcInputDate Label="EcInputDate (wo/ PredefinedDates, wo/ validation)" @bind-Value="@model.DateTime" ShowPredefinedDates="false" ValidationMessageMode="ValidationMessageMode.None" />
+	<EcInputDate Label="EcInputDate (custom PredefinedDates)" @bind-Value="@model.DateTime" PredefinedDates="@GetPredefinedDates()" />
+	<EcInputDate Label="EcInputDate (disabled)" @bind-Value="@model.DateTime" PredefinedDates="@GetPredefinedDates()" Enabled="false" />
+	<EcInputDate Label="EcInputDate (w/ CalendarIcon)" @bind-Value="@model.DateTime" CalendarIcon="BootstrapIcon.Calendar" />
+	<EcInputDate Label="EcInputDate (w/ CalendarIcon)" @bind-Value="@model.DateTime" CalendarIcon="BootstrapIcon.Calendar" Enabled="false" />
+	<EcInputDate Label="EcInputDate (w/ CalendarIcon, wo/ PredefinedDates)" @bind-Value="@model.DateTime" CalendarIcon="BootstrapIcon.Calendar" ShowPredefinedDates="false" />
+	<EcInputDate Label="EcInputDate (w/ MinDate, MaxDate)" @bind-Value="@model.DateTime" MinDate="new DateTime(1920, 3, 5)" MaxDate="new DateTime(1999, 6, 15)" ShowPredefinedDates="false" CalendarDateCustomizationProvider="GetCalendarDateCustomization" />
+
+	<button type="submit">Submit</button>
+</EditForm>
+
+@code {
+	private FormModel model = new FormModel();
+
+	private IEnumerable<InputDatePredefinedDatesItem> GetPredefinedDates()
+	{
+		DateTime today = DateTime.Today;
+		yield return new InputDatePredefinedDatesItem { Label = "First of month", Date = new DateTime(today.Year, today.Month, 1) };
+		yield return new InputDatePredefinedDatesItem { Label = "Tomorrow", Date = today.AddDays(1) };
+	}
+
+	private CalendarDateCustomizationResult GetCalendarDateCustomization(CalendarDateCustomizationRequest request) => new CalendarDateCustomizationResult { Enabled = request.Date.Day % 2 != 0 };
+
+	private class FormModel : IValidatableObject
+	{
+		public DateTime DateTime { get; set; } = DateTime.Today;
+		public DateTime? NullableDateTime { get; set; }
+		public DateTimeOffset DateTimeOffset { get; set; }
+		public DateTimeOffset NullableDateTimeOffset { get; set; }
+
+		public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+		{
+			if (DateTime.Year != 2020)
+			{
+				yield return new ValidationResult("Date has to fall in year 2020.", new string[] { nameof(DateTime) });
+			}
+		}
+	}
+}

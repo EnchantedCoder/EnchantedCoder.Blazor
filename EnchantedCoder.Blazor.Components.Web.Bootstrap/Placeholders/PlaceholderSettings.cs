@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxPlaceholder"/> and derived components.
+/// Settings for the <see cref="EcPlaceholder"/> and derived components.
 /// </summary>
 public record PlaceholderSettings
 {
@@ -16,7 +16,7 @@ public record PlaceholderSettings
 	public ThemeColor? Color { get; set; }
 
 	/// <summary>
-	/// Additional CSS class for <see cref="HxPlaceholder"/>.
+	/// Additional CSS class for <see cref="EcPlaceholder"/>.
 	/// </summary>
 	public string CssClass { get; set; }
 }

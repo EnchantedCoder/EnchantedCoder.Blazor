@@ -73,7 +73,7 @@ public static class ApiTypeHelper
 
 		try
 		{
-			result = typeof(HxButton).Assembly.GetTypes().FirstOrDefault((t) => t.FullName.Contains(typeName));
+			result = typeof(EcButton).Assembly.GetTypes().FirstOrDefault((t) => t.FullName.Contains(typeName));
 			if (result is not null)
 			{
 				return result;

@@ -1,0 +1,25 @@
+<EcSidebar>
+    <ItemsTemplate>
+        <EcSidebarItem Icon="BootstrapIcon.Bell" Href="test">
+            <ContentTemplate>
+                Notifications <EcBadge Color="ThemeColor.Primary" CssClass="ms-2">8</EcBadge>
+            </ContentTemplate>
+            <ChildContent>
+                <EcSidebarItem Icon="BootstrapIcon.Wallet" Href="#x1" Match="NavLinkMatch.All">
+                    <ContentTemplate>
+                        Received payments <EcBadge Color="ThemeColor.Primary" CssClass="ms-2">3</EcBadge>
+                    </ContentTemplate>
+                </EcSidebarItem>
+                <EcSidebarItem Icon="BootstrapIcon.Wallet2" Href="#x1" Match="NavLinkMatch.All">
+                    <ContentTemplate>
+                        Pending payments <EcBadge Color="ThemeColor.Primary" CssClass="ms-2">5</EcBadge>
+                    </ContentTemplate>
+                </EcSidebarItem>
+            </ChildContent>
+        </EcSidebarItem>
+        <EcSidebarItem Text="Payment history (plain)" Icon="BootstrapIcon.Cash">
+            <EcSidebarItem Text="Dashboard" Href="/EcSidebarTest#x1" Match="NavLinkMatch.All" />
+            <EcSidebarItem Text="Ongoing payments" Href="TEST" />
+        </EcSidebarItem>
+    </ItemsTemplate>
+</EcSidebar>

@@ -1,0 +1,81 @@
+﻿@page "/EcTabPanel_Issue125_Test"
+@using System.Globalization
+
+<EcTabPanel Variant="TabPanelVariant.Card">
+    <EcTab Title="Neutral">
+        <Content>
+            <EcListLayout Title="Neutral cultures" TFilterModel="FilterModelDto">
+                <DataTemplate>
+                    <EcGrid ContentNavigationMode="GridContentNavigationMode.Pagination" Responsive="true" TItem="CultureInfo" PageSize="10" DataProvider="LoadNeutralCultures">
+                        <Columns>
+                            <EcGridColumn TItem="CultureInfo" HeaderText="LCID" ItemTextSelector="@(item => item.LCID.ToString())" SortKeySelector="@(item => item.LCID)" IsDefaultSortColumn="true" />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="DisplayName" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)"  />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="EnglishName" ItemTextSelector="@(item => item.EnglishName)" SortKeySelector="@(item => item.EnglishName)"  />
+
+                        </Columns>
+                    </EcGrid>
+                </DataTemplate>
+            </EcListLayout>
+        </Content>
+    </EcTab>
+    <EcTab Title="Specific">
+        <Content>
+            <EcListLayout Title="Specific cultures" TFilterModel="FilterModelDto">
+                <DataTemplate>
+                    <EcGrid ContentNavigationMode="GridContentNavigationMode.Pagination" TItem="CultureInfo" PageSize="10" DataProvider="LoadSpecificCultures">
+                        <Columns>
+                            <EcGridColumn TItem="CultureInfo" HeaderText="LCID" ItemTextSelector="@(item => item.LCID.ToString())" SortKeySelector="@(item => item.LCID)" IsDefaultSortColumn="true" />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="DisplayName" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)"  />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="EnglishName" ItemTextSelector="@(item => item.EnglishName)" SortKeySelector="@(item => item.EnglishName)"  />
+
+                        </Columns>
+                    </EcGrid>
+                </DataTemplate>
+            </EcListLayout>
+        </Content>
+    </EcTab>
+    <EcTab Title="Installed">
+        <Content>
+            <EcListLayout Title="Installed cultures" TFilterModel="FilterModelDto">
+                <DataTemplate>
+                    <EcGrid ContentNavigationMode="GridContentNavigationMode.Pagination" TItem="CultureInfo" PageSize="10" DataProvider="LoadInstalledWin32Cultures">
+                        <Columns>
+                            <EcGridColumn TItem="CultureInfo" HeaderText="LCID" ItemTextSelector="@(item => item.LCID.ToString())" SortKeySelector="@(item => item.LCID)" IsDefaultSortColumn="true" />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="DisplayName" ItemTextSelector="@(item => item.DisplayName)" SortKeySelector="@(item => item.DisplayName)" />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="Name" ItemTextSelector="@(item => item.Name)" SortKeySelector="@(item => item.Name)"  />
+		                    <EcGridColumn TItem="CultureInfo" HeaderText="EnglishName" ItemTextSelector="@(item => item.EnglishName)" SortKeySelector="@(item => item.EnglishName)"  />
+
+                        </Columns>
+                    </EcGrid>
+                </DataTemplate>
+            </EcListLayout>
+        </Content>
+    </EcTab>
+</EcTabPanel>
+
+@code {
+    private Task<GridDataProviderResult<CultureInfo>> LoadInstalledWin32Cultures(GridDataProviderRequest<CultureInfo> request)
+    {
+        IEnumerable<CultureInfo> result = CultureInfo.GetCultures(CultureTypes.InstalledWin32Cultures).ToList();
+
+        return Task.FromResult(request.ApplyTo(result));
+    }
+
+    private Task<GridDataProviderResult<CultureInfo>> LoadNeutralCultures(GridDataProviderRequest<CultureInfo> request)
+    {
+        IEnumerable<CultureInfo> result = CultureInfo.GetCultures(CultureTypes.NeutralCultures).ToList();
+
+        return Task.FromResult(request.ApplyTo(result));
+    }
+
+    private Task<GridDataProviderResult<CultureInfo>> LoadSpecificCultures(GridDataProviderRequest<CultureInfo> request)
+    {
+        IEnumerable<CultureInfo> result = CultureInfo.GetCultures(CultureTypes.SpecificCultures).ToList();
+
+        return Task.FromResult(request.ApplyTo(result));
+    }
+
+    public record FilterModelDto { }
+}

@@ -5,19 +5,19 @@
 <EditForm Model="@model" OnValidSubmit="@(() => model.Text = "Validation passed... :-)")">
 	<DataAnnotationsValidator />
 
-	<HxInputText Label="HxInputText" @bind-Value="@model.Text" Placeholder="Enter text here." Hint="Hint: Enter text, value is shared with all text inputs." />
+	<EcInputText Label="EcInputText" @bind-Value="@model.Text" Placeholder="Enter text here." Hint="Hint: Enter text, value is shared with all text inputs." />
 
-	<HxInputTextArea Label="HxInputTextArea" @bind-Value="@model.Text" />
+	<EcInputTextArea Label="EcInputTextArea" @bind-Value="@model.Text" />
 
-	<HxInputNumber Label="HxInputNumber" @bind-Value="@model.IntegerValue"  />
+	<EcInputNumber Label="EcInputNumber" @bind-Value="@model.IntegerValue"  />
 
-	<HxInputDate Label="HxInputDate" @bind-Value="@model.DateValue" />
-	<HxInputDateRange Label="HxInputDateRange" @bind-Value="@model.DateTimeRangeValue" />
+	<EcInputDate Label="EcInputDate" @bind-Value="@model.DateValue" />
+	<EcInputDateRange Label="EcInputDateRange" @bind-Value="@model.DateTimeRangeValue" />
 
-	<HxCheckbox Text="Checkbox" @bind-Value="@model.BoolValue" />
-	<HxSwitch Text="Switch" @bind-Value="@model.BoolValue" />
+	<EcCheckbox Text="Checkbox" @bind-Value="@model.BoolValue" />
+	<EcSwitch Text="Switch" @bind-Value="@model.BoolValue" />
 
-	<HxSubmit Color="ThemeColor.Primary">Validate</HxSubmit>
+	<EcSubmit Color="ThemeColor.Primary">Validate</EcSubmit>
 
 </EditForm>
 

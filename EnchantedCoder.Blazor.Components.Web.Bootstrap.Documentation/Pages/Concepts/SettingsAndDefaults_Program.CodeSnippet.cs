@@ -1,29 +1,29 @@
-﻿public class Startup
+public class Startup
 {
 	public void ConfigureServices(IServiceCollection services)
 	{
 		services.AddRazorPages();
 
-		services.AddHxServices();
-		services.AddHxMessenger();
-		services.AddHxMessageBoxHost();
+		services.AddEcServices();
+		services.AddEcMessenger();
+		services.AddEcMessageBoxHost();
 
-		SetHxComponents();
+		SetEcComponents();
 	}
 
-	private static void SetHxComponents()
+	private static void SetEcComponents()
 	{
-		HxPlaceholderContainer.Defaults.Animation = PlaceholderAnimation.Glow;
-		HxPlaceholder.Defaults.Color = ThemeColor.Light;
+		EcPlaceholderContainer.Defaults.Animation = PlaceholderAnimation.Glow;
+		EcPlaceholder.Defaults.Color = ThemeColor.Light;
 
-		HxButton.Defaults.Size = ButtonSize.Small;
-		
-		HxOffcanvas.Defaults.Backdrop = OffcanvasBackdrop.Static;
-		HxOffcanvas.Defaults.HeaderCssClass = "border-bottom";
-		HxOffcanvas.Defaults.FooterCssClass = "border-top";
-		
-		HxChipList.Defaults.ChipBadgeSettings.Color = ThemeColor.Light;
-		HxChipList.Defaults.ChipBadgeSettings.TextColor = ThemeColor.Dark;
-		HxChipList.Defaults.ChipBadgeSettings.CssClass = "p-2 rounded-pill";
+		EcButton.Defaults.Size = ButtonSize.Small;
+
+		EcOffcanvas.Defaults.Backdrop = OffcanvasBackdrop.Static;
+		EcOffcanvas.Defaults.HeaderCssClass = "border-bottom";
+		EcOffcanvas.Defaults.FooterCssClass = "border-top";
+
+		EcChipList.Defaults.ChipBadgeSettings.Color = ThemeColor.Light;
+		EcChipList.Defaults.ChipBadgeSettings.TextColor = ThemeColor.Dark;
+		EcChipList.Defaults.ChipBadgeSettings.CssClass = "p-2 rounded-pill";
 	}
 }

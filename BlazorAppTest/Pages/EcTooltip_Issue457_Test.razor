@@ -1,0 +1,10 @@
+﻿@page "/EcTooltip_Issue457_Test"
+
+@inject NavigationManager NavigationManager
+
+<EcButton Text="Navigate home"
+	Tooltip="Navigate"
+	Color="ThemeColor.Primary"
+	OnClick="@(() => NavigationManager.NavigateTo(""))" />
+
+@* https://github.com/EnchantedCoder/EnchantedCoder.Blazor/issues/457 *@

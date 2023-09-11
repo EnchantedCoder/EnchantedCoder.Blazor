@@ -8,7 +8,7 @@ public partial class AllTests
 {
 	private RenderFragment GetComponentTestLinks() => builder =>
 	{
-		List<string?> routes = GetRoutesToRender(typeof(HxAlertTest).Assembly);
+		List<string?> routes = GetRoutesToRender(typeof(EcAlertTest).Assembly);
 
 		foreach (var route in routes)
 		{

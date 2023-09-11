@@ -1,0 +1,48 @@
+﻿@page "/EcMessengerTest"
+
+@* <EcMessenger /> iteself is in MainLayout.razor *@
+
+<h1>EcMessenger</h1>
+
+<EcButton Text="Add information" OnClick="HandleAddInformationButtonClick" Color="ThemeColor.Primary" />
+<EcButton Text="Add warning" OnClick="HandleAddWarningButtonClick" Color="ThemeColor.Warning" />
+<EcButton Text="Add error" OnClick="HandleAddErrorButtonClick" Color="ThemeColor.Danger" />
+<EcButton Text="With redirect" OnClick="HandleWithRedirect" Color="ThemeColor.Info" />
+<br/>
+<EcButton Text="Clear" OnClick="Messenger.Clear" Color="ThemeColor.Secondary" />
+
+@code{
+	[Inject] protected IEcMessengerService Messenger { get; set; }
+	[Inject] protected NavigationManager NavigationManager { get; set; }
+
+	protected override void OnAfterRender(bool firstRender)
+	{
+		base.OnAfterRender(firstRender);
+		if (firstRender)
+		{
+			Messenger.AddInformation("Setup", "services.AddEcMessenger(); in Startup.cs!\n<EcMessenger /> in MainLayout.razor");
+		}
+	}
+
+	private void HandleAddInformationButtonClick()
+	{
+		Messenger.AddInformation("Information", "Information button clicked.");
+	}
+
+	private void HandleAddWarningButtonClick()
+	{
+		Messenger.AddWarning("Warning", "Warning button clicked.");
+	}
+
+	private void HandleAddErrorButtonClick()
+	{
+		Messenger.AddError("Error", "Error button clicked.");
+	}
+
+	private void HandleWithRedirect()
+	{
+		Messenger.AddError("Messenger with redirect", "Content.");
+		NavigationManager.NavigateTo("/");
+	}
+}
+

@@ -1,0 +1,18 @@
+@attribute [Route("/components/" + nameof(EcFilterForm<TModel>))]
+
+<ComponentApiDoc Type="typeof(EcFilterForm<TModel>)">
+
+	<DocHeading Title="Used in EcListLayout" />
+	<p>
+		See <a href="/components/@nameof(EcListLayout)">@nameof(EcListLayout)</a> demo with its filter and chips
+		to see the real usage of the <code>EcFilterForm</code>.
+	</p>
+
+    <DocHeading Title="Standalone demo" />
+    <DocAlert Type="DocAlertType.Warning">
+        <code>EcFilterForm</code> component has to be kept rendered to work propertly with <code><a href="/components/EcChipList">EcChipList</a></code>.<br/>
+        Beware of <code><a href="/components/EcOffcanvas">EcOffcanvas</a></code> where you have to set <code>RenderModer="OffcanvasRenderModer.Always"</code> to prevent removing the component from rendering when offcanvas is closed.
+    </DocAlert>
+	<Demo Type="typeof(EcFilterForm_Demo)" />
+
+</ComponentApiDoc>

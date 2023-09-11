@@ -1,5 +1,5 @@
 :root {
-	--hx-sidebar-width: 320px;
+	--ec-sidebar-width: 320px;
 }
 
 #blazor-error-ui {
@@ -66,12 +66,12 @@ pre[class*="language-"] {
 		margin-bottom: 1rem
 	}
 
-.sidebar .hx-sidebar-header {
+.sidebar .ec-sidebar-header {
 	flex-wrap: wrap;
 }
 
 .collapsed.sidebar .sidebar-search,
-.collapsed.sidebar .hx-sidebar-footer .hx-form-group {
+.collapsed.sidebar .ec-sidebar-footer .ec-form-group {
 	display: none;
 }
 

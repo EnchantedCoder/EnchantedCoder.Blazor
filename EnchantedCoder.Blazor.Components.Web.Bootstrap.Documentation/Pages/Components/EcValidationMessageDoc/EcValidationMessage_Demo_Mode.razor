@@ -1,0 +1,35 @@
+﻿<EditForm EditContext="@editContext">
+    <DataAnnotationsValidator />
+
+    <EcInputText ValidationMessageMode="ValidationMessageMode.Tooltip" @bind-Value="@model.Text" Label="ValidationMessageMode.Tooltip" Placeholder="Validation message renders as tooltip." />
+    <EcInputText ValidationMessageMode="ValidationMessageMode.Floating" @bind-Value="@model.Text" Label="ValidationMessageMode.Floating (EcInputXy default)" Placeholder="Validation message does not take any new space when displayed." />
+    <EcInputText ValidationMessageMode="ValidationMessageMode.None" @bind-Value="@model.Text" Label="ValidationMessageMode.None" Placeholder="Validation message not displayed." />
+    <EcInputText ValidationMessageMode="ValidationMessageMode.Regular" @bind-Value="@model.Text" Label="ValidationMessageMode.Regular (EcValidationMessage default)" Placeholder="Validation message shifts content when displayed (takes new space)." />
+
+    <div>
+        <EcSubmit Color="ThemeColor.Primary" Text="Submit" />
+        <EcButton Text="Reset" Color="ThemeColor.Secondary" OnClick="ResetForm" />
+    </div>
+</EditForm>
+
+@code {
+    private DemoModel model = new();
+    private EditContext editContext;
+
+    protected override void OnInitialized()
+    {
+        editContext = new(model);
+    }
+
+    private void ResetForm()
+    {
+        model = new();
+        editContext = new(model);
+    }
+
+    protected class DemoModel
+    {
+        [Required(ErrorMessage = "A text has to be written.")]
+        public string Text { get; set; }
+    }
+}

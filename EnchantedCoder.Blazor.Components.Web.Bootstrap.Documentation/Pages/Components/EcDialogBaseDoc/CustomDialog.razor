@@ -1,0 +1,15 @@
+﻿@inherits EcDialogBase<int>
+
+<EcModal Title="What is on your dice?" @ref="modal"> @* @ref="modal" is required by EcDialogBase<> *@
+	<BodyTemplate>
+		<EcButton Text="1" Color="ThemeColor.Secondary" OnClick="async () => await HideAsync(1)" />
+		<EcButton Text="2" Color="ThemeColor.Secondary" OnClick="async () => await HideAsync(2)" />
+		<EcButton Text="3" Color="ThemeColor.Secondary" OnClick="async () => await HideAsync(3)" />
+		<EcButton Text="4" Color="ThemeColor.Secondary" OnClick="async () => await HideAsync(4)" />
+		<EcButton Text="5" Color="ThemeColor.Secondary" OnClick="async () => await HideAsync(5)" />
+		<EcButton Text="6" Color="ThemeColor.Secondary" OnClick="async () => await HideAsync(6)" />
+	</BodyTemplate>
+	<FooterTemplate>
+		<EcButton Text="Close" Color="ThemeColor.Secondary" OnClick="async () => await HideAsCancelledAsync()" />
+	</FooterTemplate>
+</EcModal>

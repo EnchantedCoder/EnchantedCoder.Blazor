@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Options for controlling the behavior of the <see cref="HxModal.Backdrop"/>.
+/// Options for controlling the behavior of the <see cref="EcModal.Backdrop"/>.
 /// </summary>
 public enum ModalBackdrop
 {

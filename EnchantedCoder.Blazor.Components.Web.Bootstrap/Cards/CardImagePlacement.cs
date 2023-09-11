@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Placement of the image in the <see cref="HxCard"/> component.
+/// Placement of the image in the <see cref="EcCard"/> component.
 /// </summary>
 public enum CardImagePlacement
 {

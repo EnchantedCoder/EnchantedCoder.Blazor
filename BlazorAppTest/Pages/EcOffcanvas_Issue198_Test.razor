@@ -1,0 +1,15 @@
+﻿@page "/EcOffcanvas_Issue198_Test"
+
+<EcOffcanvas @ref="offcanvasComponent" CssClass="@(x ? "bg-success" : "bg-warning")">
+	<BodyTemplate>
+           <EcButton OnClick="() => x = !x" Text="Switch CSS" Color="ThemeColor.Primary" />
+	</BodyTemplate>
+</EcOffcanvas>
+
+<EcButton OnClick="() => offcanvasComponent.ShowAsync()" Text="Open" Color="ThemeColor.Primary" />
+
+@code
+{
+    private bool x;
+    private EcOffcanvas offcanvasComponent;
+}

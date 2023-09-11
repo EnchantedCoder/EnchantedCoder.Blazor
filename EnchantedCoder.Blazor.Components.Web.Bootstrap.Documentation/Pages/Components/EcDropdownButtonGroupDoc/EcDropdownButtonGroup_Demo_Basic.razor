@@ -1,0 +1,16 @@
+﻿<EcDropdownButtonGroup>
+	<EcDropdownToggleButton Color="ThemeColor.Secondary">Dropdown button</EcDropdownToggleButton>
+	<EcDropdownMenu>
+		<EcDropdownItemNavLink Href="/components/EcDropdown">Link with Href</EcDropdownItemNavLink>
+		<EcDropdownItem OnClick="HandleDropdownItemClick">Item with OnClick action</EcDropdownItem>
+		<EcDropdownDivider />
+		<EcDropdownItemText>Some text only</EcDropdownItemText>
+	</EcDropdownMenu>
+</EcDropdownButtonGroup>
+
+@message
+
+@code {
+	private string message;
+	private void HandleDropdownItemClick() => message = "Dropdown item clicked";
+}

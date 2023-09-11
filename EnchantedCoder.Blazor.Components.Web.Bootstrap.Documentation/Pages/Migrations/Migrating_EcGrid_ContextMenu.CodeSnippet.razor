@@ -1,0 +1,24 @@
+﻿@* Original *@
+<EcGrid ...>
+	<Columns>
+		...
+	</Columns>
+	<ContextMenu>
+		<EcContextMenuItem ... />
+		<EcContextMenuItem ... />
+	</ContextMenu>
+</EcGrid>
+
+@* New structure *@
+<EcGrid ...>
+	<Columns>
+		...
+		<EcContextMenuGridColumn>
+			<EcContextMenu>
+				<EcContextMenuItem ... />
+				<EcContextMenuItem ... />
+			</EcContextMenu>
+		</EcContextMenuGridColumn>
+		...
+	</Columns>
+</EcGrid>

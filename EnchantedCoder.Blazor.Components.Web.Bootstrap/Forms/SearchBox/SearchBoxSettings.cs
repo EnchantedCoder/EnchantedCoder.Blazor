@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxSearchBox{TItem} "/> and derived components.
+/// Settings for the <see cref="EcSearchBox{TItem} "/> and derived components.
 /// </summary>
 public class SearchBoxSettings
 {

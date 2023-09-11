@@ -1,0 +1,44 @@
+﻿@attribute [Route("/components/" + nameof(EcSearchBox<TItem>))]
+
+<ComponentApiDoc Type="typeof(EcSearchBox<TItem>)">
+    <MainContent>
+        <DocAlert Type="DocAlertType.Warning">
+            Due to breaking change in Bootstrap 5.2, the keyboard navigation stopped working for dropdowns triggered from <code>input</code> (the <code>Up</code> and <code>Down</code> keys).
+            As an experimental feature we added our own keyboard navigation routines to the affected components. This might be subject to future change.
+            You can check the progress here: <a href="https://github.com/EnchantedCoder/EnchantedCoder.Blazor/issues/348">https://github.com/EnchantedCoder/EnchantedCoder.Blazor/issues/348</a>.
+        </DocAlert>
+
+        <DocHeading Title="Basic usage" />
+        <Demo Type="typeof(EcSearchBox_Demo)" />
+
+        <DocHeading Title="Suggestions only" />
+        <p>You can disable free-text query by setting <code>AllowTextQuery="false"</code>. Only suggestions will be allowed.</p>
+        <Demo Type="typeof(EcSearchBox_Demo_DisableTextQuery)" />
+    </MainContent>
+    <CssVariables>
+        <ComponentApiDocCssVariable Name="--ec-search-box-item-icon-margin" Default="0 .5rem 0 0">
+            Item icon margin.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-search-box-item-icon-font-size" Default="inherit">
+            Item icon font-size.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-search-box-item-title-font-size" Default="inherit">
+            Item title font-size.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-search-box-item-title-color" Default="inherit">
+            Item title color.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-search-box-item-subtitle-font-size" Default=".75rem">
+            Item subtitle font-size.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-search-box-item-subtitle-color" Default="var(--bs-secondary)">
+            Item subtitle color.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-search-box-dropdown-menu-height" Default="300px">
+            Maximum height of results dropdown menu.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-search-box-item-highlighted-background-color" Default="var(--bs-tertiary-bg)">
+            Background color of an item when highlighted.
+        </ComponentApiDocCssVariable>
+    </CssVariables>
+</ComponentApiDoc>

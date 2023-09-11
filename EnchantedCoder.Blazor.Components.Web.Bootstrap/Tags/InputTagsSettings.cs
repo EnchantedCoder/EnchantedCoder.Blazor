@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxInputTags"/> component.
+/// Settings for the <see cref="EcInputTags"/> component.
 /// </summary>
 public record InputTagsSettings : InputSettings, IInputSettingsWithSize
 {
@@ -33,7 +33,7 @@ public record InputTagsSettings : InputSettings, IInputSettingsWithSize
 	public bool? ShowAddButton { get; set; }
 
 	/// <summary>
-	/// Settings for the <see cref="HxBadge"/> used to render tags.
+	/// Settings for the <see cref="EcBadge"/> used to render tags.
 	/// </summary>
 	public BadgeSettings TagBadgeSettings { get; set; }
 }

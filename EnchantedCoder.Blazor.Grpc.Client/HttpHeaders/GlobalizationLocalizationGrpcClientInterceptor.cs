@@ -3,7 +3,7 @@
 namespace EnchantedCoder.Blazor.Grpc.Client.HttpHeaders;
 
 /// <summary>
-/// gRPC Service (client-side) interceptor which adds "hx-culture" value to the HTTP header (to be consumed by GlobalizationLocalizationGrpcServerInterceptor on server-side).
+/// gRPC Service (client-side) interceptor which adds "ec-culture" value to the HTTP header (to be consumed by GlobalizationLocalizationGrpcServerInterceptor on server-side).
 /// </summary>
 public class GlobalizationLocalizationGrpcClientInterceptor : CallerMetadataGrpcClientInterceptorBase // DI SINGLETON !!
 {
@@ -11,6 +11,6 @@ public class GlobalizationLocalizationGrpcClientInterceptor : CallerMetadataGrpc
 		where TRequest : class
 		where TResponse : class
 	{
-		context.Options.Headers.Add("hx-culture", Thread.CurrentThread.CurrentCulture.ToString());
+		context.Options.Headers.Add("ec-culture", Thread.CurrentThread.CurrentCulture.ToString());
 	}
 }

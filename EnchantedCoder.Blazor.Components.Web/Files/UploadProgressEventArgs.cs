@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web;
 
 /// <summary>
-/// Arguments for <see cref="HxInputFileCore.OnProgress"/> event.
+/// Arguments for <see cref="EcInputFileCore.OnProgress"/> event.
 /// </summary>
 public class UploadProgressEventArgs
 {

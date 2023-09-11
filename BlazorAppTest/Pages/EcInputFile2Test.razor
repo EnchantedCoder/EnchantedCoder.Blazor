@@ -1,0 +1,92 @@
+﻿@page "/EcInputFile2Test"
+
+<h1>EcInputFile[Core]</h1>
+
+<EcInputFile @ref="ecInputFileComponent" Label="EcInputFile" UploadUrl="/file-upload-streamed/" Multiple="true" />
+
+<EcButton Text="Upload" Color="ThemeColor.Primary" OnClick="HandleUploadClick" CssClass="my-2" />
+
+<h4>FileInfo[] from GetFilesAsync()</h4>
+<table class="table mt-3">
+	<tr>
+		<th>FileIndex</th>
+		<th>Name</th>
+		<th>ContentType</th>
+		<th>Size</th>
+		<th>LastModified</th>
+	</tr>
+	<EcRepeater Data="fileInfos">
+		<ItemTemplate>
+			<tr>
+				<td>@context.FileIndex</td>
+				<td>@context.Name</td>
+				<td>@context.ContentType</td>
+				<td>@context.Size</td>
+				<td>@context.LastModified</td>
+			</tr>
+		</ItemTemplate>
+	</EcRepeater>
+</table>
+<br />
+
+<h4>UploadCompletedEventArgs.FilesUploaded</h4>
+<table class="table mt-3">
+	<tr>
+		<th>FileIndex</th>
+		<th>OriginalFileName</th>
+		<th>ContentType</th>
+		<th>Progress</th>
+		<th>ContentType</th>
+		<th>Size</th>
+		<th>LastModified</th>
+		<th>ResponseStatus</th>
+		<th>ResponseText</th>
+	</tr>
+	<EcRepeater Data="files">
+		<ItemTemplate>
+			<tr>
+				<td>@context.FileIndex</td>
+				<td>@context.OriginalFileName</td>
+				<td>@context.ContentType</td>
+				<td>@context.Size</td>
+				<td>@context.LastModified</td>
+				<td>@context.ResponseStatus</td>
+				<td>@context.ResponseText</td>
+			</tr>
+		</ItemTemplate>
+	</EcRepeater>
+</table>
+<br />
+FileCount: @(fileInfos?.Count() ?? 0)
+<br />
+Completed: @uploadCompleted?.TotalSize bytes in @uploadCompleted?.FileCount files
+
+
+@code
+{
+	private EcInputFile ecInputFileComponent;
+	private IEnumerable<FileUploadedEventArgs> files;
+	private UploadCompletedEventArgs uploadCompleted;
+	private FileInfo[] fileInfos;
+
+	private async Task HandleUploadClick()
+	{
+		string accessToken = null;
+
+		// WASM:
+		//var accessTokenResult = await AccessTokenProvider.RequestAccessToken();
+		//if (accessTokenResult.Status == AccessTokenResultStatus.Success)
+		//{
+		//	if (accessTokenResult.TryGetToken(out var token))
+		//	{
+		//		accessToken = token.Value;
+		//	}
+		//}
+
+		fileInfos = await ecInputFileComponent.GetFilesAsync();
+		StateHasChanged();
+
+		uploadCompleted = await ecInputFileComponent.UploadAsync(accessToken);
+		files = uploadCompleted.FilesUploaded;
+	}
+}

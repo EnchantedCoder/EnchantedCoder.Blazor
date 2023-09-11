@@ -1,0 +1,7 @@
+<EcButton Spinner="showSpinner" Text="The button" OnClick="async () => await Task.Delay(2000)" Color="ThemeColor.Warning" />
+<EcButton Text="showSpinner=true" OnClick="() => showSpinner = true" Color="ThemeColor.Success" />
+<EcButton Text="showSpinner=false" OnClick="() => showSpinner = false" Color="ThemeColor.Danger" />
+
+@code {
+    bool showSpinner;
+}

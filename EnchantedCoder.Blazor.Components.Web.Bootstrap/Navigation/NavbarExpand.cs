@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Responsive expand setting (breakpoint) for <see cref="HxNavbar"/>.
+/// Responsive expand setting (breakpoint) for <see cref="EcNavbar"/>.
 /// </summary>
 public enum NavbarExpand
 {

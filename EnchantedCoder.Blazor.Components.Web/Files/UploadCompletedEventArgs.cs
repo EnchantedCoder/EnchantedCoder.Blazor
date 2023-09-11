@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web;
 
 /// <summary>
-/// Arguments for <see cref="HxInputFileCore.OnUploadCompleted"/> event.
+/// Arguments for <see cref="EcInputFileCore.OnUploadCompleted"/> event.
 /// </summary>
 public class UploadCompletedEventArgs
 {

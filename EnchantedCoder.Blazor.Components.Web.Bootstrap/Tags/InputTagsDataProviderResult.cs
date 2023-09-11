@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Data provider result for <see cref="HxInputTags"/>.
+/// Data provider result for <see cref="EcInputTags"/>.
 /// </summary>
 public class InputTagsDataProviderResult
 {

@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for <see cref="HxContextMenu"/>.
+/// Settings for <see cref="EcContextMenu"/>.
 /// </summary>
 public record ContextMenuSettings
 {

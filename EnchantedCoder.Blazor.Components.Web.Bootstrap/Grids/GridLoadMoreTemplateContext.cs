@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Context for "load more" template of <see cref="HxGrid{TItem}"/>.
+/// Context for "load more" template of <see cref="EcGrid{TItem}"/>.
 /// </summary>
 public sealed class GridLoadMoreTemplateContext
 {
@@ -16,15 +16,15 @@ public sealed class GridLoadMoreTemplateContext
 	}
 
 	/// <remark>
-	/// Not used HxGrid because we have HxGrid&lt;TItem&gt; which leads to GridLoadMoreTemplateContext&lt;TItem&gt;.
+	/// Not used EcGrid because we have EcGrid&lt;TItem&gt; which leads to GridLoadMoreTemplateContext&lt;TItem&gt;.
 	/// </remark>
 	private GridLoadMoreTemplateContext(Func<Task> loadMoreAsyncFunc)
 	{
 		this.loadMoreAsyncFunc = loadMoreAsyncFunc;
 	}
 
-	internal static GridLoadMoreTemplateContext CreateFor<TItem>(HxGrid<TItem> hxGrid)
+	internal static GridLoadMoreTemplateContext CreateFor<TItem>(EcGrid<TItem> ecGrid)
 	{
-		return new GridLoadMoreTemplateContext(hxGrid.LoadMoreAsync);
+		return new GridLoadMoreTemplateContext(ecGrid.LoadMoreAsync);
 	}
 }

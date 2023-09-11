@@ -1,0 +1,7 @@
+﻿<EcInputDate Label="Small" CalendarIcon="BootstrapIcon.Calendar" InputSize="InputSize.Small" @bind-Value="value" CssClass="mb-3" />
+<EcInputDate Label="Regular (default)" CalendarIcon="BootstrapIcon.Calendar" InputSize="InputSize.Regular" @bind-Value="value" CssClass="mb-3" />
+<EcInputDate Label="Large" CalendarIcon="BootstrapIcon.Calendar" InputSize="InputSize.Large" @bind-Value="value" CssClass="mb-3" />
+
+@code {
+	private DateTime value = DateTime.Today;
+}

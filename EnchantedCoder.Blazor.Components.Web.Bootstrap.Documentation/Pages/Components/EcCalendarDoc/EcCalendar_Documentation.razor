@@ -1,0 +1,99 @@
+﻿@attribute [Route("/components/" + nameof(EcCalendar))]
+
+<ComponentApiDoc Type="typeof(EcCalendar)">
+    <MainContent>
+        <DocHeading Title="Basic usage" />
+        <Demo Type="typeof(EcCalendar_Demo)" Tabs="false" />
+
+        <DocHeading Title="Dates customization" />
+        <p>
+            You can change rendering of weekend days by defining your own CSS rule for <code>.weekend</code> class.
+            The disabled days get <code>.disabled</code> class.
+        </p>
+        <p>
+            For more detailed customization use the <code>DateCustomizationProvider</code> parameter which allows you setting
+            <code>CssClass</code> and <code>Enabled</code> values for every single date rendered.
+        </p>
+
+        <DocHeading Id="EcInputDate-EcInputDateRange" Title="EcInputDate, EcInputDateRange" />
+        <p>
+            <code>EcCalendar</code> is used in implementation of <a href="/components/EcInputDate"><code>EcInputDate</code></a>
+            and <a href="/components/EcInputDateRange"><code>EcInputDateRange</code></a> components. See their documentation for more info.
+        </p>
+    </MainContent>
+    <CssVariables>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-hover-background" Default="var(--bs-tertiary-bg)">
+            Day background on hover.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-border" Default="none">
+            Day border.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-hover-border" Default="none">
+            Day border on hover.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-selected-background" Default="var(--bs-primary)">
+            Background of the selected day.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-selected-color" Default="var(--bs-white)">
+            Color of the selected day.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-selected-border" Default="none">
+            Border of the selected day.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-out-color" Default="var(--bs-tertiary-color)">
+            Day outer color.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-in-color" Default="unset">
+            Day inner color.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-disabled-opacity" Default=".5">
+            Disabled day opacity.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-disabled-text-decoration" Default="line-through">
+            Disabled day text decoration.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-names-color" Default="unset">
+            Color of the day names.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-names-font-weight" Default="700">
+            Font weight of the day names.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-navigation-button-focus-box-shadow" Default="0 0 0 0.25rem rgb(0 157 224 / 25%)">
+            Navigation button box shadow when focused.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-navigation-button-hover-background" Default="var(--bs-tertiary-bg)">
+            Navigation button background on hover.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-navigation-button-text-color" Default="var(--bs-tertiary-color)">
+            Navigation button text color.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-today-border" Default="none">
+            Border of today.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-today-background" Default="var(--bs-primary-rgb)">
+            Background of today.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-today-background-opacity" Default=".05">
+            Background opacity of today.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-today-color" Default="var(--bs-primary)">
+            Color of today.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-border-radius" Default=".25rem">
+            Day border radius.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-width" Default="2.25rem">
+            Day width.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-height" Default="2.25rem">
+            Day height.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-day-spacing" Default=".125rem">
+            Day spacing.
+        </ComponentApiDocCssVariable>
+        <ComponentApiDocCssVariable Name="--ec-calendar-font-size" Default=".875rem">
+            Font size within the calendar.
+        </ComponentApiDocCssVariable>
+    </CssVariables>
+
+</ComponentApiDoc>

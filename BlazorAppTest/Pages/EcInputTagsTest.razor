@@ -1,0 +1,55 @@
+@page "/EcInputTagsTest"
+@using FluentValidation
+
+<h1>EcInputTags</h1>
+
+<EcSwitch Text="Enabled" @bind-Value="@enabled" />
+
+<EcFormState Enabled="@enabled">
+	<EditForm Model="model">
+		<Blazored.FluentValidation.FluentValidationValidator />
+		<ValidationSummary />
+		<EcInputTags Label="Tags" @bind-Value="model.Tags" DataProvider="GetNewItemSuggestions" />
+		<EcInputTags Label="Tags (shared Value, Large)" @bind-Value="model.Tags" DataProvider="GetNewItemSuggestions" InputSize="InputSize.Large" />
+		<EcInputTags Label="Tags (shared Value, Small)" @bind-Value="model.Tags" DataProvider="GetNewItemSuggestions" InputSize="InputSize.Small" />
+		<EcInputTags ShowAddButton="true" AddButtonText="Add tag" Naked Label="Tags Naked" @bind-Value="model.Tags" DataProvider="GetNewItemSuggestions" />
+		<EcInputTags ShowAddButton="true" AddButtonText="Add tag" Naked Label="Tags (shared Value, Large, Naked)" @bind-Value="model.Tags" DataProvider="GetNewItemSuggestions" InputSize="InputSize.Large" />
+		<EcInputTags ShowAddButton="true" AddButtonText="Add tag" Naked Label="Tags (shared Value, Small, Naked)" @bind-Value="model.Tags" DataProvider="GetNewItemSuggestions" InputSize="InputSize.Small" />
+		<EcButton CssClass="mt-2" Color="ThemeColor.Primary" OnClick="HandleValidClick">Save</EcButton>
+	</EditForm>
+</EcFormState>
+
+Tags: @tags
+
+@code {
+	private bool enabled = true;
+	private MyModel model = new MyModel();
+	string tags;
+
+	private Task<InputTagsDataProviderResult> GetNewItemSuggestions(InputTagsDataProviderRequest request)
+	{
+		return Task.FromResult(new InputTagsDataProviderResult()
+		{
+			Data = Enum.GetValues<ThemeColor>().Select(v => v.ToString())
+		});
+	}
+
+	public class MyModel
+	{
+		public List<string> Tags { get; set; } = new List<string>() { "Blazor", "C#", "ASP.NET" };
+
+		public class MyModelValidator : AbstractValidator<MyModel>
+		{
+			public MyModelValidator()
+			{
+				RuleFor(a => a.Tags).Must(t => t.Count > 3).WithMessage("At least 4 tags have to be entered.");
+			}
+		}
+	}
+
+	public void HandleValidClick()
+	{
+		tags = String.Join(',', model.Tags);
+		StateHasChanged();
+	}
+}

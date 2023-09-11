@@ -1,0 +1,18 @@
+@namespace EnchantedCoder.Blazor.Components.Web.Bootstrap
+
+<div>
+    <EcNavLink Href="@Href"
+               CssClass="@CssClassHelper.Combine(this.CssClass)"
+               Match="this.Match">
+        <div class="ec-sidebar-footer-navlink">
+            @if (Icon != null)
+            {
+                <EcIcon Icon="Icon" />
+            }
+            <span class="@CssClassHelper.Combine("text", Icon == null ? null : "ms-3")">
+                @Text
+            </span>
+        </div>
+
+    </EcNavLink>
+</div>

@@ -1,7 +1,7 @@
 ﻿@implements IDisposable
 @inject IDemoDataService DemoDataService
 
-<HxInputText Label="Debounced HxInputText"
+<EcInputText Label="Debounced EcInputText"
 			 @bind-Value="query"
 			 @bind-Value:after="TriggerQuery"
 			 BindEvent="BindEvent.OnInput"

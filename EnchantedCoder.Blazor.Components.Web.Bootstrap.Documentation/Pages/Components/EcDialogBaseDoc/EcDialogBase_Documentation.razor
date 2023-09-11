@@ -1,0 +1,15 @@
+﻿@attribute [Route("/components/EcDialog")]
+@attribute [Route("/components/" + nameof(EcDialogBase<TResult>))]
+
+<ComponentApiDoc Type="typeof(EcDialogBase<TResult>)">
+
+	<DocHeading Title="Implementation" />
+	<p>Use <a href="/components/@nameof(EcModal)">@nameof(EcModal)</a> with <code>@@ref="@nameof(EcDialogBase<object>.modal)"</code> inside of the dialog. See demo.</p>
+
+    <DocHeading Title="How to use a custom dialog" Id="custom-dialog-usage" />
+	<Demo Type="typeof(EcDialogBase_Demo)" />
+
+    <DocHeading Title="How to implement a custom dialog" Id="custom-dialog-implementation" />
+	<Demo Type="typeof(CustomDialog)" Tabs="false" />
+
+</ComponentApiDoc>

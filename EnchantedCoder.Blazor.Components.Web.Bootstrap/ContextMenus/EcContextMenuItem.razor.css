@@ -1,0 +1,8 @@
+﻿a {
+    display: flex;
+    align-items: center;
+}
+
+::deep .ec-context-menu-item-icon {
+    margin: var(--ec-context-menu-item-icon-margin);
+}

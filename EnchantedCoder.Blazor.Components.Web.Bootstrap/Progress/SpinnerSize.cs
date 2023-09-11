@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Size for <see cref="HxSpinner"/>.
+/// Size for <see cref="EcSpinner"/>.
 /// </summary>
 public enum SpinnerSize
 {

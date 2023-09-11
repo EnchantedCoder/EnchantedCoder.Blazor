@@ -1,0 +1,53 @@
+@page "/EcFilterFormTest"
+@using System.Globalization;
+
+<h1>FilterContext</h1>
+
+<EcFilterForm @ref="filterForm" Model="@model" ModelChanged="HandleModelChanged" TModel="FormModel" OnChipsUpdated="HandleChipsUpdated">
+	<DataAnnotationsValidator />
+	<ValidationSummary />
+
+	<h2>Filter</h2>
+
+	<EcInputText Label="Text1" @bind-Value="@context.Text1" />
+	<EcInputText Label="Text2" @bind-Value="@context.Text2">
+		<ChipTemplate>
+			Haha! There is also a chip with custom template! (value @context.Text2)
+		</ChipTemplate>
+	</EcInputText>
+	<EcInputNumber Label="Number 1" @bind-Value="@context.Number1" />
+    <EcInputTags Label="Tags (ThemeColor)" @bind-Value="@context.Tags" DataProvider="GetTagsSuggestions"/>
+    <EcSelect Label="Select"
+        TItem="ThemeColor"
+        TValue="ThemeColor"
+        @bind-Value="@context.Color"
+        Data="selectData" />
+
+	<EcSubmit Text="Apply" Color="ThemeColor.Primary" />
+
+	<h2>Values</h2>
+
+	<h3>Values in filter</h3>
+	<ul>
+		<li>Text1: @context.Text1</li>
+		<li>Text2: @context.Text2</li>
+		<li>Number1: @context.Number1</li>
+	</ul>
+</EcFilterForm>
+
+<h3>Values in model</h3>
+<ul>
+	<li>Text1: @model.Text1</li>
+	<li>Text2: @model.Text2</li>
+	<li>Text3: @model.Number1</li>
+</ul>
+
+<h4>Chips</h4>
+
+<EcChipList Chips="@chips" OnChipRemoveClick="HandleChipRemoveClick" />
+
+<EcGrid @ref="myGrid" TItem="string" DataProvider="@GridDataProvider">
+	<Columns>
+		<EcGridColumn TItem="string" HeaderText="Value" ItemTextSelector="(item) => item" />
+	</Columns>
+</EcGrid>

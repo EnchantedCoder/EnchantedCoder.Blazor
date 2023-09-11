@@ -120,7 +120,7 @@ public abstract class MemberModel
 
 	private string GenerateEnchantedCoderDocumentationLink(string[] splitLink)
 	{
-		bool containsHx = splitLink.Any(t => t.Contains("hx", StringComparison.OrdinalIgnoreCase));
+		bool containsEc = splitLink.Any(t => t.Contains("ec", StringComparison.OrdinalIgnoreCase));
 		string seeName = "";
 
 		string fullLink = "";
@@ -135,9 +135,9 @@ public abstract class MemberModel
 			{
 				fullLink = $"{splitLink[i]}";
 
-				if (splitLink[i].Contains("Hx"))
+				if (splitLink[i].Contains("Ec"))
 				{
-					containsHx = true;
+					containsEc = true;
 					seeName = splitLink[i];
 					break;
 				}
@@ -171,14 +171,14 @@ public abstract class MemberModel
 			}
 		}
 
-		// Default case: if "Hx" wasn't found anywhere, it couldn't be detected what part to use in the link, so the default part will be chosen
-		if ((fullLink.Length == 0) || ((containsHx == false) && isType))
+		// Default case: if "Ec" wasn't found anywhere, it couldn't be detected what part to use in the link, so the default part will be chosen
+		if ((fullLink.Length == 0) || ((containsEc == false) && isType))
 		{
 			fullLink = splitLink[^1];
 			seeName = splitLink[^1];
 		}
 
-		if ((enclosingType is null || enclosingType.FullName.Contains("Hx") || !isProperty) && isComponent)
+		if ((enclosingType is null || enclosingType.FullName.Contains("Ec") || !isProperty) && isComponent)
 		{
 			fullLink = $"href=\"/components/{fullLink}";
 		}

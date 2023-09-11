@@ -46,7 +46,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Update="Pages\Components\HxAutosuggestDoc\HxAutosuggest_Demo_InitialSuggestions.razor">
+	  <Content Update="Pages\Components\EcAutosuggestDoc\EcAutosuggest_Demo_InitialSuggestions.razor">
 	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 	  </Content>
 	</ItemGroup>
@@ -55,7 +55,7 @@
 		<!-- Let's embed demos sources to the assembly to be able to show sources at runtime. -->
 		<ItemGroup>
 			<EmbeddedResource Include="Pages/**/*Demo*.razor" />
-			<EmbeddedResource Include="Pages/Components/HxDialogBaseDoc/CustomDialog.razor" />
+			<EmbeddedResource Include="Pages/Components/EcDialogBaseDoc/CustomDialog.razor" />
 		</ItemGroup>
 	</Target>
 

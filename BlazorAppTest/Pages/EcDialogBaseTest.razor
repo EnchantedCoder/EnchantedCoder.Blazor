@@ -1,0 +1,27 @@
+﻿@page "/EcDialogBaseTest"
+
+<h3>EcDialogBaseTest</h3>
+
+<EcButton Text="Play your dice" Color="ThemeColor.Primary" OnClick="HandleClick" />
+
+<BlazorAppTest.Pages.EcDialogBaseComponents.MyDialog @ref="dialog" />
+
+<p>Successful: @successful</p>
+<p>Dice number: @diceNumber</p>
+
+@code
+{
+	BlazorAppTest.Pages.EcDialogBaseComponents.MyDialog dialog;
+
+	private bool? successful;
+	private int? diceNumber;
+
+	private async Task HandleClick()
+	{
+		DialogResult<int> dialogResult = await dialog.ShowAsync(); // waits until the dialog is closed
+
+		successful = dialogResult.Successful;
+		diceNumber = dialogResult.Successful ? dialogResult.Value : null;
+	}
+}
+

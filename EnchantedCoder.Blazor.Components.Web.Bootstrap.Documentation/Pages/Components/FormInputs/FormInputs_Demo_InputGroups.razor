@@ -1,32 +1,32 @@
-﻿<HxInputText Label="Input groups (text)" @bind-Value="@value" InputGroupStartText="€" InputGroupEndText=".00" />
-<HxInputText Label="Input groups (icon)" @bind-Value="@value">
+﻿<EcInputText Label="Input groups (text)" @bind-Value="@value" InputGroupStartText="€" InputGroupEndText=".00" />
+<EcInputText Label="Input groups (icon)" @bind-Value="@value">
 	<InputGroupStartTemplate>
-		<HxIcon CssClass="input-group-text" Icon="BootstrapIcon.CurrencyEuro" />
+		<EcIcon CssClass="input-group-text" Icon="BootstrapIcon.CurrencyEuro" />
 	</InputGroupStartTemplate>
-</HxInputText>
+</EcInputText>
 
-<HxInputText Label="Input groups (template with button/dropdown)" @bind-Value="@value">
+<EcInputText Label="Input groups (template with button/dropdown)" @bind-Value="@value">
 	<InputGroupStartTemplate>
-		<HxButton Text="Button" Color="ThemeColor.Secondary" Outline="true" />
-		<HxButton Text="Button 2" Color="ThemeColor.Secondary" Outline="true" />
+		<EcButton Text="Button" Color="ThemeColor.Secondary" Outline="true" />
+		<EcButton Text="Button 2" Color="ThemeColor.Secondary" Outline="true" />
 	</InputGroupStartTemplate>
 	<InputGroupEndTemplate>
-		@* Bootstrap does not expect any <HxDropdown /> wrapper here. *@
-		<HxDropdownToggleButton Text="Dropdown" Color="ThemeColor.Secondary" Outline="true" />
-		<HxDropdownMenu>
-			<HxDropdownItem>Item 1</HxDropdownItem>
-			<HxDropdownItem>Item 2</HxDropdownItem>
-		</HxDropdownMenu>
+		@* Bootstrap does not expect any <EcDropdown /> wrapper here. *@
+		<EcDropdownToggleButton Text="Dropdown" Color="ThemeColor.Secondary" Outline="true" />
+		<EcDropdownMenu>
+			<EcDropdownItem>Item 1</EcDropdownItem>
+			<EcDropdownItem>Item 2</EcDropdownItem>
+		</EcDropdownMenu>
 	</InputGroupEndTemplate>
-</HxInputText>
+</EcInputText>
 
-<HxInputText Label="Input groups (template with checkbox/radio)" @bind-Value="@value">
+<EcInputText Label="Input groups (template with checkbox/radio)" @bind-Value="@value">
 	<InputGroupStartTemplate>
 		<div class="input-group-text">
-			<HxCheckbox @bind-Value="@valueBool" CssClass="mt-0" />
+			<EcCheckbox @bind-Value="@valueBool" CssClass="mt-0" />
 		</div>
 	</InputGroupStartTemplate>
-</HxInputText>
+</EcInputText>
 
 @code
 {

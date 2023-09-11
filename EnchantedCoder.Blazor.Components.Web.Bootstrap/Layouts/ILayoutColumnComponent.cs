@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Interface for column-sized components (e.g. <see cref="HxPlaceholder"/>).
+/// Interface for column-sized components (e.g. <see cref="EcPlaceholder"/>).
 /// </summary>
 public interface ILayoutColumnComponent
 {

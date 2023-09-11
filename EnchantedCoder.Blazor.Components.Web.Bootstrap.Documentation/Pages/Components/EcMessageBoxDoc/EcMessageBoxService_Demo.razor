@@ -1,0 +1,29 @@
+﻿@* <EcMessageBoxHost /> is in MainLayout.razor *@
+
+<p>
+	<EcButton Text="MessageBox.ShowAsync()..." OnClick="OpenMessageBox" Color="ThemeColor.Primary" />
+	<EcButton Text="MessageBox.Confirm()..." OnClick="OpenConfirm" Color="ThemeColor.Primary" />
+</p>
+
+<p>
+	ShowAsync result: @showResult.ToString("g")<br />
+	Confirm result: @confirmResult
+</p>
+
+@code
+{
+	[Inject] protected IEcMessageBoxService MessageBox { get; set; }
+
+	private MessageBoxButtons showResult;
+	private bool? confirmResult;
+
+	private async Task OpenMessageBox()
+	{
+		showResult = await MessageBox.ShowAsync("Info", "This is the text", MessageBoxButtons.OkCancel);
+	}
+
+	private async Task OpenConfirm()
+	{
+		confirmResult = await MessageBox.ConfirmAsync("Confirm", "Do you really want to ...?");
+	}
+}

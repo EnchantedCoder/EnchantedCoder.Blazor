@@ -1,0 +1,35 @@
+﻿<EcButton Text="Show" OnClick="HandleShowClick" Color="ThemeColor.Primary" Spinner="false" />
+<EcButton Text="Hide" OnClick="HandleHideClick" Color="ThemeColor.Secondary" Spinner="false" />
+
+<EcTooltip @ref="tooltip1"
+		   Trigger="TooltipTrigger.Manual"
+		   OnHidden="HandleTooltip1Hidden"
+		   Text="Tooltip 1">
+	<EcButton Color="ThemeColor.Light">Tooltip 1</EcButton>
+</EcTooltip>
+
+<EcTooltip @ref="tooltip2"
+		   Trigger="TooltipTrigger.Manual"
+		   Text="Tooltip 2">
+	<EcButton Color="ThemeColor.Light">Tooltip 2</EcButton>
+</EcTooltip>
+
+@code
+{
+	private EcTooltip tooltip1, tooltip2;
+
+	private async Task HandleShowClick()
+	{
+		await tooltip1.ShowAsync();
+	}
+
+	private async Task HandleHideClick()
+	{
+		await tooltip1.HideAsync();
+	}
+
+	private async Task HandleTooltip1Hidden()
+	{
+		await tooltip2.ShowAsync();
+	}
+}

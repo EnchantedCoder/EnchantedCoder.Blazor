@@ -1,0 +1,22 @@
+﻿@inject IDemoDataService DemoDataService
+
+<EcGrid ContentNavigationMode="GridContentNavigationMode.LoadMore" PageSize="5" Responsive="true" TItem="EmployeeDto" DataProvider="GetGridData">
+	<Columns>
+		<EcGridColumn HeaderText="Name" ItemTextSelector="employee => employee.Name" />
+		<EcGridColumn HeaderText="Phone" ItemTextSelector="employee => employee.Phone" />
+		<EcGridColumn HeaderText="Salary" ItemTextSelector="@(employee => employee.Salary.ToString("c0"))" />
+		<EcGridColumn HeaderText="Position" ItemTextSelector="employee => employee.Position" />
+		<EcGridColumn HeaderText="Location" ItemTextSelector="employee => employee.Location" />
+	</Columns>
+</EcGrid>
+
+@code {
+	private async Task<GridDataProviderResult<EmployeeDto>> GetGridData(GridDataProviderRequest<EmployeeDto> request)
+	{
+		return new GridDataProviderResult<EmployeeDto>()
+		{
+			Data = await DemoDataService.GetEmployeesDataFragmentAsync(request.StartIndex, request.Count, request.CancellationToken),
+			TotalCount = await DemoDataService.GetEmployeesCountAsync(request.CancellationToken)
+		};
+	}
+}

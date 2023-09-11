@@ -1,0 +1,27 @@
+﻿@page "/EcModelEditFormTest"
+@using System.ComponentModel.DataAnnotations
+
+<h1>EcModelEditFormTest</h1>
+
+<EcModelEditForm @bind-Model="@model">
+	<DataAnnotationsValidator />
+	<ValidationSummary />
+
+	<EcInputText @bind-Value="@context.Text1" BindEvent="BindEvent.OnInput" />
+	<EcSubmit Color="ThemeColor.Primary">Submit</EcSubmit>
+
+	<p>Value in @@context: @context.Text1</p>
+	<p>Value in @@model: @model.Text1</p>
+</EcModelEditForm>
+
+@code {
+	private FormModel model = new FormModel();
+
+	private class FormModel : ICloneable
+	{
+		[Required]
+		public string Text1 { get; set; }
+
+        public object Clone() => MemberwiseClone();
+	}
+}

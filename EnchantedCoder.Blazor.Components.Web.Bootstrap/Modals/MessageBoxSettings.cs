@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Settings for the <see cref="HxMessageBox"/> and derived components.
+/// Settings for the <see cref="EcMessageBox"/> and derived components.
 /// </summary>
 public record MessageBoxSettings
 {
@@ -16,7 +16,7 @@ public record MessageBoxSettings
 	public ButtonSettings SecondaryButtonSettings { get; set; }
 
 	/// <summary>
-	/// Settings for underlying <see cref="HxModal"/> component.
+	/// Settings for underlying <see cref="EcModal"/> component.
 	/// </summary>
 	public ModalSettings ModalSettings { get; set; }
 }

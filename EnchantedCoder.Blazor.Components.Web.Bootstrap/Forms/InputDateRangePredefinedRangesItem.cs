@@ -1,7 +1,7 @@
 ﻿namespace EnchantedCoder.Blazor.Components.Web.Bootstrap;
 
 /// <summary>
-/// Item for <see cref="HxInputDateRange.PredefinedDateRanges" />.
+/// Item for <see cref="EcInputDateRange.PredefinedDateRanges" />.
 /// </summary>
 public class InputDateRangePredefinedRangesItem
 {

@@ -1,0 +1,64 @@
+.ec-input-tags-control {
+	position: relative;
+	display: flex;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+input:focus {
+	outline: none;
+}
+
+.dropdown {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: var(--ec-input-tags-input-width)
+}
+
+::deep .ec-tag {
+	margin: var(--ec-input-tags-tag-margin);
+	display: flex;
+	align-items: center;
+}
+
+::deep .ec-icon {
+	display: flex;
+}
+
+.ec-input-tags-naked-sm  {
+	font-size: var(--ec-input-tags-naked-font-size-sm);
+}
+
+.ec-input-tags-naked-lg  {
+	font-size: var(--ec-input-tags-naked-font-size-lg);
+}
+
+.ec-tag-remove-button {
+	display: inline-flex;
+	align-items: center;
+	margin: var(--ec-input-tags-remove-button-margin);
+	opacity: .6125;
+}
+
+.ec-tag-remove-button:hover {
+	opacity: 1;
+}
+
+.ec-input-tags-control:focus-within:not(.ec-input-tags-naked) {
+	box-shadow: var(--ec-input-tags-control-focused-box-shadow);
+	border-color: var(--ec-input-tags-control-focused-border-color);
+	outline: 0;
+}
+
+.ec-input-tags-control-disabled:not(.ec-input-tags-naked) {
+	background-color: var(--bs-secondary-bg);
+}
+
+.ec-tag-add-button-text {
+	margin: var(--ec-input-tags-add-button-text-margin);
+}
+
+::deep .ec-input-tags-dropdown-item-focused {
+	background-color: var(--ec-input-tags-dropdown-item-highlighted-background-color);
+}
